@@ -1,0 +1,125 @@
+\documentclass[twocolumn]{article}
+\usepackage[a4paper, top=1in, bottom=1in, left=2cm, right=2cm]{geometry}
+\usepackage[onehalfspacing]{setspace}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{kotex}
+\usepackage{hyperref}
+\title{평면 경계면에 의한 굴절 상과 아스트로이드의 재발견}
+\author{M. Ryu \\ {\href{mailto:mingshey@hafs.hs.kr}{mingshey@hafs.hs.kr}}}
+\begin{document}
+	\maketitle
+	\section{도입}
+	평평한 수면 아래의 점 물체를 수면 위에서 바라볼 때, 상의 위치는 시점(POV)에 따라 달라진다. 
+	시점이 움직임에 따라 법선 평면 내에서 관찰되는 상은 ``찌그러진 아스트로이드''라고 불리는 특정 곡선을 그린다.
+	
+	\includegraphics[width=2.7in]{g409.eps}
+	
+	물체와 시점을 포함하는 법평면을 $xy$-평면으로 하고, 법선 평면과 수면의 교선을 $x$-축으로, 
+	물체를 통과하는 법선을 $y$-축으로 합니다. 그러면 상의 자취는 다음 곡선의 일부이다.
+	$$ \left| \dfrac{x}{M} \right| ^ {2/3} 
+	+ \left| \dfrac{y}{N} \right| ^ {2/3} = 1,$$
+	여기서 $M = D/\sqrt{n^2 - 1}$ 및 $N = D/n$이고, $D$는 물체의 깊이이며 $n$은 공기에 대한 물의 상대 굴절률이다.
+	
+	\section{공식의 유도}
+	
+	공기와 물의 굴절률을 각각 $n_1$ 및 $n_2$라고 하자. 공기와 물의 경계면 아래 깊이 $D$인 곳에 점 물체 $O$가 있다. 
+	물체에서 출발한 광선이 수면을 $y$-축으로부터 $\alpha$만큼 떨어진 지점에서 
+	법선으로부터 $\theta_2$의 각도로 경계면에 입사한 후, 동일한 법선으로부터 $\theta_1$의 각도로 공기 중으로 굴절된다.
+	
+	\includegraphics[width=2.2in]{g237.eps}
+	
+	스넬의 법칙에 따라 다음이 성립한다.
+	$$ \sin\theta_1 = \frac{n_2}{n_1} \sin\theta_2 = n\sin\theta_2.$$
+	굴절된 광선의 연장선은 다음 방정식으로 표현된다.
+	$$y=k(x-\alpha).$$
+	여기서 
+	$$k=\dfrac{1}{\tan\theta_1}=\dfrac{\cos\theta_1}{\sin\theta_1}$$
+	이고, 스넬의 법칙을 고려하면,
+	$$k=\dfrac{\sqrt{1-n^2\sin^2\theta_2}}{n\sin\theta_2}.$$
+	이 직선은 $y$-축과 $y=\beta$에서 만나므로,
+	$$\beta = -k\alpha.$$
+	기하학적으로 다음을 얻을 수 있다.
+	$$\alpha = D\tan\theta_2 = \dfrac{D\sin\theta_2}{\cos\theta_2},$$
+	및
+	$$\begin{aligned}
+		\beta &= -k\alpha \\
+		&= -\dfrac{D\sin\theta_2}{\cos\theta_2}
+		\dfrac{\sqrt{1-n^2\sin\theta_2}}{n\sin\theta_2}\\
+		&=-\dfrac{D\sqrt{1-n^2\sin\theta_2}}{n\cos\theta_2}.
+	\end{aligned}$$
+	이제, $K=\alpha/M$ 및 $H=\beta/N$이라 하면,
+	$$ \begin{aligned}
+		K^2 + H^2 &= \dfrac{\alpha^2}{M^2}+\dfrac{\beta^2}{N^2}\\
+		&=\dfrac{\left(n^2-1\right)\sin^2\theta_2 + 1-n^2\sin^2\theta_2}
+		{\cos^2\theta_2}\\
+		&=\dfrac{1-\sin^2\theta_2}{\cos^2\theta_2}\\
+		&=1
+	\end{aligned}$$
+	$\xi=x/M$ 및 $\eta=y/N$이라고 하면, 시점이 $xy$-평면에서 움직임에 따라,
+	점 $\mathrm{A}(\alpha, 0)$ 및 $\mathrm{B}(0, \beta)$도 이에 따라 움직이고, 
+	$\xi\eta$-평면에서 점 $(K, 0)$ 및 $(0, H)$도 이에 따라 움직이며, 
+	두 점 사이의 거리는 1로 일정하게 유지된다.
+	
+	\includegraphics{g107.eps}
+	
+	이러한 선분의 포락선은 ``아스트로이드''(\emph{astroid})\footnote{
+		``소행성''을 뜻하는 \emph{asteroid}와 혼동하지 말 것.}로 잘 알려져 있으며, 
+	다음 방정식으로 표현된다.
+	$$ \left| \xi \right|^{2/3} + \left| \eta \right|^{2/3} = 1. $$
+	
+	상은 선분 $\overline{\mathrm{AB}}$와 움직이는 선분의 포락선의 접점 $\mathrm{C}$에 위치한다. 
+	이는 이 순간 인접한 광선이 발산하는 점이기 때문이다. 
+	$\xi\eta$-평면에서 해당 점은 $(K^3, H^3)$이다.
+	
+	따라서 다음 관계식으로부터 상의 좌표 $(x_{\mathrm{C}}^{}, y_{\mathrm{C}}^{})$를 얻을 수 있다.
+	$$ \left\{ 
+	\begin{aligned}
+		\xi_{\mathrm{C}}^{} &= \dfrac{x_{\mathrm{C}}^{}}{M} = K^3 = \dfrac{\alpha^3}{M^3},\\
+		\eta_{\mathrm{C}}^{} &= \dfrac{y_{\mathrm{C}}^{}}{N} = H^3 = \dfrac{\beta^3}{N^3}.
+	\end{aligned}
+	\right.$$
+	즉,
+	$$ \left\{ 
+	\begin{aligned}
+		x_{\mathrm{C}}^{} &= \dfrac{\alpha^3}{M^2},\\
+		y_{\mathrm{C}}^{} &= \dfrac{\beta^3}{N^2}=-\dfrac{k^3\alpha^3}{N^2}.
+	\end{aligned}
+	\right.$$
+	
+	를 사용하여,
+	$$\sin\theta_2 = \dfrac{\alpha}{\sqrt{D^2+\alpha^2}},$$
+	$$k = \dfrac{\sqrt{D^2-(n^2-1)\alpha^2}}{n\alpha},$$
+	를 얻을 수 있으며, 
+	상의 위치를 $\alpha$에 대한 매개변수 함수로 유도할 수 있다.
+	$$ \left\{ 
+	\begin{aligned}
+		x_{\mathrm{C}}^{} &= (n^2-1)\dfrac{\alpha^3}{D^2},\\
+		y_{\mathrm{C}}^{} &= -\dfrac{n^2}{D^2}\dfrac{\alpha^3}{n^3\alpha^3}\left\{ D^2-(n^2-1)\alpha^2 \right\}^{3/2}\\
+		&=-\dfrac{D}{n}\left\{ 1-(n^2-1)\dfrac{\alpha^2}{D^2} \right\}^{3/2}.
+	\end{aligned}
+	\right.$$
+	
+\section{시점이 물 속에 있는 경우}
+
+물체가 경계면 위 높이 D인 공기 중에 있고, 
+시점이 물 속에 있는 경우, 상대적인 굴절률은 $1/n < 1$이고, 
+유사한 추론에 의해 다음 방정식을 얻는다.
+$$ - \left| \xi \right|^{2/3} + \left| \eta \right|^{2/3} = 1, $$
+여기서 $\xi = \dfrac{x}{W} $ 및 $\eta = \dfrac{y}{Z}$이고, 
+$W = \dfrac{nD}{\sqrt{1-n^2}}$ 및 $Z = nD$인데,  
+이 곡선의 모양에 대한 이름은 찾을 수 없었다. 
+
+아스트로이드는 
+$$ \left| \xi \right|^{n} + \left| \eta \right|^{n} = 1. $$
+와 같이 정의되는 ``초타원''(\emph{superellipse})이라는 곡선 계열에 속한다. 
+아스트로이드는 $n=2/3$인 경우이다.
+ 
+그러나 필자가 알기로는 다음 형태의 곡선 계열에 대한 이름이 없다.
+$$ \left| \xi \right|^{n} - \left| \eta \right|^{n} = \pm 1 $$
+이것은 ``초쌍곡선''(\emph{super-hyperbola})이라고 부를 수 있을지 모르지만, 
+같은 의미의 반복되는 어원 때문에 거슬릴 수도 있으니 \emph{superbola}라고 하는 것이 
+좋을 수도 있겠다.
+
+\end{document}
