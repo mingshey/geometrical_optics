@@ -12,12 +12,12 @@
 	\maketitle
 	\section{도입}
 	평평한 수면 아래의 점 물체를 수면 위에서 바라볼 때, 상의 위치는 시점(POV)에 따라 달라진다. 
-	시점이 움직임에 따라 법선 평면 내에서 관찰되는 상은 ``찌그러진 아스트로이드''라고 불리는 특정 곡선을 그린다.
+	시점이 움직임에 따라 법평면 내에서 관찰되는 상은 ``찌그러진 아스트로이드''라고 불리는 특정 곡선을 그린다.
 	
 	\includegraphics[width=2.7in]{g409.eps}
 	
 	물체와 시점을 포함하는 법평면을 $xy$-평면으로 하고, 법선 평면과 수면의 교선을 $x$-축으로, 
-	물체를 통과하는 법선을 $y$-축으로 합니다. 그러면 상의 자취는 다음 곡선의 일부이다.
+	물체를 통과하는 법선을 $y$-축으로 하자. 그러면 상의 자취는 다음 곡선의 일부이다.
 	$$ \left| \dfrac{x}{M} \right| ^ {2/3} 
 	+ \left| \dfrac{y}{N} \right| ^ {2/3} = 1,$$
 	여기서 $M = D/\sqrt{n^2 - 1}$ 및 $N = D/n$이고, $D$는 물체의 깊이이며 $n$은 공기에 대한 물의 상대 굴절률이다.
@@ -28,9 +28,9 @@
 	물체에서 출발한 광선이 수면을 $y$-축으로부터 $\alpha$만큼 떨어진 지점에서 
 	법선으로부터 $\theta_2$의 각도로 경계면에 입사한 후, 동일한 법선으로부터 $\theta_1$의 각도로 공기 중으로 굴절된다.
 	
-	\includegraphics[width=2.2in]{g237.eps}
-	
-	스넬의 법칙에 따라 다음이 성립한다.
+
+	\includegraphics[width=2.2in]{g237.eps}\\
+	이 때 스넬의 법칙에 따라 다음이 성립한다.
 	$$ \sin\theta_1 = \frac{n_2}{n_1} \sin\theta_2 = n\sin\theta_2.$$
 	굴절된 광선의 연장선은 다음 방정식으로 표현된다.
 	$$y=k(x-\alpha).$$
@@ -64,13 +64,13 @@
 	
 	\includegraphics{g107.eps}
 	
-	이러한 선분의 포락선은 ``아스트로이드''(\emph{astroid})\footnote{
-		``소행성''을 뜻하는 \emph{asteroid}와 혼동하지 말 것.}로 잘 알려져 있으며, 
+	이러한 선분의 포락선은 ``아스트로이드''(\emph{astroid}\footnote{
+		``소행성''을 뜻하는 \emph{asteroid}와 혼동하지 말 것.})로 잘 알려져 있으며, 
 	다음 방정식으로 표현된다.
 	$$ \left| \xi \right|^{2/3} + \left| \eta \right|^{2/3} = 1. $$
 	
 	상은 선분 $\overline{\mathrm{AB}}$와 움직이는 선분의 포락선의 접점 $\mathrm{C}$에 위치한다. 
-	이는 이 순간 인접한 광선이 발산하는 점이기 때문이다. 
+	이는 이 순간 인접한 광선 다발이 발산하는 점이기 때문이다. 
 	$\xi\eta$-평면에서 해당 점은 $(K^3, H^3)$이다.
 	
 	따라서 다음 관계식으로부터 상의 좌표 $(x_{\mathrm{C}}^{}, y_{\mathrm{C}}^{})$를 얻을 수 있다.
@@ -96,7 +96,8 @@
 	$$ \left\{ 
 	\begin{aligned}
 		x_{\mathrm{C}}^{} &= (n^2-1)\dfrac{\alpha^3}{D^2},\\
-		y_{\mathrm{C}}^{} &= -\dfrac{n^2}{D^2}\dfrac{\alpha^3}{n^3\alpha^3}\left\{ D^2-(n^2-1)\alpha^2 \right\}^{3/2}\\
+		y_{\mathrm{C}}^{} &= -\dfrac{n^2}{D^2}\dfrac{\alpha^3}
+		{n^3\alpha^3}\left\{ D^2-(n^2-1)\alpha^2 \right\}^{3/2}\\
 		&=-\dfrac{D}{n}\left\{ 1-(n^2-1)\dfrac{\alpha^2}{D^2} \right\}^{3/2}.
 	\end{aligned}
 	\right.$$
@@ -118,8 +119,9 @@ $$ \left| \xi \right|^{n} + \left| \eta \right|^{n} = 1. $$
  
 그러나 필자가 알기로는 다음 형태의 곡선 계열에 대한 이름이 없다.
 $$ \left| \xi \right|^{n} - \left| \eta \right|^{n} = \pm 1 $$
-이것은 ``초쌍곡선''(\emph{super-hyperbola})이라고 부를 수 있을지 모르지만, 
-같은 의미의 반복되는 어원 때문에 거슬릴 수도 있으니 \emph{superbola}라고 하는 것이 
-좋을 수도 있겠다.
+이것은 ``초쌍곡선''(\emph{super-hyperbola}\footnote{같은 의미의 반복되는 어원
+때문에 거슬릴 수도 있으니 \emph{superbola}라고 하는 것이 
+좋을 수도 있겠다.})이라고 부를 수 있을지 모르겠다. 
+
 
 \end{document}
