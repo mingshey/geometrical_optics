@@ -23,16 +23,18 @@ Let the normal plane that contains the object and  POV be the $xy$-plane,
  is part of the curve 
 $$ \left| \dfrac{x}{M} \right| ^ {2/3} 
 + \left| \dfrac{y}{N} \right| ^ {2/3} = 1,$$
-where $M = D/\sqrt{n^2 - 1}$ and $N = D/n$, and $D$ is the depth of object
- and $n$ is the index of refraction of the water relative to the air.
+where $M = D/\sqrt{n^2 - 1}$ is the maximum distance of incidence
+determined by the critical angle of total internal reflection and $N = D/n$ 
+is the apparent depth of the object when observed from directly above, where
+$D$ is the actual depth of the object, and $n$ is the refractive index of 
+water relative to the air.
 
 \section{Derivation of the formula}
-Let the indices of refraction  of air and of water be $n_1$ and $n_2$,
-respectively. The point object $O$ is at the depth $D$ below 
-the boundary of air and water. A ray starts off the object and enters the boundary of media at 
-$\alpha$ away from the $y$-axis with angle $\theta_2$ from the normal at 
-that point and then refracts into air with angle $\theta_1$ from the same 
-normal.
+Let the refractive indices  of air and water be $n_1$ and $n_2$, respectively. 
+The point object $O$ is at the depth $D$ below the boundary of air and water. 
+A ray starts off the object and enters the boundary of media at $\alpha$ away 
+from the $y$-axis with angle $\theta_2$ from the normal at that point and then 
+refracts into air with angle $\theta_1$ from the same normal.
 
 \includegraphics[width=2.2in]{g237.eps}
 
@@ -70,7 +72,7 @@ while keeping the distance between them a constant; namely $1$.
 
 \includegraphics{g107.eps}
 
-The envelope of such a segment is well-known as an \emph{astroid}\footnote{Not 
+The envelope of such a segment is well-known as an \href{https://en.wikipedia.org/wiki/Astroid}{\emph{astroid}}\footnote{Not 
 to be confused with {\emph{asteroid}}.}, which is described by the 
 equation
 $$ \left| \xi \right|^{2/3} + \left| \eta \right|^{2/3} = 1. $$
@@ -113,19 +115,57 @@ $$ \left\{
 If the object is in the air, at height of D above the boundary, and the POV
 is under water, the relative index of refraction is $1/n < 1$, and the similar reasoning
 leads to the equation
-$$ - \left| \xi \right|^{2/3} + \left| \eta \right|^{2/3} = 1, $$
+$$ \left| \xi \right|^{2/3} - \left| \eta \right|^{2/3} = -1, $$
 with $\xi = \dfrac{x}{W} $ and $\eta = \dfrac{y}{Z}$, where
 $W = \dfrac{nD}{\sqrt{1-n^2}}$ and $Z = nD$.
 
-I could not find the name for this shape of the curve. The astroid is a member of the 
-family of curves named \emph{superellipse}, which is defined by 
-$$ \left| \xi \right|^{n} + \left| \eta \right|^{n} = 1. $$
+However, I could not find the name for this shape of the curve.  \\
 
-Asteroid is the case where $n=2/3$. But as far as I know there's no name for the 
+\includegraphics[width=3in]{g254.eps}
+
+If this curve, 
+$$ \left| \xi \right|^{2/3} - \left| \eta \right|^{2/3} = \pm1, $$
+which has physical significance and is also related to the astroid, does not yet have a name,
+how about calling it a \emph{hyperastroid} because it has a relationship with the 
+astroid similar to that of a hyperbola to an ellipse?
+
+The astroid is a member of the 
+family of curves named \href{https://mathworld.wolfram.com/Astroid.html}{\emph{superellipse}}, which is defined by 
+$$ \left| \xi \right|^{r} + \left| \eta \right|^{r} = 1. $$
+
+Asteroid is the case where $r=2/3$. But as far as I know nor is there a name for the 
 family of curves in the form
-$$ \left| \xi \right|^{n} - \left| \eta \right|^{n} = \pm 1, $$
+$$ \left| \xi \right|^{r} - \left| \eta \right|^{r} = \pm 1, $$
 which could be named \emph{super-hyperbola}, although the repeating cognates may 
 bother you\footnote{I might suggest \emph{superbola}.}.
+
+\appendix
+\newcommand{\pardiff}[2]{{\frac{\partial #1}{\partial #2}}}
+\newcommand{\ilpardiff}[2]{{{\partial #1}/{\partial #2}}}
+\section*{Note: Astroid as an envelope}
+Let's assume that a point $(K, 0)$ on the x-axis and a point $(0, H)$ on the y-axis in a Cartesian plane move while maintaining a constant distance $a$ between them. Then, $K^2+H^2=a^2$, and the equation of the line containing the line segment at a certain moment can be written as
+$$y=-\dfrac{H}{K}(x-K)$$
+and using $H=\pm \sqrt{a^2-K^2}$, we have
+$$y(x, K) = \mp \dfrac{\sqrt{a^2-K^2}}{K}(x-K)$$
+As the value of $K$ changes, the line segment or line connecting the two points changes, and the envelope drawn by it is the locus of stationary points at each moment, that is, the locus of points where $\ilpardiff{y}{K} = 0$. Let's find the $(x, y)$ that satisfy this condition.
+
+$$ \begin{aligned}
+	\pardiff{y}{K} &= \pm\left[\left( \dfrac{1}{\sqrt{a^2-K^2}}+\dfrac{\sqrt{a^2-K^2}}{K^2}\right) (x_{0}-K) + \dfrac{\sqrt{a^2-K^2}}{K} \right]\\
+	&= \pm \dfrac{(K^2+a^2-K^2)(x_{0}-K)+K(a^2-K^2)}{K^2\sqrt{a^2-K^2}}\\
+	&= 0.
+\end{aligned}
+$$
+Therefore the abscissa of the stationary point is $x = K^3/a^2$, and its ordinate is
+
+$$ \begin{aligned}
+	y(x, K) &= \mp \dfrac{\sqrt{a^2-K^2}}{K}\left(\dfrac{K^3}{a^2}-K\right)\\
+	& = \pm \dfrac{\left( a^2- K^2 \right)^{3/2}}{a^2}\\
+	& = \dfrac{H^3}{a^2}
+\end{aligned}
+$$
+Therefore, the coordinate $(x, y)$ of the stationary points satisfies the equation
+$$ \left|\dfrac{x}{a}\right|^{2/3} + \left|\dfrac{y}{a}\right|^{2/3} = 1. $$
+$\blacksquare$
 
 \end{document}
 
