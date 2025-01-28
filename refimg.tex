@@ -10,19 +10,20 @@
 \begin{document}
 \maketitle
 \section{Introduction}
-If you see a point object under water from  above the flat surface of water, 
-the position of image depends on the point of view(POV). The image seen
- within a normal plane traces out a specific curve that is called a  
- \emph{squashed astroid} as the POV moves around.
+When viewing a point object submerged in a flat water surface from above, 
+the apparent position of the object varies depending on the point of 
+view (POV). As the POV moves, the trace of the image observed within the 
+normal plane is a kind of caustic\footnote{Since it is a locus of virtual 
+image, it can be called a \emph{virtual caustic}.}, and in this case, 
+the caustic forms a specific curve called a  \emph{squashed astroid}.
 
 \includegraphics[width=2.7in]{g409.eps}
 
 Let the normal plane that contains the object and  POV be the $xy$-plane,
- and let the intersection of  normal plane and the surface of water be the 
- $x$-axis, and the normal through  object $y$-axis. Then the locus of image 
- is part of the curve 
-$$ \left| \dfrac{x}{M} \right| ^ {2/3} 
-+ \left| \dfrac{y}{N} \right| ^ {2/3} = 1,$$
+and let the intersection of  normal plane and the surface of water be the 
+$x$-axis, and the normal through  object $y$-axis. Then the trace of image 
+is part of the curve 
+$$ \left| \dfrac{x}{M} \right| ^ {2/3} + \left| \dfrac{y}{N} \right| ^ {2/3} = 1,$$
 where $M = D/\sqrt{n^2 - 1}$ is the maximum distance of incidence
 determined by the critical angle of total internal reflection and $N = D/n$ 
 is the apparent depth of the object when observed from directly above, where
@@ -32,8 +33,8 @@ water relative to the air.
 \section{Derivation of the formula}
 Let the refractive indices  of air and water be $n_1$ and $n_2$, respectively. 
 The point object $O$ is at the depth $D$ below the boundary of air and water. 
-A ray starts off the object and enters the boundary of media at $\alpha$ away 
-from the $y$-axis with angle $\theta_2$ from the normal at that point and then 
+A ray starts off the object and enters the boundary of media at point A, which is a distance $\alpha$ away 
+from the $y$-axis, with angle $\theta_2$ from the normal at that point, and then 
 refracts into air with angle $\theta_1$ from the same normal.
 
 \includegraphics[width=2.2in]{g237.eps}
@@ -46,7 +47,7 @@ where
 $$k=\dfrac{1}{\tan\theta_1}=\dfrac{\cos\theta_1}{\sin\theta_1},$$
 and considering the Snell's law,
 $$k=\dfrac{\sqrt{1-n^2\sin^2\theta_2}}{n\sin\theta_2}.$$
-This line meets the $y$-axis at $y=\beta$, thus
+This line meets the $y$-axis at B($y=\beta$), thus
 $$\beta = -k\alpha.$$
 By the geometry we have
 $$\alpha = D\tan\theta_2 = \dfrac{D\sin\theta_2}{\cos\theta_2},$$
@@ -78,7 +79,7 @@ equation
 $$ \left| \xi \right|^{2/3} + \left| \eta \right|^{2/3} = 1. $$
 
 The image is at the point of tangency $\mathrm{C}$ of the segment 
-$\overline{\mathrm{AB}}$ and the envelope of the moving segment, for 
+$\overline{\mathrm{AB}}$ and the envelope, for 
 it is the instant point of divergence of the neighboring pencil of rays.
 Its corresponding point in the $\xi\eta$-plane is $(K^3, H^3)$.
 
@@ -112,14 +113,16 @@ $$ \left\{
 \right.$$
 
 \section{POV under water}
-If the object is in the air, at height of D above the boundary, and the POV
-is under water, the relative index of refraction is $1/n < 1$, and the similar reasoning
-leads to the equation
-$$ \left| \xi \right|^{2/3} - \left| \eta \right|^{2/3} = -1, $$
-with $\xi = \dfrac{x}{W} $ and $\eta = \dfrac{y}{Z}$, where
-$W = \dfrac{nD}{\sqrt{1-n^2}}$ and $Z = nD$.
 
-However, I could not find the name for this shape of the curve.  \\
+If the object is located at a height D above a boundary surface in air and the POV
+is submerged in water, the relative refractive index is less than 1, i.e., $1/n < 1$.
+Through similar reasoning, we can derive the following equation for the caustic:
+
+$$ \left| \xi \right|^{2/3} - \left| \eta \right|^{2/3} = -1, $$
+
+where $\xi = \dfrac{x}{W} $, $\eta = \dfrac{y}{Z}$, $W = \dfrac{nD}{\sqrt{1-n^2}}$,
+and $Z = nD$. However, I have been unable to find a specific name for the shape of 
+this caustic curve.
 
 \includegraphics[width=3in]{g254.eps}
 
@@ -139,6 +142,34 @@ $$ \left| \xi \right|^{r} - \left| \eta \right|^{r} = \pm 1, $$
 which could be named \emph{super-hyperbola}, although the repeating cognates may 
 bother you\footnote{I might suggest \emph{superbola}.}.
 
+\section{Finding the Image Location}
+Since we can obtain a closed form of the caustic, we can find the location of the 
+image given the object and the POV as follows.
+
+\includegraphics[width=3in]{g394.eps}
+
+Draw a tangent line from the POV to the caustic. The point of tangency between the 
+tangent line and the caustic is the location of the image, and the point where the 
+tangent line intersects the water surface is the point where the light ray from 
+the object is incident on the water surface.
+
+If there is a continuous object in the water, we can find the image for each point
+$1, 2, 3, \dots$ located along the surface of the object in the same way. The locus 
+of the image as the point moves continuously will be the image of the object.
+
+\includegraphics*[width=3in]{g240.eps}
+
+However, it is difficult, if not impossible, to find the tangent line to the caustic analytically, and 
+in practice, we must be satisfied with finding an approximate value using numerical 
+methods.
+
+Another method is to numerically find the path of the light ray connecting the object 
+and the viewpoint using Fermat's principle, and then find the location of the image 
+by using the tangent point formula of the astroid based on the coordinates of the 
+point where the light ray intersects the water surface. A Python example for this can 
+be found at \href{https://github.com/mingshey/python_projects/blob/main/Refraction_Image_en.ipynb}%
+{github.com/mingshey/python\_projects}.
+
 \appendix
 \newcommand{\pardiff}[2]{{\frac{\partial #1}{\partial #2}}}
 \newcommand{\ilpardiff}[2]{{{\partial #1}/{\partial #2}}}
@@ -150,8 +181,9 @@ $$y(x, K) = \mp \dfrac{\sqrt{a^2-K^2}}{K}(x-K)$$
 As the value of $K$ changes, the line segment or line connecting the two points changes, and the envelope drawn by it is the locus of stationary points at each moment, that is, the locus of points where $\ilpardiff{y}{K} = 0$. Let's find the $(x, y)$ that satisfy this condition.
 
 $$ \begin{aligned}
-	\pardiff{y}{K} &= \pm\left[\left( \dfrac{1}{\sqrt{a^2-K^2}}+\dfrac{\sqrt{a^2-K^2}}{K^2}\right) (x_{0}-K) + \dfrac{\sqrt{a^2-K^2}}{K} \right]\\
-	&= \pm \dfrac{(K^2+a^2-K^2)(x_{0}-K)+K(a^2-K^2)}{K^2\sqrt{a^2-K^2}}\\
+	\pardiff{y}{K} &= \pm\left[\left( \dfrac{1}{\sqrt{a^2-K^2}}+\dfrac{\sqrt{a^2-K^2}}{K^2}\right) (x-K) + \dfrac{\sqrt{a^2-K^2}}{K} \right]\\
+	&= \pm \dfrac{(K^2+a^2-K^2)(x-K)+K(a^2-K^2)}{K^2\sqrt{a^2-K^2}}\\
+	&= \pm \dfrac{a^2 x - K^3}{K^2 \sqrt{a^2 - K^2}}\\
 	&= 0.
 \end{aligned}
 $$
