@@ -10,34 +10,57 @@
 \begin{document}
 \maketitle
 \section{Introduction}
-When viewing a point object submerged in a flat water surface from above, 
-the apparent position of the object varies depending on the point of 
-view (POV). As the POV moves, the trace of the image observed within the 
-normal plane is a kind of caustic\footnote{Since it is a locus of virtual 
-image, it can be called a \emph{virtual caustic}.}, and in this case, 
-the caustic forms a specific curve called a  \emph{squashed astroid}.
+The phenomenon of a pencil appearing bent when submerged in water is a 
+familiar sight commonly encountered when first learning about refraction. 
+However, it is observable that the tip of the pencil does not always appear 
+at the same location. While the depth when viewed directly from above is 
+covered in introductory physics courses, the reasons behind the variations 
+in depth and apparent position when viewed obliquely often remain unexplored. 
+Perhaps it is considered too complex to delve into in depth. In fact, in 
+advanced optics textbooks, this simple question is often overlooked in favor 
+of more significant topics such as lenses and mirrors.
 
-\includegraphics[width=2.7in]{g409.eps}
+Nevertheless, this seemingly simple yet intriguing question continues to 
+pique our curiosity. It is likely that others, besides the author, have 
+pondered this question. This study aims to provide an answer.
+
+\section{Quick answer}
+For the impatient reader, here's the quick answer:
+Consider a point object submerged in water. The observation point (POV) is 
+located above the water surface. The object and the POV lie within a common normal plane. 
 
 Let the normal plane that contains the object and  POV be the $xy$-plane,
 and let the intersection of  normal plane and the surface of water be the 
-$x$-axis, and the normal through  object $y$-axis. Then the trace of image 
-is part of the curve 
+$x$-axis, and the normal through  object $y$-axis.
+
+As the POV moves within the normal plane, the apparent position of the 
+object changes. The locus of these apparent positions forms a curve, 
+which can be classified as a type of caustic\footnote{Since this is a 
+locus of virtual images, it can be termed a \emph{virtual caustic}.}. 
+
+It is shown that this caustic curve is a \emph{squashed astroid}
+and can be described by the following equation:
+
 $$ \left| \dfrac{x}{M} \right| ^ {2/3} + \left| \dfrac{y}{N} \right| ^ {2/3} = 1,$$
-where $M = D/\sqrt{n^2 - 1}$ is the maximum distance of incidence
-determined by the critical angle of total internal reflection and $N = D/n$ 
-is the apparent depth of the object when observed from directly above, where
-$D$ is the actual depth of the object, and $n$ is the refractive index of 
-water relative to the air.
+where 
+$M = D/\sqrt{n^2 - 1}$ represents the maximum distance of incidence determined 
+by the critical angle of total internal reflection, 
+$N = D/n$ represents the apparent depth of the object when observed directly 
+from above,
+$D$ is the actual depth of the object, and
+$n$ is the refractive index of water relative to air.
+
+
+\includegraphics[width=2.7in]{g409.eps}
 
 \section{Derivation of the formula}
-Let the refractive indices  of air and water be $n_1$ and $n_2$, respectively. 
-The point object $O$ is at the depth $D$ below the boundary of air and water. 
-A ray starts off the object and enters the boundary of media at point A, which is a distance $\alpha$ away 
-from the $y$-axis, with angle $\theta_2$ from the normal at that point, and then 
-refracts into air with angle $\theta_1$ from the same normal.
 
-\includegraphics[width=2.2in]{g237.eps}
+Consider a point object O submerged at a depth D below the planar interface 
+between air (refractive index $n_1$) and water (refractive index $n_2$). 
+A ray of light emanating from O strikes the interface at point A, located a 
+distance $\alpha$ from the y-axis. The incident ray makes an angle $\theta_2$ 
+with the normal at A, and the refracted ray in air makes an angle $\theta_1$ 
+with the same normal.
 
 From Snell's law we have
 $$ \sin\theta_1 = \frac{n_2}{n_1} \sin\theta_2 = n\sin\theta_2.$$
@@ -47,8 +70,12 @@ where
 $$k=\dfrac{1}{\tan\theta_1}=\dfrac{\cos\theta_1}{\sin\theta_1},$$
 and considering the Snell's law,
 $$k=\dfrac{\sqrt{1-n^2\sin^2\theta_2}}{n\sin\theta_2}.$$
+
+\includegraphics[width=3in]{g237.eps}
+
 This line meets the $y$-axis at B($y=\beta$), thus
 $$\beta = -k\alpha.$$
+
 By the geometry we have
 $$\alpha = D\tan\theta_2 = \dfrac{D\sin\theta_2}{\cos\theta_2},$$
 and
@@ -66,22 +93,27 @@ $$ \begin{aligned}
 	&=\dfrac{1-\sin^2\theta_2}{\cos^2\theta_2}\\
 	&=1
 \end{aligned}$$
-Let $\xi=x/M$ and $\eta=y/N$, then as the POV moves around in the $xy$-plane,
-the points $\mathrm{A}(\alpha, 0)$, and $\mathrm{B}(0, \beta)$ move accordingly,  
-and the points $(K, 0)$ and $(0, H)$ in the $\xi\eta$-plane follow suite, 
-while keeping the distance between them a constant; namely $1$.
 
-\includegraphics{g107.eps}
+We introduce dimensionless parameters $\xi=x/M$ and $\eta=y/N$. 
+As the POV traverses the $xy$-plane, the corresponding points transform accordingly:
+Point $\mathrm{A}(\alpha, 0)$ in object space maps to $\mathrm{K}(K, 0)$ in the $\xi\eta$-plane 
+and point $\mathrm{B}(0, \beta)$ in object space maps to $\mathrm{H}(0, H)$ in the $\xi\eta$-plane. 
+Crucially, the distance between these transformed points remains constant and equal 
+to unity throughout the movement of the POV.
 
-The envelope of such a segment is well-known as an \href{https://en.wikipedia.org/wiki/Astroid}{\emph{astroid}}\footnote{Not 
-to be confused with {\emph{asteroid}}.}, which is described by the 
-equation
-$$ \left| \xi \right|^{2/3} + \left| \eta \right|^{2/3} = 1. $$
+\hfill \includegraphics{g107.eps} \hfill\null
 
-The image is at the point of tangency $\mathrm{C}$ of the segment 
-$\overline{\mathrm{AB}}$ and the envelope, for 
-it is the instant point of divergence of the neighboring pencil of rays.
-Its corresponding point in the $\xi\eta$-plane is $(K^3, H^3)$.
+The locus of the segment $\overline{\mathrm{KH}}$ in the $\xi\eta$-plane, generates an envelope, which is a 
+well-defined geometric shape known as an astroid (not to be confused with an asteroid). 
+Mathematically, an astroid is described by the following equation:
+
+$$ \left| \xi \right|^{2/3} + \left| \eta \right|^{2/3} = 1 $$
+
+The image of the submerged object is located at the point of tangency (point $\mathrm{C}$) 
+between the segment $\overline{\mathrm{AB}}$(in object space) and the squashed astroid 
+envelope in the $xy$-plane. This tangency point signifies the point of divergence for the 
+neighboring bundle of light rays. The corresponding coordinates of point $\xi\eta$-plane is 
+$\mathrm{G}(K^3, H^3)$.
 
 Thus we can obtain the coordinates of image $(x_{\mathrm{C}}^{}, y_{\mathrm{C}}^{})$ 
 from the relation
@@ -91,6 +123,7 @@ $$ \left\{
 	\eta_{\mathrm{C}}^{} &= \dfrac{y_{\mathrm{C}}^{}}{N} = H^3 = \dfrac{\beta^3}{N^3}.
 \end{aligned}
 \right.$$
+
 That is
 $$ \left\{ 
 \begin{aligned}
@@ -113,24 +146,35 @@ $$ \left\{
 \right.$$
 
 \section{POV under water}
-
-If the object is located at a height D above a boundary surface in air and the POV
-is submerged in water, the relative refractive index is less than 1, i.e., $1/n < 1$.
-Through similar reasoning, we can derive the following equation for the caustic:
+When an object is located at a height $D$ above a planar interface separating 
+air and water, and the point of observation (POV) is submerged in water, the 
+relative refractive index is less than unity, i.e., $1/n < 1$. Through similar 
+reasoning, the equation for the caustic can be derived as:
 
 $$ \left| \xi \right|^{2/3} - \left| \eta \right|^{2/3} = -1, $$
 
-where $\xi = \dfrac{x}{W} $, $\eta = \dfrac{y}{Z}$, $W = \dfrac{nD}{\sqrt{1-n^2}}$,
-and $Z = nD$. However, I have been unable to find a specific name for the shape of 
-this caustic curve.
+where $\xi = \dfrac{x}{W} $, $\eta = \dfrac{y}{Z}$, 
+$W = \dfrac{nD}{\sqrt{n^2-1}}$, and $Z = nD$. This curve exhibits asymptotes 
+with slopes of $\pm Z/W = \pm \sqrt{n^2-1}$. 
+
+Consequently, the observed imagery of the \emph{skyscape} above the water, 
+as viewed from underwater, is compressed into a circular region (or more 
+accurately, a cone) bounded by the critical angle of total internal reflection, 
+commonly referred to as Snell's window. This circular, wide-angle view, as 
+perceived by an underwater observer, bears a resemblance to the field of view 
+captured by a fisheye lens.
+
+To the best of the author's knowledge, a specific name for this shape of the 
+caustic curve has not been established in the literature. Given that the 
+generalized form of this curve, 
+
+$$ \left| \xi \right|^{2/3} - \left| \eta \right|^{2/3} = \pm1, $$
+has physical significance as the caustic of rays emanating from a point light 
+source above water and refracted into water, and given its relationship to 
+the astroid, analogous to the relationship between a hyperbola and an ellipse, 
+the term \emph{hyperastroid} is proposed as a suitable nomenclature.\\
 
 \includegraphics[width=3in]{g254.eps}
-
-If this curve, 
-$$ \left| \xi \right|^{2/3} - \left| \eta \right|^{2/3} = \pm1, $$
-which has physical significance and is also related to the astroid, does not yet have a name,
-how about calling it a \emph{hyperastroid} because it has a relationship with the 
-astroid similar to that of a hyperbola to an ellipse?
 
 The astroid is a member of the 
 family of curves named \href{https://mathworld.wolfram.com/Astroid.html}{\emph{superellipse}}, which is defined by 
@@ -148,14 +192,16 @@ image given the object and the POV as follows.
 
 \includegraphics[width=3in]{g394.eps}
 
-Draw a tangent line from the POV to the caustic. The point of tangency between the 
-tangent line and the caustic is the location of the image, and the point where the 
-tangent line intersects the water surface is the point where the light ray from 
-the object is incident on the water surface.
+A tangent line is drawn from the POV to the caustic curve. The point of tangency 
+between the tangent line and the caustic represents the location of the image of 
+the point source. Simultaneously, the intersection point of this tangent line 
+with the water surface identifies the point of incidence of the light ray 
+originating from the object.
 
-If there is a continuous object in the water, we can find the image for each point
-$1, 2, 3, \dots$ located along the surface of the object in the same way. The locus 
-of the image as the point moves continuously will be the image of the object.
+For an extended object within the water, the image of each point on the object's 
+surface can be determined by applying the same procedure. The locus of these 
+individual image points, as the point moves continuously along the object's 
+surface, constitutes the image of the extended object.
 
 \includegraphics*[width=3in]{g240.eps}
 
