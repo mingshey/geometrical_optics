@@ -1,5 +1,5 @@
 \documentclass[twocolumn]{article}
-\usepackage[a4paper, top=1in, bottom=1in, left=2cm, right=2cm]{geometry}
+\usepackage[a4paper, top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
 \usepackage[onehalfspacing]{setspace}
 \usepackage{amsmath}
 \usepackage{amssymb}
@@ -24,14 +24,19 @@
 
 \section{간단한 해답}
 
-\hfill \includegraphics[width=2.7in]{g409.eps} \hfill\null
-
 호기심은 있지만 시간을 많이 할애하기 어려운 독자를 위해 결론부터 말하자면 이렇다:  
 평평한 수면 아래의 점 물체를 수면 위에서 바라볼 때, 상의 위치는 시점(POV)에 따라 달라진다. 
 시점이 움직임에 따라 법평면 내에서 관찰되는 상의 자취는 일종의  코스틱\footnote{허상의 
 자취이므로 ``허코스틱''(\emph{virtual caustic}) 이라고 할 수 있겠다.}인데, 이 경우에 
 코스틱은 ``찌그러진 아스트로이드''라고 불리는 특정 곡선이다.
 	
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=3in]{g409.eps} \hfill\null
+	\caption{시점에 따라 위치가 달라지는 상의 자취}
+	\label{fig:caustic}
+\end{figure}
+
 물체와 시점을 포함하는 법평면을 $xy$-평면으로 하고, 법평면과 수면의 교선을 $x$-축으로, 
 물체를 통과하는 법선을 $y$-축으로 하자. 그러면 상의 자취는 다음 곡선의 일부이다.
 	$$ \left| \dfrac{x}{M} \right| ^ {2/3} 
@@ -46,35 +51,44 @@ $D$는 물체의 실제 깊이이고, $n$은 공기에 대한 물의 굴절률�
 물체에서 출발한 광선이 $y$-축으로부터 $\alpha$만큼 떨어진 경계면 위의 점 A에 
 법선으로부터 $\theta_2$의 각도로 입사한 후, 동일한 법선으로부터 $\theta_1$의 각도로 공기 중으로 굴절된다.
 
-\hfill \includegraphics[width=2.2in]{g237.eps}\hfill\null\\
+\begin{figure}
+	\centering
+	\includegraphics[width=3in]{g237.eps}
+	\caption{물-공기 경계면에서 굴절하는 광선 및 그 연장선과 코스틱의 기하학적 관계}
+	\label{fig:geometry}
+\end{figure}
+
 
 이 때 스넬의 법칙에 따라 다음이 성립한다.
 $$ \sin\theta_1 = \frac{n_2}{n_1} \sin\theta_2 = n\sin\theta_2.$$
 굴절된 광선의 연장선은 다음 방정식으로 표현된다.
 $$y=k(x-\alpha).$$
+
 여기서 
 $$k=\dfrac{1}{\tan\theta_1}=\dfrac{\cos\theta_1}{\sin\theta_1}$$
 이고, 스넬의 법칙을 고려하면,
 $$k=\dfrac{\sqrt{1-n^2\sin^2\theta_2}}{n\sin\theta_2}.$$
 이 직선은 $y$-축과 점 B($y=\beta$)에서 만나므로,
 $$\beta = -k\alpha.$$
-기하학적으로 다음을 얻을 수 있다.
-$$\alpha = D\tan\theta_2 = \dfrac{D\sin\theta_2}{\cos\theta_2},$$
-및
+기하학적으로 다음을 얻을 수 있다:
+$$\alpha = D\tan\theta_2 = \dfrac{D\sin\theta_2}{\cos\theta_2}.$$
+따라서
 $$\begin{aligned}
 	\beta &= -k\alpha \\
 	&= -\dfrac{D\sin\theta_2}{\cos\theta_2}
 	\dfrac{\sqrt{1-n^2\sin^2\theta_2}}{n\sin\theta_2}\\
 	&=-\dfrac{D\sqrt{1-n^2\sin^2\theta_2}}{n\cos\theta_2}.
 \end{aligned}$$
+
 이제, $K=\alpha/M$ 및 $H=\beta/N$이라 하면,
+
 $$ \begin{aligned}
 	K^2 + H^2 &= \dfrac{\alpha^2}{M^2}+\dfrac{\beta^2}{N^2}\\
 	&=\dfrac{\left(n^2-1\right)\sin^2\theta_2 + 1-n^2\sin^2\theta_2}
 	{\cos^2\theta_2}\\
-	&=\dfrac{1-\sin^2\theta_2}{\cos^2\theta_2}\\
-	&=1
+	&=\dfrac{1-\sin^2\theta_2}{\cos^2\theta_2}=1
 \end{aligned}$$
+
 $\xi=x/M$ 및 $\eta=y/N$이라고 하면, 시점이 $xy$-평면에서 움직임에 따라,
 점 $\mathrm{A}(\alpha, 0)$ 및 $\mathrm{B}(0, \beta)$도 이에 따라 움직이는데, 
 점  $\mathrm{A}$, $\mathrm{B}$는 각각  $\xi\eta$-평면의 점 $\mathrm{K}(K, 0)$
@@ -87,7 +101,12 @@ $\xi=x/M$ 및 $\eta=y/N$이라고 하면, 시점이 $xy$-평면에서 움직임�
 다음 방정식으로 표현된다.
 $$ \left| \xi \right|^{2/3} + \left| \eta \right|^{2/3} = 1. $$
 
-\hfill\includegraphics{g107.eps} \hfill\null
+\begin{figure}[h]
+	\centering
+	\includegraphics{g107.eps}	
+	\caption{코스틱을 $\xi\eta$ 평면에 투영한 모습은 아스트로이드이다.}
+	\label{fig:astroid}
+\end{figure}
 
 상은 선분 $\overline{\mathrm{AB}}$와 포락선의 접점 $\mathrm{C}$에 위치한다. 
 이는 이 순간 인접한 광선 다발이 발산하는 점이기 때문이다. 
@@ -138,12 +157,17 @@ $\pm Z/W = \pm \sqrt{n^2-1}$인 점근선을 갖는다.
 `스넬의 창'(Snell's window)이라고 하는 잘 알려진 현상이며 전천 사진과 같은 초광각 
 사진에 사용되는 어안렌즈(fisheye lens)의 시야와도 닮았다.
 
-\includegraphics[width=3in]{g254.eps}
+\begin{figure}
+	\centering
+	\includegraphics[width=3in]{g254.eps}
+	\caption{아스트로이드 및 `쌍곡-아스트로이드'}
+	\label{fig:hyperastroid}
+\end{figure}
 
 이 곡선의 좀 더 일반적인 형태인 
 $$ \left| \xi \right|^{2/3} - \left| \eta \right|^{2/3} = \pm1 $$
-은 물리학적으로 물 위의 점광원에서 나와 물 속으로 들어가며 굴절된 광선들의 코스틱 
-곡선으로 등장하기도 하는데, 필자가 아는 바로는 아직 이름이 확립되지 않은 것같다.
+은 필자의 짧은 견문에 의하면 아직 이름이 확립되지 않은 것같다. 물 위의 점광원에서 
+나와 물 속으로 들어가며 굴절된 광선들의 코스틱 곡선으로서 물리학적으로도 의미가 있으므로 
 여기에 `쌍곡-아스트로이드'(\emph{hyperastroid})라고 이름을 붙여보는 것은 어떨까?
 아스트로이드에 대해 이 곡선은 타원에 대한 쌍곡선과도 비슷한 관계가 있기 때문이다. 
  
@@ -152,18 +176,27 @@ $$ \left| \xi \right|^{r} + \left| \eta \right|^{r} = 1. $$
 와 같이 정의되는 `초타원'(\href{https://mathworld.wolfram.com/Astroid.html}%
 {\emph{superellipse}})이라는 곡선 계열에 속한다. 
 아스트로이드는 $r=2/3$인 경우이다.
- 
-그러나 필자가 알기로는 다음 형태의 곡선 계열에 대한 이름도 없다.
+
+여기서 좌변의 두 번째 항을 더하는 대신 빼서 만든
 $$ \left| \xi \right|^{r} - \left| \eta \right|^{r} = \pm 1 $$
-이것은 `초쌍곡선'(\emph{super-hyperbola}\footnote{같은 의미의 반복되는 어원
-때문에 거슬릴 수도 있으니 \emph{superbola}라고 하는 것이 
-좋을 수도 있겠다.})이라고 부를 수 있을지 모르겠다.
+와 같은 곡선 계열을 \href{http://dynamicmathematicslearning.com/super-ellipse.html}%
+{`The Gielis Super Shape Formula'}에서는 \emph{Super Hyperbola}\footnote{같은 의미의 반복되는 어원
+\emph{super-}와 \emph{hyper-} 때문에 거슬릴 수도 있으니 \emph{superbola}라고 하는 것이 
+더 나은 이름일 수도 있겠다.}라는 이름으로 부르고 있고 
+\href{https://old.nationalcurvebank.org/superconicncb/superconicncb.htm}{`National Curve Bank'}에서는
+집합적인 명칭으로 \emph{Superconics}를 사용하고 있는데, 다른 사용 예를 찾지 못했고, 
+학계에서 확립된 명칭인지는 확인하지 못했다.
 
 \section{상의 위치 찾기}
 물체에 대한 허상의 코스틱을 닫힌 형태로 구할 수 있으므로 이를 이용하여 물체의 위치와 
 시점이 주어졌을 때 상의 위치를 다음과 같이 찾을 수 있다.
 
-\includegraphics[width=3in]{g394.eps}
+\begin{figure}
+	\centering
+	\includegraphics[width=3in]{g394.eps}
+	\caption{코스틱을 이용한 상의 위치 결정}
+	\label{fig:image_caustic}
+\end{figure}
 
 시점에서 코스틱에 접선을 그린다. 접선과 코스틱의 접점이 상의 위치이고, 접선이 수면과 
 교차하는 점은 물체에서 나온 광선이 수면에 입사하는 점이다.
@@ -172,7 +205,12 @@ $$ \left| \xi \right|^{r} - \left| \eta \right|^{r} = \pm 1 $$
 각각 이와 같은 방법으로 상을 찾을 수 있다. 점이 연속으로 움직일 때 따라 움직이는 상의 자취가 
 물체의 상이 될 것이다.
 
-\includegraphics*[width=3in]{g240.eps}
+\begin{figure}
+	\centering
+	\includegraphics*[width=3in]{g240.eps}
+	\caption{연속적인 물체의 상}
+	\label{fig:extended_image}
+\end{figure}
 
 단, 코스틱에 대한 접선은 해석적으로 찾기 어렵고 실제로는 수치적인 방법을 이용하여 
 근삿값을 찾는 것으로 만족해야 할 것이다.
@@ -185,25 +223,25 @@ $$ \left| \xi \right|^{r} - \left| \eta \right|^{r} = \pm 1 $$
 
 
 \appendix
+\newcommand{\pd}[2]{{\frac{\partial #1}{\partial #2}}}
+\newcommand{\ilpd}[2]{{{\partial #1}/{\partial #2}}}
 \section*{부록: 포락선으로 정의한 아스트로이드}
 평면 상의 직교 좌표에서 $x$ 축 위의 점  $(K, 0)$과 $y$ 축 위의 점 $(0, H)$가 일정한 거리 $a$를 유지하며 움직인다고 하자. 그러면 $K^2+H^2=a^2$이고, 어느 순간 선분을 포함하는 직선의 방정식을 
 $$y=-\dfrac{H}{K}(x-K)$$
-라 쓸 수 있고, $H=\pm \sqrt{a^2-K^2}$임을 이용하면 
+라 쓸 수 있고, $H=\pm \sqrt{a^2-K^2}$를 대입하면 
 $$y(x, K) = \mp \dfrac{\sqrt{a^2-K^2}}{K}(x-K)$$
 라 할 수 있다. 
-$K$값이 변할 때 두 점을 잇는 선분 또는 직선이 변하며 그리는 포락선은 매 순간 정류점들의 자취, 즉
-\newcommand{\pardiff}[2]{{\frac{\partial #1}{\partial #2}}}
-\newcommand{\ilpardiff}[2]{{{\partial #1}/{\partial #2}}}
-$\ilpardiff{y}{K} = 0$인 점들의 자취이다. 이 조건을 만족하는 $(x, y)$들을 구해 보자.
+$K$ 값이 변하면 두 점을 잇는 선분도 변한다. 이러한 선분들의 계열이 이루는 포락선은 $K$가 극소량 변할 때 변하지 않는 정류점, 즉
+$\ilpd{y}{K} = 0$인 점들의 자취로 정의할 수 있다. 이 조건을 만족하는 $(x, y)$들을 구하기 위해 $y$를 $K$로 미분하면,
 
 $$ \begin{aligned}
-\pardiff{y}{K} &= \pm\left[\left( \dfrac{1}{\sqrt{a^2-K^2}}+\dfrac{\sqrt{a^2-K^2}}{K^2}\right) (x-K) + \dfrac{\sqrt{a^2-K^2}}{K} \right]\\
+\pd{y}{K} &= \pm\left[\left( \dfrac{1}{\sqrt{a^2-K^2}}+\dfrac{\sqrt{a^2-K^2}}{K^2}\right) (x-K) + \dfrac{\sqrt{a^2-K^2}}{K} \right]\\
 	&= \pm \dfrac{(K^2+a^2-K^2)(x-K)+K(a^2-K^2)}{K^2\sqrt{a^2-K^2}}\\
 	&= \pm \dfrac{a^2 x - K^3}{K^2 \sqrt{a^2 - K^2}}\\
 	&= 0.
 \end{aligned}
 $$
-따라서 정류점의 $x$좌표는 $x = K^3/a^2$ 이고, 이 때 $y$좌표의 값은
+따라서 정류점의 $x$좌표는 $x = K^3/a^2$ 이고, 이를 다시 $y(x, K)$에 대입하면 $y$좌표의 값은
 
 $$ \begin{aligned}
 y(x, K) &= \mp \dfrac{\sqrt{a^2-K^2}}{K}\left(\dfrac{K^3}{a^2}-K\right)\\

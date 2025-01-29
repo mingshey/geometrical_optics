@@ -24,7 +24,7 @@ Nevertheless, this seemingly simple yet intriguing question continues to
 pique our curiosity. It is likely that others, besides the author, have 
 pondered this question. This study aims to provide an answer.
 
-\section{Quick answer}
+\section{Quick Answer}
 For the impatient reader, here's the quick answer:
 Consider a point object submerged in water. The observation point (POV) is 
 located above the water surface. The object and the POV lie within a common normal plane. 
@@ -50,10 +50,14 @@ from above,
 $D$ is the actual depth of the object, and
 $n$ is the refractive index of water relative to air.
 
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=2.7in]{g409.eps}
+	\caption{Illustration of the caustic curve formed by the apparent positions of a submerged object as viewed from above the water surface.}
+	\label{fig:caustic_curve}
+\end{figure}
 
-\includegraphics[width=2.7in]{g409.eps}
-
-\section{Derivation of the formula}
+\section{Derivation of the Formula}
 
 Consider a point object O submerged at a depth D below the planar interface 
 between air (refractive index $n_1$) and water (refractive index $n_2$). 
@@ -71,7 +75,11 @@ $$k=\dfrac{1}{\tan\theta_1}=\dfrac{\cos\theta_1}{\sin\theta_1},$$
 and considering the Snell's law,
 $$k=\dfrac{\sqrt{1-n^2\sin^2\theta_2}}{n\sin\theta_2}.$$
 
-\includegraphics[width=3in]{g237.eps}
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=3in]{g237.eps}
+	\caption{Geometry of light refraction at the air-water interface.} 
+\end{figure}
 
 This line meets the $y$-axis at B($y=\beta$), thus
 $$\beta = -k\alpha.$$
@@ -101,7 +109,11 @@ and point $\mathrm{B}(0, \beta)$ in object space maps to $\mathrm{H}(0, H)$ in t
 Crucially, the distance between these transformed points remains constant and equal 
 to unity throughout the movement of the POV.
 
-\hfill \includegraphics{g107.eps} \hfill\null
+\begin{figure}[htbp]
+	\centering
+	\includegraphics{g107.eps}
+	\caption{Geometric representation in the transformed $\xi\eta$-plane.} 
+\end{figure}
 
 The locus of the segment $\overline{\mathrm{KH}}$ in the $\xi\eta$-plane, generates an envelope, which is a 
 well-defined geometric shape known as an astroid (not to be confused with an asteroid). 
@@ -145,105 +157,115 @@ $$ \left\{
 \end{aligned}
 \right.$$
 
-\section{POV under water}
-When an object is located at a height $D$ above a planar interface separating 
-air and water, and the point of observation (POV) is submerged in water, the 
-relative refractive index is less than unity, i.e., $1/n < 1$. Through similar 
-reasoning, the equation for the caustic can be derived as:
+\section{Underwater Viewpoint}
+
+Consider an object positioned at a height $D$ above a flat interface separating air and water. If the  POV is submerged in water, the relative refractive index becomes less than one, expressed as $1/n < 1$. Following similar reasoning, we can derive the equation for the caustic as:
 
 $$ \left| \xi \right|^{2/3} - \left| \eta \right|^{2/3} = -1, $$
 
-where $\xi = \dfrac{x}{W} $, $\eta = \dfrac{y}{Z}$, 
-$W = \dfrac{nD}{\sqrt{n^2-1}}$, and $Z = nD$. This curve exhibits asymptotes 
-with slopes of $\pm Z/W = \pm \sqrt{n^2-1}$. 
+where $\xi = \dfrac{x}{W}$, $\eta = \dfrac{y}{Z}$, $W = \dfrac{nD}{\sqrt{n^2-1}}$, and $Z = nD$. This curve exhibits asymptotes with slopes of $\pm Z/W = \pm \sqrt{n^2-1}$.
 
-Consequently, the observed imagery of the \emph{skyscape} above the water, 
-as viewed from underwater, is compressed into a circular region (or more 
-accurately, a cone) bounded by the critical angle of total internal reflection, 
-commonly referred to as Snell's window. This circular, wide-angle view, as 
-perceived by an underwater observer, bears a resemblance to the field of view 
-captured by a fisheye lens.
+Consequently, the observed image of the \emph{skyscape} above the water, as seen from underwater, is compressed into a circular region (or more precisely, a cone) bounded by the critical angle of total internal reflection, known as Snell's window. This wide-angle, circular view perceived by an underwater observer resembles the field of view captured by a fisheye lens.
 
-To the best of the author's knowledge, a specific name for this shape of the 
-caustic curve has not been established in the literature. Given that the 
-generalized form of this curve, 
+A specific name for this caustic curve shape appears to be absent in the current literature. The generalized form of this curve,
 
 $$ \left| \xi \right|^{2/3} - \left| \eta \right|^{2/3} = \pm1, $$
-has physical significance as the caustic of rays emanating from a point light 
-source above water and refracted into water, and given its relationship to 
-the astroid, analogous to the relationship between a hyperbola and an ellipse, 
-the term \emph{hyperastroid} is proposed as a suitable nomenclature.\\
+%
+holds physical significance as the caustic of rays emanating from a point light source above water and refracted into water. Given this significance and its relationship to the astroid, analogous to the connection between a hyperbola and an ellipse, we propose the term \emph{hyperastroid} as a suitable nomenclature.
 
-\includegraphics[width=3in]{g254.eps}
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=3in]{g254.eps}
+	\caption{An astroid and its hyperbolic counterparts}
+	\label{fig:caustic}
+\end{figure}
 
-The astroid is a member of the 
-family of curves named \href{https://mathworld.wolfram.com/Astroid.html}{\emph{superellipse}}, which is defined by 
+The astroid belongs to the family of curves known as \emph{superellipses} (see \href{https://mathworld.wolfram.com/Astroid.html}{MathWorld}), defined by the equation:
+
 $$ \left| \xi \right|^{r} + \left| \eta \right|^{r} = 1. $$
+%
+An astroid is the special case where $r=2/3$. 
 
-Asteroid is the case where $r=2/3$. But as far as I know nor is there a name for the 
-family of curves in the form
-$$ \left| \xi \right|^{r} - \left| \eta \right|^{r} = \pm 1, $$
-which could be named \emph{super-hyperbola}, although the repeating cognates may 
-bother you\footnote{I might suggest \emph{superbola}.}.
+A similar family of curves, defined by
+$$
+\left| \xi \right|^{r} - \left| \eta \right|^{r} = \pm 1,
+$$
+%
+has been called \emph{super hyperbolas} in \href{http://dynamicmathematicslearning.com/super-ellipse.html}{DML} \footnote{\ttfamily{dynamicmathematicslearning.com/super-ellipse.html}}. A collective term \emph{superconics} is used in \href{https://old.nationalcurvebank.org/superconicncb/superconicncb.htm}{NCB} \footnote{\ttfamily{nationalcurvebank.org/superconicncb/superconicncb.htm}}, but I have not found other instances of these terms in the literature and am uncertain if they are established terms in the field.
 
-\section{Finding the Image Location}
-Since we can obtain a closed form of the caustic, we can find the location of the 
-image given the object and the POV as follows.
+\section{Locating of the Image}
 
-\includegraphics[width=3in]{g394.eps}
+The closed-form solution of the caustic curve allows us to analytically determine the image location for a given object and point of view (POV).
 
-A tangent line is drawn from the POV to the caustic curve. The point of tangency 
-between the tangent line and the caustic represents the location of the image of 
-the point source. Simultaneously, the intersection point of this tangent line 
-with the water surface identifies the point of incidence of the light ray 
-originating from the object.
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=3in]{g394.eps}
+	\caption{Finding the image location using the caustic curve. The tangent line from the POV (dot and dash) intersects the caustic (orange) at the image point ($O^\prime$). The intersection with the water surface marks the light ray incidence point. }
+	\label{fig:image_location}
+\end{figure}
 
-For an extended object within the water, the image of each point on the object's 
-surface can be determined by applying the same procedure. The locus of these 
-individual image points, as the point moves continuously along the object's 
-surface, constitutes the image of the extended object.
+A tangent line is drawn from the POV to the caustic curve. The point of tangency between this line and the caustic represents the image location of the point source. Simultaneously, the intersection point of the tangent line with the water surface identifies the point of incidence for the light ray originating from the object.
 
-\includegraphics*[width=3in]{g240.eps}
+For an extended object submerged in water, the image of each point on its surface can be determined using the same procedure. The collection of these individual image points, as each point traverses the object's surface continuously, forms the image of the extended object.
 
-However, it is difficult, if not impossible, to find the tangent line to the caustic analytically, and 
-in practice, we must be satisfied with finding an approximate value using numerical 
-methods.
+\begin{figure}[htbp]
+	\centering
+	\includegraphics*[width=3in]{g240.eps}
+	\caption{Image formation for an extended object. Light rays from each point on the object (solid blue line) travel through water and refract, forming the image (dashed curve).}
+	\label{fig:extended_object}
+\end{figure}
 
-Another method is to numerically find the path of the light ray connecting the object 
-and the viewpoint using Fermat's principle, and then find the location of the image 
-by using the tangent point formula of the astroid based on the coordinates of the 
-point where the light ray intersects the water surface. A Python example for this can 
-be found at \href{https://github.com/mingshey/python_projects/blob/main/Refraction_Image_en.ipynb}%
-{github.com/mingshey/python\_projects}.
+However, analytically finding the tangent line to the caustic can be challenging, if not impossible. In practice, we resort to numerical methods to obtain an approximate solution.
+
+An alternative approach involves numerically tracing the light ray path connecting the object and the viewpoint using Fermat's principle. Then, based on the coordinates of the light ray's intersection point with the water surface, the tangent point formula of the astroid can be used to locate the image. A Python implementation for this method can be found at \href{https://github.com/mingshey/python_projects/blob/main/Refraction_Image_en.ipynb}{github.com/mingshey/python\_projects}.
 
 \appendix
-\newcommand{\pardiff}[2]{{\frac{\partial #1}{\partial #2}}}
-\newcommand{\ilpardiff}[2]{{{\partial #1}/{\partial #2}}}
-\section*{Note: Astroid as an envelope}
-Let's assume that a point $(K, 0)$ on the x-axis and a point $(0, H)$ on the y-axis in a Cartesian plane move while maintaining a constant distance $a$ between them. Then, $K^2+H^2=a^2$, and the equation of the line containing the line segment at a certain moment can be written as
-$$y=-\dfrac{H}{K}(x-K)$$
-and using $H=\pm \sqrt{a^2-K^2}$, we have
-$$y(x, K) = \mp \dfrac{\sqrt{a^2-K^2}}{K}(x-K)$$
-As the value of $K$ changes, the line segment or line connecting the two points changes, and the envelope drawn by it is the locus of stationary points at each moment, that is, the locus of points where $\ilpardiff{y}{K} = 0$. Let's find the $(x, y)$ that satisfy this condition.
+\newcommand{\pd}[2]{\frac{\partial #1}{\partial #2}} % Simplified command for partial derivative
+\newcommand{\ilpd}[2]{{\partial #1}/{\partial #2}}
+\section*{The Astroid as an Envelope}
 
-$$ \begin{aligned}
-	\pardiff{y}{K} &= \pm\left[\left( \dfrac{1}{\sqrt{a^2-K^2}}+\dfrac{\sqrt{a^2-K^2}}{K^2}\right) (x-K) + \dfrac{\sqrt{a^2-K^2}}{K} \right]\\
-	&= \pm \dfrac{(K^2+a^2-K^2)(x-K)+K(a^2-K^2)}{K^2\sqrt{a^2-K^2}}\\
-	&= \pm \dfrac{a^2 x - K^3}{K^2 \sqrt{a^2 - K^2}}\\
-	&= 0.
-\end{aligned}
-$$
-Therefore the abscissa of the stationary point is $x = K^3/a^2$, and its ordinate is
+Consider two points in the Cartesian plane: $(K, 0)$ on the x-axis and $(0, H)$ on the y-axis, moving such that the distance between them remains constant, denoted by $a$. This constraint implies $K^2 + H^2 = a^2$. 
 
-$$ \begin{aligned}
-	y(x, K) &= \mp \dfrac{\sqrt{a^2-K^2}}{K}\left(\dfrac{K^3}{a^2}-K\right)\\
-	& = \pm \dfrac{\left( a^2- K^2 \right)^{3/2}}{a^2}\\
-	& = \dfrac{H^3}{a^2}
-\end{aligned}
-$$
-Therefore, the coordinate $(x, y)$ of the stationary points satisfies the equation
-$$ \left|\dfrac{x}{a}\right|^{2/3} + \left|\dfrac{y}{a}\right|^{2/3} = 1. $$
+The equation of the line segment connecting these points at any given instant can be expressed as:
+
+\begin{equation*}
+	y = -\frac{H}{K}(x-K)
+\end{equation*}
+
+Substituting $H = \pm \sqrt{a^2 - K^2}$ yields:
+
+\begin{equation*}
+	y(x, K) = \mp \frac{\sqrt{a^2 - K^2}}{K}(x-K)
+\end{equation*}
+
+As the value of $K$ varies, the line segment connecting the two points also changes. The envelope of this family of lines is defined as the locus of points that are stationary with respect to infinitesimal variations in $K$, i.e., the points where $\ilpd{y}{K} = 0$. 
+
+To determine the coordinates of these stationary points, we differentiate $y(x, K)$ with respect to $K$:
+
+\begin{align*}
+	\pd{y}{K} &= \pm \left[ \left( \frac{1}{\sqrt{a^2 - K^2}} + \frac{\sqrt{a^2 - K^2}}{K^2} \right)(x-K) + \frac{\sqrt{a^2 - K^2}}{K} \right] \\
+	&= \pm \frac{(K^2 + a^2 - K^2)(x-K) + K(a^2 - K^2)}{K^2 \sqrt{a^2 - K^2}} \\
+	&= \pm \frac{a^2 x - K^3}{K^2 \sqrt{a^2 - K^2}} \\
+	&= 0. 
+\end{align*}
+
+Therefore, the abscissa of the stationary point is given by $x = K^3/a^2$. 
+
+The corresponding ordinate can be found by substituting this value of $x$ back into the equation for $y(x, K)$:
+
+\begin{align*}
+	y(x, K) &= \mp \frac{\sqrt{a^2 - K^2}}{K} \left( \frac{K^3}{a^2} - K \right) \\
+	&= \pm \frac{(a^2 - K^2)^{3/2}}{a^2} \\
+	&= \frac{H^3}{a^2}
+\end{align*}
+
+Consequently, the coordinates $(x, y)$ of the stationary points satisfy the following equation:
+
+\begin{equation*}
+	\left| \frac{x}{a} \right|^{2/3} + \left| \frac{y}{a} \right|^{2/3} = 1.
+\end{equation*}
 $\blacksquare$
+
 
 \end{document}
 

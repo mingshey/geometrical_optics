@@ -27,9 +27,9 @@
 
 物体とPOVを含む法平面を$xy$平面とし、法平面と水面の交線を$x$軸、物体を通る法線を$y$軸とする。
 
-図\ref{fig:squashed_astroid}より、POVが法平面内で移動すると、物体の見かけの位置が変化する。これらの見かけの位置の軌跡は曲線を形成し、これは一種のコースティック(caustic) である\footnote{これは虚像の軌跡であるため、\textit{虚コースティック(virtual caustic)}と呼ぶことができる。}。
+図\ref{fig:squashed_astroid}より、POVが法平面内で移動すると、物体の見かけの位置が変化する。これらの見かけの位置の軌跡は曲線を形成し、これは一種の(caustic) である\footnote{これは虚像の軌跡であるため、\textit{虚(virtual caustic)}と呼ぶことができる。}。
 
-このコースティック曲線は「扁平化したアストロイド（squashed astroid）」であり、以下の式で表されることが示される。
+この曲線は「扁平化したアストロイド（squashed astroid）」であり、以下の式で表されることが示される。
 
 $$ \left| \dfrac{x}{M} \right| ^ {2/3} + \left| \dfrac{y}{N} \right| ^ {2/3} = 1,$$
 
@@ -52,8 +52,8 @@ $n$ は空気に対する水の屈折率である。
 
 \begin{figure}
 	\centering
-	\includegraphics[width=2.2in]{g237.eps}
-	\caption{コースティック}
+	\includegraphics[width=3in]{g237.eps}
+	\caption{空気-水の界面における光の屈折の幾何学的な関係}
 	\label{fig:caustic}
 \end{figure}
 
@@ -101,11 +101,11 @@ $$ \left| \xi \right|^{2/3} + \left| \eta \right|^{2/3} = 1 $$
 \begin{figure}
 	\centering
 	\includegraphics{g107.eps}
-	\caption{アストロイド}
+	\caption{$\xi\eta$平面における幾何学的な図}
 	\label{fig:astroid}
 \end{figure}
 
-物体像は、$xy$ 平面上の 線分 $\overline{\mathrm{AB}}$と コースティックとの接点 C に位置する。 
+物体像は、$xy$ 平面上の 線分 $\overline{\mathrm{AB}}$と との接点 C に位置する。 
 これは、隣接する光線束の発散点である。 
 $\xi\eta$ 平面における対応する点は $\mathrm{G}(K^3, H^3)$ である。
 
@@ -140,7 +140,7 @@ $$ \left\{
 
 \section{水中の観測点}
 
-物体の高さが $D$ で，空気と水の境界となる平面界面の上方にあり，観測点 (POV) が水中に没している場合，相対屈折率は 1 より小さくなります (すなわち，$1/n < 1$)。同様の論理により，以下のコースティックの式を導出することができます。
+物体の高さが $D$ で，空気と水の境界となる平面界面の上方にあり，観測点 (POV) が水中に没している場合，相対屈折率は 1 より小さくなります (すなわち，$1/n < 1$)。同様の論理により，以下のの式を導出することができます。
 
 $$ \left| \xi \right|^{2/3} - \left| \eta \right|^{2/3} = -1, $$
 
@@ -148,11 +148,11 @@ $$ \left| \xi \right|^{2/3} - \left| \eta \right|^{2/3} = -1, $$
 
 その結果，水中から見上げる上空の \emph{空景 (skyscape)} の像は，全反射の臨界角  で制限された円領域 (あるいはより正確には円錐) に圧縮されます (スネルの窓と呼ばれる)。この円形の広角ビューは，水中観察者から見ると，魚眼レンズで撮影した視野に似ています。
 
-著者の知る限りでは，このコースティック曲線の形状を示す特定の名称は文献に確立されていません。この曲線の一般化された形式である
+著者の知る限りでは，この曲線の形状を示す特定の名称は文献に確立されていません。この曲線の一般化された形式である
 
 $$ \left| \xi \right|^{2/3} - \left| \eta \right|^{2/3} = \pm1, $$
 
-は，水面上にある点光源から発せられた光線が屈折して水中で集まる様子を表すコースティックとして物理的な意味を持ち，また楕円と双曲線の関係に似てアストロイドとの関係があることを考えると，\emph{双曲アストロイド (hyperastroid)} という用語が適切な命名法として提案されます。(図\ref{fig:hyperastroid})
+は，水面上にある点光源から発せられた光線が屈折して水中で集まる様子を表すとして物理的な意味を持ち，また楕円と双曲線の関係に似てアストロイドとの関係があることを考えると，\emph{双曲アストロイド (hyperastroid)} という用語が適切な命名法として提案されます。(図\ref{fig:hyperastroid})
 
 \begin{figure}
 	\centering
@@ -165,24 +165,28 @@ $$ \left| \xi \right|^{2/3} - \left| \eta \right|^{2/3} = \pm1, $$
 
 $$ \left| \xi \right|^{r} + \left| \eta \right|^{r} = 1. $$
 
-アストロイドは $r = 2/3$ の場合です。しかし著者の知る限りでは，
+アストロイドは $r = 2/3$ の場合です。
 
-$$ \left| \xi \right|^{r} - \left| \eta \right|^{r} = \pm 1, $$
+以下の式で定義される曲線の族は、\href{http://dynamicmathematicslearning.com/super-ellipse.html}{DML}\footnote{\ttfamily{dynamicmathematicslearning.com/super-ellipse.html}}において「スーパーハイパーボラ」と呼ばれている。
 
-の形をした曲線族の名称も存在しません。\emph{超双曲線 (super-hyperbola)} と命名することもできますが，同じ語根が繰り返されるのは好ましくないかもしれません (注: \emph{超ボラ (superbola)} を提案することもできます)。
+$$
+\left| \xi \right|^{r} - \left| \eta \right|^{r} = \pm 1,
+$$
+
+\href{https://old.nationalcurvebank.org/superconicncb/superconicncb.htm}{NCB}\footnote{\ttfamily{nationalcurvebank.org/superconicncb/superconicncb.htm}}では、これらを総称して「スーパーコニック」と呼んでいるが、他の文献でこれらの用語を見つけることができず、これらの用語が分野内で確立された用語であるかどうかは不明である。
 
 \section{像の検出}
 
-閉形式のコースティック曲線を得ることができたので、物体と観測点の位置関係から像の位置を求めることができる。
+閉形式の曲線を得ることができたので、物体と観測点の位置関係から像の位置を求めることができる。
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=3in]{g394.eps}
-	\caption{コースティック曲線と物体からの光線の経路}
+	\caption{曲線と物体からの光線の経路}
 	\label{fig:caustic_raypath}
 \end{figure}
 
-観測点からコースティック曲線に接線を引く。この接点こそが、点光源の像の位置を表す。同時に、この接線が水面上と交わる点が入射点となり、物体から出た光線が屈折した地点を示す。
+観測点から曲線に接線を引く。この接点こそが、点光源の像の位置を表す。同時に、この接線が水面上と交わる点が入射点となり、物体から出た光線が屈折した地点を示す。
 
 物体自体が水面下に広がっている場合でも、物体表面上の各点について同様に接線を引くことで像を求めることができる。物体表面を点が無断に移動しながら求めた像の軌跡が、物体全体の像となる。
 
@@ -193,7 +197,7 @@ $$ \left| \xi \right|^{r} - \left| \eta \right|^{r} = \pm 1, $$
 	\label{fig:extended_image}
 \end{figure}
 
-しかしながら、解析的にコースティック曲線への接線を引くことは困難であり、実際問題としては数値計算による近似解を求めるにとどまる。
+しかしながら、解析的に曲線への接線を引くことは困難であり、実際問題としては数値計算による近似解を求めるにとどまる。
 
 別の方法としては、フェルマーの原理を用いて物体と観測点を結ぶ光路を数値的に求め、光線が水面上と交わる点の座標をもとに、アストロイドの接点を求める公式を利用して像の位置を求めることができる。Python による実装例は、\href{https://github.com/mingshey/python_projects/blob/main/Refraction_Image_en.ipynb}{github.com/mingshey/python\_projects} で公開されている。
 
