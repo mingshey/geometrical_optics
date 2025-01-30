@@ -148,7 +148,8 @@ $$ \left\{ 
 
 Consider an object located at a height D above the boundary between air and water. When the observer is submerged in water, the relative refractive index is less than 1, i.e., $1/n < 1$. Through similar reasoning, we can derive the following equation for the caustic:
 $$ \left| \xi \right|^{2/3} - \left| \eta \right|^{2/3} = -1, $$
-where $\xi = \dfrac{x}{W} $, $\eta = \dfrac{y}{Z}$, $W = \dfrac{nD}{\sqrt{n^2-1}}$, and $Z = nD$. This curve exhibits asymptotes with slopes of $\pm Z/W = \pm \sqrt{n^2-1}$. 
+where $\xi = \dfrac{x}{W} $, $\eta = \dfrac{y}{Z}$, $W = \dfrac{nD}{\sqrt{n^2-1}}$, and $Z = nD$. 
+While the curve does not have asymptotes, the slope approaches $\pm Z/W = \pm \sqrt{n^2-1}$ as $x \to \pm\infty$.
 
 Consequently, the view of the sky observed from underwater is compressed into a circular region (or more accurately, a cone) bounded by the critical angle of total internal reflection, commonly known as Snell's window. This circular, wide-angle view, as perceived by an underwater observer, resembles the field of view of a fisheye lens.
 
@@ -181,6 +182,13 @@ The closed-form caustic curve can be utilized to determine the location of an im
 \end{figure}
 
 A tangent is drawn from the viewpoint to the caustic curve. The point of tangency represents the location of the image, and the intersection of the tangent with the water surface corresponds to the point where the light ray from the object strikes the surface.
+For instance, as shown in Figure \ref{fig:pencil_view}, the image of a partially submerged pencil appears differently depending on the viewing angle. The image appears at positions $1'$ and $2'$ when viewed from points $1$ and $2$, respectively.
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=3in]{g43.eps}
+	\caption{The image of a partially submerged pencil appears at different positions, $1'$ and $2'$, when viewed from points $1$ and $2$, respectively.}
+	\label{fig:pencil_view}
+\end{figure}
 
 For a continuous object submerged in water, we can find the image of each point on the object by repeating this process. The locus of these image points will form the image of the entire object.
 
@@ -193,7 +201,7 @@ For a continuous object submerged in water, we can find the image of each point 
 
 However, determining the tangent to the caustic analytically can be challenging. In practice, numerical methods are often used to approximate the tangent point.
 
-Alternatively, we can numerically solve for the path of a light ray connecting the object and the viewpoint using Fermat's principle. By finding the intersection of this ray with the water surface, we can then use the equation of the astroid to determine the corresponding image point. A Python implementation of this method can be found at  \href{https://github.com/mingshey/python\_projects/blob/main/Refraction\_Image\_en.ipynb}{\sffamily{github}}\footnote{\ttfamily{https://github.com/mingshey/python\_projects/\\blob/main/Refraction\_Image\_en.ipynb}}.
+Alternatively, we can numerically solve for the path of a light ray connecting the object and the viewpoint using Fermat's principle. By finding the intersection of this ray with the water surface, we can then use the equation of the astroid to determine the corresponding image point. A Python implementation of this method can be found at  \href{https://github.com/mingshey/python_projects/blob/main/Refraction_Image_en.ipynb}{\sffamily{github}}\footnote{\ttfamily{https://github.com/mingshey/python\_projects/blob/main/\\Refraction\_Image\_en.ipynb}}.
 
 \appendix
 \newcommand{\pd}[2]{{\frac{\partial #1}{\partial #2}}}

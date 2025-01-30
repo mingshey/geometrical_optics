@@ -165,8 +165,7 @@ $$ \left\{ 
 유사한 추론에 의해 코스틱에 대한 다음 방정식을 얻는다.
 $$ \left| \xi \right|^{2/3} - \left| \eta \right|^{2/3} = -1, $$
 여기서 $\xi = \dfrac{x}{W} $ 및 $\eta = \dfrac{y}{Z}$이고, 
-$W = \dfrac{nD}{\sqrt{n^2-1}}$ 및 $Z = nD$인데,  이 곡선은 기울기가 
-$\pm Z/W = \pm \sqrt{n^2-1}$인 점근선을 갖는다.
+$W = \dfrac{nD}{\sqrt{n^2-1}}$ 및 $Z = nD$인데,  이 곡선은 점근선을 가지지는 않지만 $x\rightarrow\pm\infty$일 때 기울기가 $\pm Z/W = \pm \sqrt{n^2-1}$에 수렴한다.
 
 따라서 물 속에서 본 물 위 하늘의 풍경은
 연직선으로부터 전반사의 임계각 안쪽 원(또는 원뿔) 안에 압축되어 보인다. 이것은 
@@ -208,7 +207,14 @@ $$ \left| \xi \right|^{2/3} - \left| \eta \right|^{2/3} = \pm1 $$
 \end{figure}
 
 시점에서 코스틱에 접선을 그린다. 접선과 코스틱의 접점이 상의 위치이고, 접선이 수면과 
-교차하는 점은 물체에서 나온 광선이 수면에 입사하는 점이다.
+교차하는 점은 물체에서 나온 광선이 수면에 입사하는 점이다. 
+예를 들어 물속에 반쯤 잠긴 연필의 상은 시점에 따라 그림 \ref{fig:pencil_view}\과 같이 달라진다.
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=3in]{g43.eps}
+	\caption{물에 잠긴 연필의 상은 시점 $1$, $2$에 따라 각각 $1'$, $2'$로 위치와 모양이 달라 보인다.}
+	\label{fig:pencil_view}
+\end{figure}
 
 물 속에 연속된 물체가 있다면 물체의 표면을 따라 놓인 점 $1, 2, 3, \dots$ 에 대해 
 각각 이와 같은 방법으로 상 $1', '2, 3', \dots$을 찾을 수 있다. 점이 연속으로 움직일 때 따라 움직이는 상의 자취가 
@@ -228,7 +234,7 @@ $$ \left| \xi \right|^{2/3} - \left| \eta \right|^{2/3} = \pm1 $$
 구한 다음, 광선이 수면과 교차하는 점의 좌표를 바탕으로 아스트로이드의 접점 공식을 이용하여
 상의 위치를 구하는 방법이다. 이에 대한 파이썬 예제는  
 \href{https://github.com/mingshey/python_projects/blob/main/Refraction_Image.ipynb}%
-{github.com/mingshey/python\_projects} 에 있다.
+{\sffamily{github}}\footnote{\ttfamily{https://github.com/mingshey/python\_projects/blob/main/\\Refraction\_Image\_en.ipynb}} 에 공개되어 있다.
 
 
 \appendix
