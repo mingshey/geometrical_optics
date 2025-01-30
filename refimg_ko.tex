@@ -32,7 +32,7 @@
 
 일반적으로 물리학 입문 과정에서는 수직 방향에서 관찰한 겉보기 깊이에 대해 다루지만, 사선 방향에서 관찰했을 때의 겉보기 위치 변화에 대한 상세한 논의는 생략되는 경우가 많다. 고급 광학 교재에서도 이러한 현상은 간략하게 언급되거나 생략되는 경우가 많다. 
 
-이는 한편으로는 이 현상이 비교적 복잡한 수학적 처리를 요구하므로 입문 과정에서 다루기에는 적절하지 않고, 다른 한편으로는 렌즈나 거울과 같은 광학 기기의 작동 원리에 비해 상대적으로 중요성이 낮게 평가되기 때문에 고급 과정에서 다루기에도 알맞지 않기 때문일 것이다. 
+이는 이 현상이 수학적인 어려움으로 인해 입문 과정에서 다루기에도 적절하지 않고, 렌즈나 거울과 같은 광학 기기의 작동 원리에 비해 상대적으로 중요성이 낮게 평가되기 때문에 고급 과정에도 어울리지 않기 때문일 것이다. 
 
 하지만 이처럼 단순해 보이면서도 흥미로운 현상이 가끔은 호기심을 자극한다. 필자 외에도 많은 사람이 이 현상을 궁금하게 생각했을 것이다. 본 글에서는 이러한 궁금증에 대한 해답을 제시하고자 한다.
 
@@ -45,7 +45,7 @@
 자취이므로 `허코스틱'(\emph{virtual caustic}) 이라고 할 수 있겠다.}인데, 이 경우에 
 코스틱은 `찌그러진 아스트로이드'라고 불리는 곡선이다.
 	
-\begin{figure}[h]
+\begin{figure}
 	\centering
 	\includegraphics[width=3in]{g409.eps} \hfill\null
 	\caption{시점에 따라 위치가 달라지는 상의 자취}
@@ -152,9 +152,7 @@ $$k = \dfrac{\sqrt{D^2-(n^2-1)\romana^2}}{n\romana},$$
 $$ \left\{ 
 \begin{aligned}
 	x_{\mathrm{C}}^{} &= (n^2-1)\dfrac{\romana^3}{D^2},\\
-	y_{\mathrm{C}}^{} &= -\dfrac{n^2}{D^2}\dfrac{\romana^3}
-	{n^3\romana^3}\left\{ D^2-(n^2-1)\romana^2 \right\}^{3/2}\\
-	&=-\dfrac{D}{n}\left\{ 1-(n^2-1)\dfrac{\romana^2}{D^2} \right\}^{3/2}.
+	y_{\mathrm{C}}^{} &= -\dfrac{D}{n}\left\{ 1-(n^2-1)\dfrac{\romana^2}{D^2} \right\}^{3/2}.
 \end{aligned}
 \right.$$
 	
@@ -200,7 +198,7 @@ $$ \left| \xi \right|^{2/3} - \left| \eta \right|^{2/3} = \pm1 $$
 물체에 대한 허상의 코스틱을 구할 수 있으므로 이를 이용하여 물체의 위치와 
 시점이 주어졌을 때 상의 위치를 다음과 같이 찾을 수 있다.
 
-\begin{figure}[h]
+\begin{figure}[ht]
 	\centering
 	\includegraphics[width=3in]{g394.eps}
 	\caption{코스틱을 이용한 상의 위치 결정}
@@ -221,13 +219,6 @@ $$ \left| \xi \right|^{2/3} - \left| \eta \right|^{2/3} = \pm1 $$
 각각 이와 같은 방법으로 상 $1', 2', 3', \dots$을 찾을 수 있다. 점이 연속으로 움직일 때 이에 따라 움직이는 상의 자취가 
 물체의 상이 될 것이다.
 
-\begin{figure}[h]
-	\centering
-	\includegraphics*[width=3in]{g240.eps}
-	\caption{연속적인 물체의 상}
-	\label{fig:extended_image}
-\end{figure}
-
 단, 코스틱에 대한 접선은 해석적으로 찾기 어렵고 실제로는 수치적인 방법을 이용하여 
 근삿값을 찾는 것으로 만족해야 할 것이다.
 
@@ -237,6 +228,12 @@ $$ \left| \xi \right|^{2/3} - \left| \eta \right|^{2/3} = \pm1 $$
 \href{https://github.com/mingshey/python_projects/blob/main/Refraction_Image.ipynb}%
 {\sffamily{github}}\footnote{\ttfamily{https://github.com/mingshey/python\_projects/blob/main/\\Refraction\_Image\_en.ipynb}} 에 공개되어 있다.
 
+\begin{figure}[ht]
+	\centering
+	\includegraphics*[width=3in]{g240.eps}
+	\caption{연속적인 물체의 상}
+	\label{fig:extended_image}
+\end{figure}
 
 \appendix
 \newcommand{\pd}[2]{{\frac{\partial #1}{\partial #2}}}
@@ -254,8 +251,7 @@ $\ilpd{y}{a} = 0$인 점들의 자취로 정의할 수 있다. 이 조건을 만
 $$ \begin{aligned}
 \pd{y}{a} &= \pm\left[\left( \dfrac{1}{\sqrt{c^2-a^2}}+\dfrac{\sqrt{c^2-a^2}}{a^2}\right) (x-a) + \dfrac{\sqrt{c^2-a^2}}{a} \right]\\
 	&= \pm \dfrac{(a^2+c^2-a^2)(x-a)+a(c^2-a^2)}{a^2\sqrt{c^2-a^2}}\\
-	&= \pm \dfrac{c^2 x - a^3}{a^2 \sqrt{c^2 - a^2}}\\
-	&= 0.
+	&= \pm \dfrac{c^2 x - a^3}{a^2 \sqrt{c^2 - a^2}} = 0.
 \end{aligned}
 $$
 따라서 정류점의 $x$좌표는 $x = a^3/c^2$ 이고, 이를 다시 $y(x, a)$에 대입하면 $y$좌표의 값은
@@ -269,5 +265,8 @@ $$
 이다. 따라서 정류점의 좌표 $(x, y)$는 다음 방정식을 만족한다:
 $$ \left|\dfrac{x}{c}\right|^{2/3} + \left|\dfrac{y}{c}\right|^{2/3} = 1. $$
 $\blacksquare$
+
+\section*{감사의 글}
+딸들의 세심한 조언 덕분에 이 글을 완성할 수 있었습니다. 감사합니다.
 
 \end{document}
