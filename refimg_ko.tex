@@ -76,21 +76,17 @@ $D$는 물체의 실제 깊이이고, $n$은 공기에 대한 물의 굴절률�
 	\label{fig:geometry}
 \end{figure}
 
-
 스넬의 법칙에 의해 다음의 관계식을 얻을 수 있다.
 $$ \sin\theta_1 = \frac{n_2}{n_1} \sin\theta_2 = n\sin\theta_2.$$
 굴절된 광선의 연장선은 다음 방정식으로 표현된다.
 $$y=k(x-\romana).$$
 
-여기서 
-$$k=\dfrac{1}{\tan\theta_1}=\dfrac{\cos\theta_1}{\sin\theta_1}$$
-이고, 스넬의 법칙을 고려하면,
-$$k=\dfrac{\sqrt{1-n^2\sin^2\theta_2}}{n\sin\theta_2}.$$
-이 직선은 $y$-축과 점 B($y=\romanb$)에서 만나므로,
-$$\romanb = -k\romana.$$
-기하학적으로 다음을 얻을 수 있다:
+여기서 스넬의 법칙을 고려하면,
+$$k=\dfrac{1}{\tan\theta_1}=\dfrac{\cos\theta_1}{\sin\theta_1}
+	=\dfrac{\sqrt{1-n^2\sin^2\theta_2}}{n\sin\theta_2}.$$
+기하학적으로 다음 관계가 성립한다:
 $$\romana = D\tan\theta_2 = \dfrac{D\sin\theta_2}{\cos\theta_2}.$$
-따라서
+직선이 $y$-축과 만나는 점을 B($y=\romanb$)라 하면,
 $$\begin{aligned}
 	\romanb &= -k\romana \\
 	&= -\dfrac{D\sin\theta_2}{\cos\theta_2}
@@ -118,7 +114,7 @@ $$ \begin{aligned}
 소행성을 뜻하는 \emph{asteroid}와 혼동하지 말 것.})라 불리는 잘 알려진 곡선인데, 아스트로이드는 다음 방정식으로 표현된다.
 $$ \left| \xi \right|^{2/3} + \left| \eta \right|^{2/3} = 1. $$
 
-\begin{figure}[h]
+\begin{figure}
 	\centering
 	\includegraphics{g107.eps}	
 	\caption{코스틱을 $\xi\eta$ 평면에 투영한 모습은 아스트로이드이다.}
@@ -152,7 +148,9 @@ $$k = \dfrac{\sqrt{D^2-(n^2-1)\romana^2}}{n\romana},$$
 $$ \left\{ 
 \begin{aligned}
 	x_{\mathrm{C}}^{} &= (n^2-1)\dfrac{\romana^3}{D^2},\\
-	y_{\mathrm{C}}^{} &= -\dfrac{D}{n}\left\{ 1-(n^2-1)\dfrac{\romana^2}{D^2} \right\}^{3/2}.
+	y_{\mathrm{C}}^{} &= -\dfrac{n^2}{D^2}\dfrac{\romana^3}
+	{n^3\romana^3}\left\{ D^2-(n^2-1)\romana^2 \right\}^{3/2}\\
+	&= -\dfrac{D}{n}\left\{ 1-(n^2-1)\dfrac{\romana^2}{D^2} \right\}^{3/2}.
 \end{aligned}
 \right.$$
 	
@@ -195,8 +193,7 @@ $$ \left| \xi \right|^{2/3} - \left| \eta \right|^{2/3} = \pm1 $$
 \end{figure}
 
 \section{상의 위치 찾기}
-물체에 대한 허상의 코스틱을 구할 수 있으므로 이를 이용하여 물체의 위치와 
-시점이 주어졌을 때 상의 위치를 다음과 같이 찾을 수 있다.
+물체의 위치와 시점이 주어졌을 때 코스틱을 이용하여 상의 위치를 다음과 같이 찾을 수 있다.
 
 \begin{figure}[ht]
 	\centering
@@ -251,7 +248,8 @@ $\ilpd{y}{a} = 0$인 점들의 자취로 정의할 수 있다. 이 조건을 만
 $$ \begin{aligned}
 \pd{y}{a} &= \pm\left[\left( \dfrac{1}{\sqrt{c^2-a^2}}+\dfrac{\sqrt{c^2-a^2}}{a^2}\right) (x-a) + \dfrac{\sqrt{c^2-a^2}}{a} \right]\\
 	&= \pm \dfrac{(a^2+c^2-a^2)(x-a)+a(c^2-a^2)}{a^2\sqrt{c^2-a^2}}\\
-	&= \pm \dfrac{c^2 x - a^3}{a^2 \sqrt{c^2 - a^2}} = 0.
+	&= \pm \dfrac{c^2 x - a^3}{a^2 \sqrt{c^2 - a^2}}\\
+	&= 0.
 \end{aligned}
 $$
 따라서 정류점의 $x$좌표는 $x = a^3/c^2$ 이고, 이를 다시 $y(x, a)$에 대입하면 $y$좌표의 값은
@@ -266,7 +264,7 @@ $$
 $$ \left|\dfrac{x}{c}\right|^{2/3} + \left|\dfrac{y}{c}\right|^{2/3} = 1. $$
 $\blacksquare$
 
-\section*{감사의 글}
-딸들의 세심한 조언 덕분에 이 글을 완성할 수 있었습니다. 감사합니다.
+%\section*{감사의 글}
+%딸들의 세심한 조언 덕분에 이 글을 완성할 수 있었습니다. 감사합니다.
 
 \end{document}

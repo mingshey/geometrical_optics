@@ -41,10 +41,10 @@ Nevertheless, this seemingly simple yet intriguing phenomenon continues to spark
 
 For those who are curious but short on time, here's the bottom line: When viewing a point object submerged in water from above, the apparent position of the image varies depending on the point of view. As the viewing point moves, the locus of the observed image on the normal plane forms a type of caustic\footnote{In this case you could call it a \emph{virtual caustic}, since it's the locus of virtual images}, which in this case is a curve known as a \emph{squashed astroid}.
 
-\begin{figure}[h]
+\begin{figure}
 	\centering
-	\includegraphics[width=3in]{g409.eps} \hfill\null
-	\caption{Locus of the image point as the viewing point moves}
+	\includegraphics[width=3in]{g409.eps}
+	\caption{Locus of the image as the viewpoint moves}
 	\label{fig:caustic}
 \end{figure}
 
@@ -62,10 +62,10 @@ As the angle of incidence $\theta_2$ varies, the extension of the refracted rays
 As $\theta_2$ varies, the varying refracted rays glide along a smooth curve. This kind of curve is generally called an envelope, and in optics such overlapping envelope of rays is called a caustic.
 The image point $\mathrm{C}$ is located at the tangency point of the line segment ${\mathrm{AB}}$ and this caustic, as it represents the local point of divergence for a neighboring pencil of rays.
 
-\begin{figure}[h]
+\begin{figure}
 	\centering
 	\includegraphics[width=3in]{g237.eps}
-	\caption{Geometry of refraction at the air-water interface and the caustic.}
+	\caption{Light rays and the caustic.}
 	\label{fig:geometry}
 \end{figure}
 
@@ -74,15 +74,13 @@ $$ \sin\theta_1 = \frac{n_2}{n_1} \sin\theta_2 = n\sin\theta_2.$$
 
 The extension of the refracted ray can be expressed by the equation
 $$y=k(x-\alpha).$$
-Here, 
-$$k=\dfrac{1}{\tan\theta_1}=\dfrac{\cos\theta_1}{\sin\theta_1},$$
-and considering Snell's law,
-$$k=\dfrac{\sqrt{1-n^2\sin^2\theta_2}}{n\sin\theta_2}.$$
-This line intersects the $y$-axis at point B($y=\beta$), thus
-$$\beta = -k\alpha.$$
-From the geometry, we obtain 
+Here, considering the Snell's law,
+$$k=\dfrac{1}{\tan\theta_1}=\dfrac{\cos\theta_1}{\sin\theta_1}
+=\dfrac{\sqrt{1-n^2\sin^2\theta_2}}{n\sin\theta_2}.$$
+From the geometry, we have
 $$\alpha = D\tan\theta_2 = \dfrac{D\sin\theta_2}{\cos\theta_2}.$$
-Therefore,
+Since the line intersects the $y$-axis at point B($y=\beta$),
+
 $$\begin{aligned}
 	\beta &= -k\alpha \\
 	&= -\dfrac{D\sin\theta_2}{\cos\theta_2}
@@ -106,7 +104,7 @@ When a family of line segments ${\mathrm{\Aprime\Bprime}}$ is overlaid, where ea
 
 $$ \left| \xi \right|^{2/3} + \left| \eta \right|^{2/3} = 1. $$
 
-\begin{figure}[h]
+\begin{figure}
 	\centering
 	\includegraphics{g107.eps}	
 	\caption{Projection of the caustic onto the $\xi\eta$ plane, revealing an astroid shape.}
@@ -119,11 +117,11 @@ Therefore, the coordinates of the image point $(x_{\mathrm{C}}^{}, y_{\mathrm{C}
 $$ \left\{ 
 \begin{aligned}
 	\xi_{\mathrm{G}}^{} &= \dfrac{x_{\mathrm{C}}^{}}{M} = \greeka^3 = \dfrac{\romana^3}{M^3},\\
-	\eta_{\mathrm{G}}^{} &= \dfrac{y_{\mathrm{C}}^{}}{N} = \greekb^3 = \dfrac{\romanb^3}{N^3}.
+	\eta_{\mathrm{G}}^{} &= \dfrac{y_{\mathrm{C}}^{}}{N} = \greekb^3 = \dfrac{\romanb^3}{N^3},
 \end{aligned}
 \right.$$
-That is,
-$$ \left\{ 
+that is,
+$$\left\{ 
 \begin{aligned}
 	x_{\mathrm{C}}^{} &= \dfrac{\romana^3}{M^2},\\
 	y_{\mathrm{C}}^{} &= \dfrac{\romanb^3}{N^2}=-\dfrac{k^3\romana^3}{N^2}.
@@ -163,7 +161,7 @@ The specific case where
 $$ \left| \xi \right|^{2/3} - \left| \eta \right|^{2/3} = \pm1, $$
 has physical significance as the caustic of rays emanating from a point light source above water and refracted into water. Given its relationship to the astroid, which is analogous to the relationship between a hyperbola and an ellipse, we propose the term \emph{hyperastroid} for this curve.
 
-\begin{figure}[h]
+\begin{figure}
 	\centering
 	\includegraphics[width=3in]{g254.eps}
 	\caption{Astroid and `\emph{hyperastroids}'}
@@ -185,8 +183,8 @@ A tangent is drawn from the viewpoint to the caustic curve. The point of tangenc
 For instance, as shown in Figure \ref{fig:pencil_view}, the image of a partially submerged pencil appears differently depending on the viewing angle. The image appears at positions $1'$ and $2'$ when viewed from points $1$ and $2$, respectively.
 \begin{figure}[ht]
 	\centering
-	\includegraphics[width=3in]{g43.eps}
-	\caption{The image of a partially submerged pencil appears at different positions, $1'$ and $2'$, when viewed from points $1$ and $2$, respectively.}
+	\includegraphics[width=2.5in]{g43.eps}
+	\caption{The image of a partially submerged pencil.}
 	\label{fig:pencil_view}
 \end{figure}
 
@@ -201,7 +199,7 @@ For a continuous object submerged in water, we can find the image of each point 
 
 However, determining the tangent to the caustic analytically can be challenging. In practice, numerical methods are often used to approximate the tangent point.
 
-Alternatively, we can numerically solve for the path of a light ray connecting the object and the viewpoint using Fermat's principle. By finding the intersection of this ray with the water surface, we can then use the equation of the astroid to determine the corresponding image point. A Python implementation of this method can be found at  \href{https://github.com/mingshey/python_projects/blob/main/Refraction_Image_en.ipynb}{\sffamily{github}}\footnote{\ttfamily{https://github.com/mingshey/python\_projects/blob/main/\\Refraction\_Image\_en.ipynb}}.
+Alternatively, we can numerically solve for the path of a light ray connecting the object and the viewpoint using Fermat's principle. Once the point of incidence is found, we can then use the formula for the coordinates of the image point. A Python implementation of this method can be found at  \href{https://github.com/mingshey/python_projects/blob/main/Refraction_Image_en.ipynb}{\sffamily{github}}\footnote{\ttfamily{https://github.com/mingshey/python\_projects/blob/main/\\Refraction\_Image\_en.ipynb}}.
 
 \appendix
 \newcommand{\pd}[2]{{\frac{\partial #1}{\partial #2}}}
@@ -236,16 +234,16 @@ $$ \begin{aligned}
 $$
 
 Thus, the coordinates $(x, y)$ of the stationary points satisfy the equation
-$$ \left|\dfrac{x}{c}\right|^{2/3} + \left|\dfrac{y}{c}\right|^{2/3} = 1. $$
+$$\left|\dfrac{x}{c}\right|^{2/3} + \left|\dfrac{y}{c}\right|^{2/3} = 1.$$
 $\blacksquare$
 
-\section*{Acknowledgments}
-The author would like to thank Google's Gemini language model for its assistance with the translation of this document from Korean.
-
-\medskip
-
-\noindent
-I am thankful to my daughter for her thoughtful advice, which was instrumental in completing this work.
+\section*{}
+\slshape{This document is translated from Korean with the assistance of Google's Gemini language model.}
+%
+%\medskip
+%
+%\noindent
+%I am thankful to my daughter for her thoughtful advice, which was instrumental in completing this work.
 
 \end{document}
 
