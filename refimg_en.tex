@@ -55,7 +55,7 @@ where $M = D/\sqrt{n^2 - 1}$ is the maximum incident distance determined by the 
 
 \section{Derivation of the Equation}
 
-Consider a point object $O$ submerged at a depth $D$ below the interface between air and water with refractive indices $n_1^{}$ and $n_2^{}$, respectively. A ray of light emanating from the object intersects the interface at point A$(a, 0)$, located at distance of incidence $a$ from the $y$-axis. The ray makes an angle $\theta_2$ with the normal at point A and is refracted into the air at an angle $\theta_1$ with respect to the same normal. The extension of the refracted ray intersects the $y$-axis at B$(0, b)$.
+Consider a point object $O$ submerged at a depth $D$ below the interface between air and water with refractive indices $n_1^{}$ and $n_2^{}$, respectively. A ray of light emanating from the object intersects the interface at point A$(a, 0)$. The ray makes an angle $\theta_2$ with the normal at point A and is refracted into the air at an angle $\theta_1$ with respect to the same normal. The extension of the refracted ray intersects the $y$-axis at B$(0, b)$.
 
 As the angle of incidence $\theta_2$ varies, the line segment AB envelop a virtual caustic curve. The image of the object is formed at the point of tangency, C, as it represents the local point of divergence for the neighboring pencil of rays.
 
@@ -75,10 +75,9 @@ with the distance of incidence $a$ as a parameter and with the slope $k$,
 where, considering the Snell's law,
 $$k=\dfrac{1}{\tan\theta_1}=\dfrac{\cos\theta_1}{\sin\theta_1}
 =\dfrac{\sqrt{1-n^2\sin^2\theta_2}}{n\sin\theta_2}.$$
-From the geometry, we also have
-$$\romana = D\tan\theta_2 = \dfrac{D\sin\theta_2}{\cos\theta_2}.$$
-
-Substituting point B$(0, b)$ into the equation of line AB,
+From the geometry, we have
+$$	\romana = D\tan\theta_2 = \dfrac{D\sin\theta_2}{\cos\theta_2},$$
+and
 $$\begin{aligned}
 	\romanb &= -k\romana \\
 	&= -\dfrac{D\sin\theta_2}{\cos\theta_2}
@@ -87,6 +86,7 @@ $$\begin{aligned}
 \end{aligned}$$
 
 Introducing dimensionless parameters $\greeka=\romana/M$ and $\greekb=\romanb/N$, we have
+%
 $$ \begin{aligned}
 	\greeka^2 + \greekb^2 &= \dfrac{\romana^2}{M^2}+\dfrac{\romanb^2}{N^2}\\
 	&=\dfrac{n^2-1}{D^2}\dfrac{D^2\sin^2\theta_2}{\cos^2\theta_2}%
@@ -127,7 +127,7 @@ $$\left\{ 
 \right.$$
 
 Using 
-$$\sin\theta_2 = \dfrac{\romana}{\sqrt{D^2+\romana^2}},$$
+$\sin\theta_2 = {\romana}/{\sqrt{D^2+\romana^2}}$
 we obtain
 $$k = \dfrac{\sqrt{D^2-(n^2-1)\romana^2}}{n\romana},$$
 and the position of the image can be expressed as parametric functions of $\romana$:
@@ -148,6 +148,13 @@ $$ \left| \xi \right|^{2/3} - \left| \eta \right|^{2/3} = -1, $$
 where $\xi = \dfrac{x}{W} $, $\eta = \dfrac{y}{Z}$, $W = \dfrac{nD}{\sqrt{n^2-1}}$, and $Z = nD$. 
 While the curve does not have asymptotes, the slope approaches $\pm Z/W = \pm \sqrt{n^2-1}$ as $x \to \pm\infty$.
 
+\begin{figure}
+	\centering
+	\includegraphics[width=3in]{figs/g254.eps}
+	\caption{Astroid and `\emph{hyperastroids}'}
+	\label{fig:hyperastroid}
+\end{figure}
+
 Consequently, the view of the sky observed from underwater is compressed into a circular region (or more accurately, a cone) bounded by the critical angle of total internal reflection, commonly known as Snell's window. This circular, wide-angle view, as perceived by an underwater observer, resembles the field of view of a fisheye lens.
 
 A more general form of this curve is given by 
@@ -160,30 +167,24 @@ The specific case where
 $$ \left| \xi \right|^{2/3} - \left| \eta \right|^{2/3} = \pm1, $$
 has physical significance as the caustic of rays emanating from a point light source above water and refracted into water. Given its relationship to the astroid, which is analogous to the relationship between a hyperbola and an ellipse, we propose the term \emph{hyperastroid} for this curve.
 
-\begin{figure}
-	\centering
-	\includegraphics[width=3in]{figs/g254.eps}
-	\caption{Astroid and `\emph{hyperastroids}'}
-	\label{fig:hyperastroid}
-\end{figure}
-
 \section{Finding the Image Location}
 
 The caustic curve can be utilized to determine the location of an image given the position of an object and the viewpoint.
+%
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=3in]{figs/g394.eps}
-	\caption{Determining the image location using the caustic curve}
+	\caption{Construction of image utilizing the caustic curve}
 	\label{fig:image_caustic}
 \end{figure}
 
-A tangent is drawn from the viewpoint to the caustic curve. The point of tangency represents the location of the image, and the intersection of the tangent with the water surface corresponds to the point where the light ray from the object strikes the surface.
+A tangent is drawn from the viewpoint to the caustic curve, as shown in Figure \ref{fig:image_caustic}. The point of tangency represents the location of the image, and the intersection of the tangent with the water surface corresponds to the point where the light ray from the object strikes the surface.
 For instance, as shown in Figure \ref{fig:pencil_view}, the image of a partially submerged pencil appears differently depending on the viewing angle. The image appears at positions $1'$ and $2'$ when viewed from points $1$ and $2$, respectively.
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=2.5in]{figs/g43.eps}
-	\caption{The image of a partially submerged pencil.}
+	\caption{Location of image depends on POV.}
 	\label{fig:pencil_view}
 \end{figure}
 
@@ -191,10 +192,18 @@ For a continuous object submerged in water, we can find the image of each point 
 
 \begin{figure}[h]
 	\centering
-	\includegraphics*[width=3in]{figs/g240.eps}
+	\includegraphics*[width=3in]{figs/g241.eps}
 	\caption{Image of a continuous object}
 	\label{fig:extended_image}
 \end{figure}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=3in]{figs/img_1805_3.eps}
+	\caption{A chopstick half-submerged in water:photo taken from low angle close to the surface.}
+	\label{fig:picture}
+\end{figure}
+
 
 However, determining the tangent to the caustic analytically can be challenging. In practice, numerical methods are often used to approximate the tangent point.
 

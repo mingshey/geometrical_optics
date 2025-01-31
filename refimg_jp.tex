@@ -82,9 +82,9 @@
 	=\dfrac{\sqrt{1-n^2\sin^2\theta_2}}{n\sin\theta_2}.$$
 	
 	幾何学的な関係から、以下の式が得られます。
-	$$\romana = D\tan\theta_2 = \dfrac{D\sin\theta_2}{\cos\theta_2}.$$
-	したがって、点$\mathrm{\romanB}$($0, b$)を直線ABの式に代入すると、
+%	したがって、点$\mathrm{\romanB}$($0, b$)を直線ABの式に代入すると、
 	$$\begin{aligned}
+		\romana &= D\tan\theta_2 = \dfrac{D\sin\theta_2}{\cos\theta_2},\\
 		\romanb &= -k\romana \\
 		&= -\dfrac{D\sin\theta_2}{\cos\theta_2}
 		\dfrac{\sqrt{1-n^2\sin^2\theta_2}}{n\sin\theta_2}\\
@@ -136,7 +136,7 @@
 	\right.$$
 	
 	ここで、
-	$$\sin\theta_2 = \dfrac{\romana}{\sqrt{D^2+\romana^2}}$$
+	$\sin\theta_2 = {\romana}/{\sqrt{D^2+\romana^2}}$
 	を用いると、
 	$$k = \dfrac{\sqrt{D^2-(n^2-1)\romana^2}}{n\romana},$$
 	となり、像の位置を$\romana$をパラメータとする関数として表すことができます。
@@ -175,7 +175,7 @@
 	
 	という特殊な場合、水上の点光源から出て水中に入射する光のコースティック曲線として物理的な意味を持ち、アストロイドとの関係が楕円に対する双曲線のような関係にあることから、「ハイパーアストロイド」と呼ぶのも興味深い。
 	
-	\begin{figure}
+	\begin{figure}[t]
 		\centering
 		\includegraphics[width=3in]{figs/g254.eps}
 		\caption{アストロイドとハイパーアストロイド}
@@ -207,9 +207,16 @@
 	
 	\begin{figure}[ht]
 		\centering
-		\includegraphics*[width=3in]{figs/g240.eps}
+		\includegraphics*[width=3in]{figs/g241.eps}
 		\caption{連続的な物体の像}
 		\label{fig:extended_image}
+	\end{figure}
+	
+	\begin{figure}
+		\centering
+		\includegraphics[width=2.5in]{figs/img_1805_3.eps}
+		\caption{水面に半分浸かった箸の写真：水面に近い低い角度から撮影}
+		\label{fig:picture}
 	\end{figure}
 	
 	ただし、コースティックに対する接線を解析的に求めることは難しく、実際には数値的な方法を用いて近似的に求める必要がある。
