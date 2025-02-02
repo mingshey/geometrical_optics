@@ -204,10 +204,13 @@ For a continuous object submerged in water, we can find the image of each point 
 	\label{fig:picture}
 \end{figure}
 
+Another approach is to numerically determine the intersection point of the ray with the water surface using Fermat's principle, and then determine the image position using the equation of the tangent point of the astroid.
 
-However, determining the tangent to the caustic analytically can be challenging. In practice, numerical methods are often used to approximate the tangent point.
+Either of the methods involves solving a quartic equation, which is generally difficult to solve analytically. Therefore, it is more efficient to use a computer algebra system (CAS) to find an analytical solution or to use numerical methods to find an approximate solution.
 
-Alternatively, we can numerically solve for the path of a light ray connecting the object and the viewpoint using Fermat's principle. Once the point of incidence is found, we can then use the formula for the coordinates of the image point. A Python implementation of this method can be found at  \href{https://github.com/mingshey/python_projects/blob/main/Refraction_Image_en.ipynb}{\sffamily{github}}\footnote{\ttfamily{https://github.com/mingshey/python\_projects/blob/main/\\Refraction\_Image\_en.ipynb}}.
+A Python example for finding the image position can be found at 
+\href{https://github.com/mingshey/python_projects/blob/main/Refraction_Image.ipynb}%
+{\sffamily{github}}\footnote{\ttfamily{https://github.com/mingshey/python\_projects/blob/main/\\Refraction\_Image\_en.ipynb}}
 
 \appendix
 \newcommand{\pd}[2]{{\frac{\partial #1}{\partial #2}}}

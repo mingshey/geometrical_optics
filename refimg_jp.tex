@@ -219,10 +219,13 @@
 		\label{fig:picture}
 	\end{figure}
 	
-	ただし、コースティックに対する接線を解析的に求めることは難しく、実際には数値的な方法を用いて近似的に求める必要がある。
+	別の方法として、フェルマーの原理を用いて光線と水面の交点を求め、次にアストロイドの接点の式を用いて像の位置を決定する方法があります。
 	
-	別の方法として、物体と視点とを結ぶ光線の経路をフェルマーの原理を用いて数値的に求め、光線が水面と交わる点の座標をもとに、アストロイドの接点の公式を用いて像の位置を求める方法も考えられる。この方法のPythonによる実装例は、\href{https://github.com/mingshey/python_projects/blob/main/Refraction_Image.ipynb}%
-	{\sffamily{github}}\footnote{\ttfamily{https://github.com/mingshey/python\_projects/blob/main/\\Refraction\_Image\_en.ipynb}} で公開されている。
+	いずれの方法でも4次方程式を解く必要があり、解析的に解くことは一般的に困難です。したがって、解析解を求めるためにコンピュータ代数システム (CAS) を利用するか、近似解を求めるために数値解法を用いる方が効率的です。
+	
+	像の位置を求めるための Python コード例は、
+	\href{https://github.com/mingshey/python_projects/blob/main/Refraction_Image.ipynb}%
+	{\sffamily{github}}\footnote{\ttfamily{https://github.com/mingshey/python\_projects/blob/main/\\Refraction\_Image\_en.ipynb}}で公開されている。
 	
 	\appendix
 	\newcommand{\pd}[2]{{\frac{\partial #1}{\partial #2}}}
