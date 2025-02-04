@@ -5,19 +5,12 @@
 \usepackage{amssymb}
 \usepackage{graphicx}
 \usepackage{hyperref}
+\usepackage[font=small,labelfont=bf]{caption}
 \title{From Everyday to Extraordinary:\\ The Astroid Revealed in a Glass of Water}
 \author{M. Ryu \\ {\href{mailto:mingshey@hafs.hs.kr}{mingshey@hafs.hs.kr}}}
 \begin{document}
 \maketitle
 %
-\newcommand{\romana}{{a}}
-\newcommand{\romanb}{{b}}
-\newcommand{\romanA}{{A}}
-\newcommand{\romanB}{{B}}
-\newcommand{\greeka}{{\alpha}}
-\newcommand{\greekb}{{\beta}}
-\newcommand{\Aprime}{{A^{\prime}}}
-\newcommand{\Bprime}{{B^{\prime}}}
 %
 \section{Introduction}
 
@@ -34,7 +27,7 @@ Typically, introductory physics courses cover the apparent depth when viewed ver
 
 This is perhaps because a rigorous analysis of this phenomenon requires a level of mathematical sophistication that may be beyond the scope of introductory courses, and its practical applications may be considered less significant compared to the workings of optical instruments. 
 
-Nevertheless, this seemingly simple yet intriguing phenomenon continues to spark curiosity. The author believes that many others have pondered this question as well. This paper aims to provide an answer.
+However, even seemingly trivial phenomena can sometimes pique our curiosity. It is likely that many others have wondered about this phenomenon as well. This paper aims to provide an answer to this question.
 
 
 \section{Quick Answer}
@@ -48,16 +41,16 @@ For those who are curious but short on time, here's the bottom line: When viewin
 	\label{fig:caustic}
 \end{figure}
 
-Considering the normal plane containing both the object and the viewer, with the intersection of the plane and the water surface as the $x$-axis and the normal passing through the object as the $y$-axis, as shown in Figure \ref{fig:caustic}, the locus of the image can be described by the following equation:
+In the normal plane containing both the object and the viewer, let the intersection of the normal plane and the water surface be the $x$-axis, and the normal line passing through the object be the $y$-axis, as shown in Figure \ref{fig:caustic}. Then, the locus of the image is part of the following curve:
 
 $$ \left| \dfrac{x}{M} \right| ^ {2/3} + \left| \dfrac{y}{N} \right| ^ {2/3} = 1,$$
 where $M = D/\sqrt{n^2 - 1}$ is the maximum incident distance determined by the critical angle of total internal reflection ($\theta_{\mathrm{c}}$), $N = D/n$ is the apparent depth when viewed directly from above, $D$ is the actual depth of the object, and $n$ is the refractive index of water relative to air.
 
 \section{Derivation of the Equation}
 
-Consider a point object $O$ submerged at a depth $D$ below the interface between air and water with refractive indices $n_1^{}$ and $n_2^{}$, respectively. A ray of light emanating from the object intersects the interface at point A$(a, 0)$. The ray makes an angle $\theta_2$ with the normal at point A and is refracted into the air at an angle $\theta_1$ with respect to the same normal. The extension of the refracted ray intersects the $y$-axis at B$(0, b)$.
+Let $n_1$ and $n_2$ be the refractive indices of air and water, respectively. A point object $O$ is located at a depth $D$ below the air-water interface. A ray of light emanating from the object is incident on point $\mathrm{A}$ on the interface, which is a distance $a$ from the $y$-axis, at an angle of $\theta_2$ to the normal. The ray is then refracted into the air at an angle of $\theta_1$ to the same normal.
 
-As the angle of incidence $\theta_2$ varies, the line segment AB envelop a virtual caustic curve. The image of the object is formed at the point of tangency, C, as it represents the local point of divergence for the neighboring pencil of rays.
+The extension of the refracted ray intersects the $y$-axis at point $\mathrm{B}(0, b)$. As the angle of incidence $\theta_2$ varies, the lines AB envelope a curve, which is defined as the caustic curve. Note that in this case, the caustic is a virtual caustic formed by the extensions of the rays, rather than the rays themselves. The image is located at point $C$, the point of tangency between the line segment AB and the caustic. This is because the bundle of rays near this point diverges locally.
 
 \begin{figure}
 	\centering
@@ -66,87 +59,90 @@ As the angle of incidence $\theta_2$ varies, the line segment AB envelop a virtu
 	\label{fig:geometry}
 \end{figure}
 
-Snell's law says that
-$$ \sin\theta_1 = \frac{n_2^{}}{n_1^{}} \sin\theta_2 = n\sin\theta_2.$$
+According to Snell's law,
+$$ \sin\theta_1 = \frac{n_2}{n_1} \sin\theta_2 = n\sin\theta_2,$$
+and the straight line $\mathrm{AB}$ can be expressed by the following equation, where $a$ is the distance from the $y$-axis to the point of incidence:
+$$y=k(x-a).$$
 
-The line AB can be expressed by the equation
-$$y=k(x-\romana)$$
-with the distance of incidence $a$ as a parameter and with the slope $k$,
-where, considering the Snell's law,
+Considering Snell's law, the slope of the line, $k$, is given by
 $$k=\dfrac{1}{\tan\theta_1}=\dfrac{\cos\theta_1}{\sin\theta_1}
 =\dfrac{\sqrt{1-n^2\sin^2\theta_2}}{n\sin\theta_2}.$$
-From the geometry, we have
-$$	\romana = D\tan\theta_2 = \dfrac{D\sin\theta_2}{\cos\theta_2},$$
-and
+
+Geometrically, the following relationships hold:
 $$\begin{aligned}
-	\romanb &= -k\romana \\
-	&= -\dfrac{D\sin\theta_2}{\cos\theta_2}
-	\dfrac{\sqrt{1-n^2\sin^2\theta_2}}{n\sin\theta_2}\\
-	&=-\dfrac{D\sqrt{1-n^2\sin^2\theta_2}}{n\cos\theta_2}.
+	a &= D\tan\theta_2 = \frac{D\sin\theta_2}{\cos\theta_2},\\
+	b &= -ka \\
+	&= -\frac{D\sin\theta_2}{\cos\theta_2} \cdot \frac{\sqrt{1-n^2\sin^2\theta_2}}{n\sin\theta_2}\\
+	&= -\frac{D\sqrt{1-n^2\sin^2\theta_2}}{n\cos\theta_2}.
 \end{aligned}$$
 
-Introducing dimensionless parameters $\greeka=\romana/M$ and $\greekb=\romanb/N$, we have
-%
-$$ \begin{aligned}
-	\greeka^2 + \greekb^2 &= \dfrac{\romana^2}{M^2}+\dfrac{\romanb^2}{N^2}\\
-	&=\dfrac{n^2-1}{D^2}\dfrac{D^2\sin^2\theta_2}{\cos^2\theta_2}%
-	+\dfrac{n^2}{D^2}\dfrac{D^2(1-n^2\sin^2\theta_2)}{n^2\cos^2\theta_2}\\
-	&=\dfrac{\left(n^2-1\right)\sin^2\theta_2 + 1-n^2\sin^2\theta_2}
-	{\cos^2\theta_2}\\
-	&=\dfrac{1-\sin^2\theta_2}{\cos^2\theta_2}\\
-	&= 1.
-\end{aligned}$$
-Now, introducing dimensionless coordinates $\xi=x/M$ and $\eta=y/N$, as the point of observation moves in the $xy$-plane, the corresponding points $\mathrm{\Aprime}(\alpha, 0)$ and $\mathrm{\Bprime}(0, \beta)$ in the $\xi\eta$-plane also move, maintaining a constant distance of 1. 
+Now, introducing dimensionless parameters $\alpha = a/M$ and $\beta = b/N$, we have
 
-When a family of line segments ${\mathrm{\Aprime\Bprime}}$ is overlaid, where each segment is defined by the parameter $\alpha$, the envelope formed is a well-known curve called an \emph{astroid}\footnote{not to be confused with an asteroid}, described by the equation:
+\begin{equation}
+	\begin{aligned}
+		\alpha^2 + \beta^2 &= \frac{a^2}{M^2} + \frac{b^2}{N^2} \\
+		&= \frac{n^2-1}{D^2} \frac{D^2\sin^2\theta_2}{\cos^2\theta_2} + \frac{n^2}{D^2} \frac{D^2(1-n^2\sin^2\theta_2)}{n^2\cos^2\theta_2} \\
+		&= \frac{(n^2-1)\sin^2\theta_2 + 1-n^2\sin^2\theta_2}{\cos^2\theta_2} \\
+		&= \frac{1-\sin^2\theta_2}{\cos^2\theta_2} \\
+		&= 1
+	\end{aligned}
+\end{equation}
 
+Furthermore, by introducing dimensionless coordinates $\xi = x/M$ and $\eta = y/N$, as the viewpoint moves in the $xy$-plane, points $\mathrm{A}(a, 0)$ and $\mathrm{B}(0, b)$ also move. The corresponding points $\mathrm{A'}(\alpha, 0)$ and $\mathrm{B'}(0, \beta$) in the $\xi\eta$-plane maintain a constant distance of $1$.
+
+The envelope of the family of lines ${\mathrm{A'B'}}$ parameterized by $\alpha$ is a well-known curve called an \emph{astroid}\footnote{Not to be confused with the \emph{asteroid} meaning a small celestial body.}, which can be described by the equation:
 $$ \left| \xi \right|^{2/3} + \left| \eta \right|^{2/3} = 1. $$
+(See Appendix \ref{app:astroid} for details.)
 
 \begin{figure}
 	\centering
-	\includegraphics{figs/g107.eps}	
+	\includegraphics[width=2.5in]{figs/g107.eps}	
 	\caption{Projection of the caustic onto the $\xi\eta$ plane, revealing an astroid shape.}
 	\label{fig:astroid}
 \end{figure}
 
-The point of tangency between the line segment ${\mathrm{\Aprime\Bprime}}$ and the astroid is denoted by $\mathrm{G}(\greeka^3, \greekb^3)$, and this point corresponds to the image point C. 
+The point of tangency between the line ${\mathrm{A'B'}}$ and the astroid is $\mathrm{G}(\alpha^3, \beta^3)$, which corresponds to the image point $\mathrm{C}$.
 
 Therefore, the coordinates of the image point $(x_{\mathrm{C}}^{}, y_{\mathrm{C}}^{})$ can be obtained from the following relations:
-$$ \left\{ 
+$$
+\left\{
 \begin{aligned}
-	\xi_{\mathrm{G}}^{} &= \dfrac{x_{\mathrm{C}}^{}}{M} = \greeka^3 = \dfrac{\romana^3}{M^3},\\
-	\eta_{\mathrm{G}}^{} &= \dfrac{y_{\mathrm{C}}^{}}{N} = \greekb^3 = \dfrac{\romanb^3}{N^3},
+	\xi_G &= \dfrac{x_C}{M} = \alpha^3 = \dfrac{a^3}{M^3},\\
+	\eta_G &= \dfrac{y_C}{N} = \beta^3 = \dfrac{b^3}{N^3}.
 \end{aligned}
-\right.$$
-that is,
-$$\left\{ 
+\right.
+$$
+That is,
+$$
+\left\{
 \begin{aligned}
-	x_{\mathrm{C}}^{} &= \dfrac{\romana^3}{M^2},\\
-	y_{\mathrm{C}}^{} &= \dfrac{\romanb^3}{N^2}=-\dfrac{k^3\romana^3}{N^2}.
+	x_C &= \dfrac{a^3}{M^2},\\
+	y_C &= \dfrac{b^3}{N^2}=-\dfrac{k^3a^3}{N^2}.
 \end{aligned}
-\right.$$
+\right.
+$$
 
 Using 
-$\sin\theta_2 = {\romana}/{\sqrt{D^2+\romana^2}}$
+$\sin\theta_2 = {a}/{\sqrt{D^2+a^2}}$
 we obtain
-$$k = \dfrac{\sqrt{D^2-(n^2-1)\romana^2}}{n\romana},$$
-and the position of the image can be expressed as parametric functions of $\romana$:
+$$k = \dfrac{\sqrt{D^2-(n^2-1)a^2}}{na},$$
+and the position of the image can be expressed as parametric functions of $a$:
 $$ \left\{ 
 \begin{aligned}
-	x_{\mathrm{C}}^{} &= (n^2-1)\dfrac{\romana^3}{D^2},\\
+	x_{\mathrm{C}}^{} &= (n^2-1)\dfrac{a^3}{D^2},\\
 	y_{\mathrm{C}}^{} 
-%	&= -\dfrac{n^2}{D^2}\dfrac{\romana^3}
-%	{n^3\romana^3}\left\{ D^2-(n^2-1)\romana^2 \right\}^{3/2}\\
-	&=-\dfrac{D}{n}\left\{ 1-(n^2-1)\dfrac{\romana^2}{D^2} \right\}^{3/2}.
+	%	&= -\dfrac{n^2}{D^2}\dfrac{a^3}
+	%	{n^3a^3}\left\{ D^2-(n^2-1)a^2 \right\}^{3/2}\\
+	&=-\dfrac{D}{n}\left\{ 1-(n^2-1)\dfrac{a^2}{D^2} \right\}^{3/2}.
 \end{aligned}
 \right.$$
 
 \section{When the viewpoint is submerged in water}
 
-Consider an object located at a height D above the boundary between air and water. When the observer is submerged in water, the relative refractive index is less than 1, i.e., $1/n < 1$. Through similar reasoning, we can derive the following equation for the caustic:
+When an object is in air at a height D above the boundary, and the viewer is in water, the relative refractive index is $1/n < 1$. By similar reasoning, we obtain the following equation for the caustic (see Appendix \ref{app:hyperastroid}):
 $$ \left| \xi \right|^{2/3} - \left| \eta \right|^{2/3} = -1, $$
-where $\xi = \dfrac{x}{W} $, $\eta = \dfrac{y}{Z}$, $W = \dfrac{nD}{\sqrt{n^2-1}}$, and $Z = nD$. 
-While the curve does not have asymptotes, the slope approaches $\pm Z/W = \pm \sqrt{n^2-1}$ as $x \to \pm\infty$.
+where $\xi = \dfrac{x}{W} $ and $\eta = \dfrac{y}{Z}$, with $W = \dfrac{nD}{\sqrt{n^2-1}}$ and $Z = nD$. 
+Although this curve does not have asymptotes, as $x \to \pm\infty$, the slope converges to $\pm Z/W = \pm \sqrt{n^2-1}$.
 
 \begin{figure}
 	\centering
@@ -155,107 +151,196 @@ While the curve does not have asymptotes, the slope approaches $\pm Z/W = \pm \s
 	\label{fig:hyperastroid}
 \end{figure}
 
-Consequently, the view of the sky observed from underwater is compressed into a circular region (or more accurately, a cone) bounded by the critical angle of total internal reflection, commonly known as Snell's window. This circular, wide-angle view, as perceived by an underwater observer, resembles the field of view of a fisheye lens.
+Therefore, the sky viewed from underwater appears compressed within a circle (or cone) centered on the vertical axis and bounded by the critical angle for total internal reflection. This phenomenon is well-known as "Snell's window" and is similar to the field of view of a fisheye lens used in panoramic photography.
 
-A more general form of this curve is given by 
-$$ \left| \xi \right|^{r} - \left| \eta \right|^{r} = \pm1, $$
-which is referred to as a \emph{super hyperbola} in \href{http://dynamicmathematicslearning.com/super-ellipse.html}{DML}\footnote{\ttfamily{dynamicmathematicslearning.com/super-ellipse.html}}. In the \href{https://old.nationalcurvebank.org/superconicncb/superconicncb.htm}{National Curve Bank}\footnote{\ttfamily{old.nationalcurvebank.org/superconicncb/\\superconicncb.htm}}, these curves, along with the \emph{super-ellipses} defined by
-$$ \left| \xi \right|^{r} + \left| \eta \right|^{r} = 1, $$
-are collectively termed \emph{superconics}. (An astroid belongs to the super-ellipses.) 
+A more general form of this curve is the family of curves defined by
+$$ \left| \xi \right|^{r} - \left| \eta \right|^{r} = \pm 1. $$
+This family is referred to as \emph{Super Hyperbola} by \href{http://dynamicmathematicslearning.com/super-ellipse.html}{DML}\footnote{\ttfamily{dynamicmathematicslearning.com/super-ellipse.html}} and is included in a broader family of curves called \emph{superconics} along with the astroid, which is defined by
+$$ \left| \xi \right|^{r} + \left| \eta \right|^{r} = 1, $$ 
+as defined in the  \href{https://old.nationalcurvebank.org/superconicncb/superconicncb.htm}{`National Curve Bank'}.%
+\footnote{\ttfamily{old.nationalcurvebank.org/superconicncb/\\superconicncb.htm}}
 
-The specific case where 
+In particular, for the special case where $r = 2/3$,
 $$ \left| \xi \right|^{2/3} - \left| \eta \right|^{2/3} = \pm1, $$
-has physical significance as the caustic of rays emanating from a point light source above water and refracted into water. Given its relationship to the astroid, which is analogous to the relationship between a hyperbola and an ellipse, we propose the term \emph{hyperastroid} for this curve.
+the resulting curve, which is the caustic of light rays emanating from a point source above the water and refracted into the water, has physical significance. Moreover, the relationship between this curve and the astroid is analogous to that between an ellipse and a hyperbola, suggesting the name \emph{hyperastroid}. 
 
-\section{Finding the Image Location}
+\section{Finding the Image Position}
 
-The caustic curve can be utilized to determine the location of an image given the position of an object and the viewpoint.
-%
+Given the position of an object and the viewpoint, the image position can be determined using the caustic as follows.
 
-\begin{figure}[h]
+\begin{figure}[!h]
 	\centering
 	\includegraphics[width=2.7in]{figs/g394.eps}
-	\caption{Construction of image utilizing the caustic curve}
+	\caption{Determining the image position using the caustic}
 	\label{fig:image_caustic}
 \end{figure}
 
-A tangent is drawn from the viewpoint to the caustic curve, as shown in Figure \ref{fig:image_caustic}. The point of tangency represents the location of the image, and the intersection of the tangent with the water surface corresponds to the point where the light ray from the object strikes the surface.
-For instance, as shown in Figure \ref{fig:pencil_view}, the image of a partially submerged pencil appears differently depending on the viewing angle. The image appears at positions $1'$ and $2'$ when viewed from points $1$ and $2$, respectively.
-\begin{figure}[ht]
+As shown in Figure \ref{fig:image_caustic}, a tangent line is drawn from the viewpoint (POV) to the caustic. The point of tangency ($O'$) on the caustic is the image position, and the intersection point of the tangent line with the water surface is the point where the light ray from the object ($O$) enters the water.
+Let $(x_{\mathrm{V}}, y_{\mathrm{V}})$ be the coordinates of the viewpoint (POV), $(x_{\mathrm{O}}, y_{\mathrm{O}})$ be the coordinates of the object (O), and $(x_{\mathrm{O'}}, y_{\mathrm{O'}})$ be the coordinates of the image (O') that we want to find. Let A and B be the points where the refracted ray intersects the water surface and the normal line passing through O (which is the y-axis), with coordinates $(a, 0)$ and $(0, b)$, respectively. In the $\xi\eta$ coordinate system, the corresponding points are the viewpoint: $(\xi_{\mathrm{V}}, \eta_{\mathrm{V}})=(x_{\mathrm{V}}/M, y_{\mathrm{V}}/N)$, the object: $(\xi_{\mathrm{O}}, \eta_{\mathrm{O}})=(x_{\mathrm{O}}/M, y_{\mathrm{O}}/N)$, and the image: $(x_{\mathrm{O'}}/M, y_{\mathrm{O'}}/N)=(\alpha^3, \beta^3)$, while the coordinates of A' and B' are $(\alpha, 0)$, $(0, \beta)=(a/M, 0)$, $(0, b/N)$, respectively. Here, $M=D/\sqrt{n^2-1}$, $N=D/n$, and $D=y_{\mathrm{O}}$. From the proportional relationship between the tangent, the water surface, and the $\eta$-axis, we obtain the following equation:
+$$\dfrac{\eta_{\mathrm{V}}}{\xi_{\mathrm{V}}-\alpha}=-\dfrac{\beta}{\alpha}.$$
+Using $\beta = \pm \sqrt{1-\alpha^2}$ and squaring both sides, we obtain the following quartic equation for $\alpha$:
+\[
+\left( 1 - \alpha^2 \right) \left(\alpha-\xi_{\mathrm{V}} \right)^2 = \alpha^2 \eta_{\mathrm{V}}^2
+\]
+Generally, a quartic equation has four complex roots, and in this case, there are two real roots. The desired value of $\alpha$ is the one between 0 and $\xi_{\mathrm{V}}$. Solving a quartic equation manually is generally difficult. Although an analytical solution can be obtained using a computer algebra system (CAS), it is often more efficient to find an approximate solution using numerical methods. (See Appendix \ref{app:python})
+
+As can be seen from the form of the equation, the coordinates of the image depend on the coordinates of the viewpoint. For example, as shown in Figure \ref{fig:pencil_view}, the tip of a partially submerged pencil appears at different positions, $1'$ and $2'$, when viewed from points $1$ and $2$, respectively.
+
+\begin{figure}[h]
 	\centering
 	\includegraphics[width=2.4in]{figs/g43.eps}
-	\caption{Location of image depends on POV.}
+	\caption{Image of a pencil partially submerged in water. The image of the pencil tip moves from $1'$ to $2'$ as the viewpoint changes from $1$ to $2$.}
 	\label{fig:pencil_view}
 \end{figure}
 
-For a continuous object submerged in water, we can find the image of each point on the object by repeating this process. The locus of these image points will form the image of the entire object.
+If there is a continuous object in water, as shown in Figure \ref{fig:extended_image}, we can find the corresponding image points $1', 2', 3', \dots$ for points $1, 2, 3, ...$ on the surface of the object using the same method. The locus of these image points, as the points move continuously, forms the image of the object.
 
 \begin{figure}[h]
 	\centering
 	\includegraphics*[width=2.5in]{figs/g242.eps}
-	\caption{Image of a continuous object}
+	\caption{Image of a continuous object. By connecting the image points $1', 2', 3', \dots$ corresponding to points $1, 2, 3, \dots$ on the object, the overall shape of the image can be drawn.}
 	\label{fig:extended_image}
 \end{figure}
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=2.7in]{figs/img_1805_3.eps}
-	\caption{A chopstick half-submerged in water:photo taken from low angle close to the surface.}
+	\includegraphics[width=3in]{figs/img_1805_2.eps}
+	\caption{Photograph of a chopstick partially submerged in water. Taken from a low angle close to the water surface.}
 	\label{fig:picture}
 \end{figure}
 
-Another approach is to determine the intersection point of the ray with the water surface using Fermat's principle. The abscissa of this intersection point can then be used as a parameter in the equation for the image location.
+Another approach is to determine the intersection point of the ray with the water surface by solving the equation
+\[
+\dfrac{n_1 \left( x - x_{\mathrm{V}}^{} \right)}{\sqrt{ y_{\mathrm{V}}^2 + \left( x - x_{\mathrm{V}}^{} \right)^2 }}
++\dfrac{n_2 \left( x - x_{\mathrm{O}}^{} \right)}{\sqrt{ y_{\mathrm{O}}^2 + \left( x - x_{\mathrm{O}}^{} \right)^2 }}
+= 0,
+\]
+which is obtained by applying Fermat's principle. The abscissa of the intersection point, which is a real root of the quartic equation
+\[ 
+	\left( x - x_{\mathrm{V}}^{} \right)^2 \left\{ y_{\mathrm{V}}^2 + \left(x - x_{\mathrm{V}}^{} \right)^2 \right\} = n^2 \left( x - x_{\mathrm{O}}^{} \right)^2 \left\{ y_{\mathrm{V}}^2 + \left(x - x_{\mathrm{V}}^{} \right)^2 \right\}
+\]
+lying between $x_{\mathrm{O}}^{}$ and $x_{\mathrm{V}}^{}$, can then be used to determine the image position using the equation of the tangent point of the astroid.
 
-Both methods involve solving a quartic equation, which is generally difficult to solve analytically. While analytical solutions can be obtained using a computer algebra system (CAS), this approach does not offer a significant advantage. Finding approximate values using numerical methods is generally more efficient.
-
-A Python example for finding the image position can be found at 
-\href{https://github.com/mingshey/python_projects/blob/main/Refraction_Image_en.ipynb}%
+While it is generally difficult to find an analytical solution to the quartic equation, numerical methods can be more efficient for practical purposes. A Python example demonstrating how to find the image position using both analytical and numerical methods can be found at 
+\href{https://github.com/mingshey/python_projects/blob/main/Refraction_Image.ipynb}%
 {\sffamily{github}}\footnote{\ttfamily{https://github.com/mingshey/python\_projects/blob/main/\\Refraction\_Image\_en.ipynb}}
 
+\section{Image of the Submerged Space}
+
+Having established a quantitative method to locate the image, let's investigate how the overall appearance of the submerged space is distorted when viewed from above the water. As shown in Figure \ref{fig:grid_underwater}, a rectangular region in water represented by a square grid appears as shown in Figures \ref{fig:image_underwater} to \ref{fig:seashell} depending on the relative height of the viewpoint.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=2.5in]{figs/grid_underwater.eps}
+	\caption{A grid-shaped object placed underwater}
+	\label{fig:grid_underwater}
+\end{figure}
+
+\begin{figure}[!t]
+	\centering
+	\includegraphics[width=3in]{figs/image_underwater1.eps}
+	\caption{Image of the grid. When the viewer's eye level is similar to or higher than the water depth, the image appears to be flattened overall in a ratio approximately equal to the refractive index.\\
+	The outline of the grid is shown as a rectangle for comparison in \ref{fig:image_underwater}$\sim$\ref{fig:snell_window}}
+	\label{fig:image_underwater}
+\end{figure}
+
+\begin{figure}[!t]
+	\centering
+	\includegraphics[width=3in]{figs/fishjar.eps}
+	\caption{Image of the grid. When the viewer's eye level is much lower than the water depth, the rectangular space appears compressed into a fishbowl shape.}
+	\label{fig:fishbowl}
+\end{figure}
+
+\begin{figure}[!t]
+	\centering
+	\includegraphics[width=3in]{figs/seashell_shape.eps}
+	\caption{Image of the grid. When the viewer's eye is extremely close to the water surface, the rectangular space appears compressed into a shape resembling a seashell.}
+	\label{fig:seashell}
+\end{figure}
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=3.3in]{figs/snell_window.eps}
+	\caption{Snell's window. The appearance of an object viewed from underwater. The generating line of the cone defining Snell's window is conveniently denoted as Snell's window.}
+	\label{fig:snell_window}
+\end{figure}
+
+When a grid of equal squares is placed in the air adjacent to the water surface, the apparent shape of the grid viewed from underwater is compressed within a cone bounded by the critical angle of total internal reflection, as shown in Figure \ref{fig:snell_window}. The circle where the water surface intersects this cone is called Snell's window, and the entire sky above the water surface appears compressed within this window. The space directly above Snell's window is relatively undistorted and appears to be magnified by a factor equal to the refractive index ratio, while other regions appear distorted with compressed visual angles and increased perceived distances. The distortion is particularly noticeable near the water surface.
+
+
+
 \appendix
-\newcommand{\pd}[2]{{\frac{\partial #1}{\partial #2}}}
-\newcommand{\ilpd}[2]{{{\partial #1}/{\partial #2}}}
-\section*{Appendix: The Astroid as an Envelope}
-
-Consider a Cartesian coordinate system with a point $(a, 0)$ on the $x$-axis and a point $(0, b)$ on the $y$-axis, moving such that the distance between them remains constant at $c$. Thus, $a^2+b^2=c^2$. The equation of the line connecting these two points at any given time can be expressed as:
-
-$$y=-\dfrac{b}{a}(x-a)$$
-
-By substituting $b=\pm \sqrt{c^2-a^2}$, we obtain
-
-$$y(x, a) = \mp \dfrac{\sqrt{c^2-a^2}}{a}(x-a)$$
-
-As the value of $a$ varies, the line connecting the two points also changes. The envelope of this family of lines is defined as the locus of points that are stationary as $a$ varies infinitesimally, that is, the points where $\ilpd{y}{a} = 0$. To find these points, we differentiate $y$ with respect to $a$:
-
-$$ \begin{aligned}
-	\pd{y}{a} &= \pm\left[\left( \dfrac{1}{\sqrt{c^2-a^2}}+\dfrac{\sqrt{c^2-a^2}}{a^2}\right) (x-a) + \dfrac{\sqrt{c^2-a^2}}{a} \right]\\
-	&= \pm \dfrac{(a^2+c^2-a^2)(x-a)+a(c^2-a^2)}{a^2\sqrt{c^2-a^2}}\\
-	&= \pm \dfrac{c^2 x - a^3}{a^2 \sqrt{c^2 - a^2}}\\
+\section*{Appendix}
+\section{The Astroid Defined as an Envelope} \label{app:astroid}
+Consider two points in the Cartesian plane: $(a, 0)$ on the $x$-axis and $(0, b)$ on the $y$-axis. Suppose these points maintain a constant distance $c$ from each other. Then, we have $a^2 + b^2 = c^2$, and the equation of the line connecting these two points at any given moment is given by
+$$y = -\frac{b}{a}(x-a)$$
+Substituting $b = \pm \sqrt{c^2 - a^2}$ yields
+$$y(x, a) = \mp \frac{\sqrt{c^2 - a^2}}{a}(x-a)$$
+As the value of a varies, the line connecting the two points also varies. The envelope of this family of lines can be defined as the locus of points that remain stationary as a undergoes an infinitesimal change, i.e., points where
+$$\frac{\partial y}{\partial a} = 0.$$
+Differentiating y with respect to a, we obtain
+$$
+\begin{aligned}
+	\frac{\partial y}{\partial a} &= \pm\left[\left( \frac{1}{\sqrt{c^2-a^2}}+\frac{\sqrt{c^2-a^2}}{a^2}\right) (x-a) + \frac{\sqrt{c^2-a^2}}{a} \right]\\
+	&= \pm \frac{(a^2+c^2-a^2)(x-a)+a(c^2-a^2)}{a^2\sqrt{c^2-a^2}}\\
+	&= \pm \frac{c^2 x - a^3}{a^2 \sqrt{c^2 - a^2}}\\
 	&= 0.
 \end{aligned}
 $$
-
-Therefore, the $x$-coordinate of the stationary point is $x = a^3/c^2$, and substituting this into the equation for $y$, we find the $y$-coordinate to be
-
-$$ \begin{aligned}
-	y(x, a) &= \mp \dfrac{\sqrt{c^2-a^2}}{a}\left(\dfrac{a^3}{c^2}-a\right)\\
-	& = \pm \dfrac{\left( c^2- a^2 \right)^{3/2}}{c^2}\\
-	& = \dfrac{b^3}{c^2}
+Therefore, the $x$-coordinate of the stationary point is $x = a^3/c^2$. Substituting this into $y(x, a)$, we obtain the y-coordinate:
+$$
+\begin{aligned}
+	y(x, a) &= \mp \frac{\sqrt{c^2-a^2}}{a}\left(\frac{a^3}{c^2}-a\right)\\
+	& = \pm \frac{\left( c^2- a^2 \right)^{3/2}}{c^2}\\
+	& = \frac{b^3}{c^2}
 \end{aligned}
 $$
+Therefore, the coordinates of the stationary point $(x, y)$ satisfy the equation of the astroid:
+$$ \left|\dfrac{x}{c}\right|^{2/3} + \left|\dfrac{y}{c}\right|^{2/3} = 1. $$
 
-Thus, the coordinates $(x, y)$ of the stationary points satisfy the equation of astroid:
-$$\left|\dfrac{x}{c}\right|^{2/3} + \left|\dfrac{y}{c}\right|^{2/3} = 1.$$
-$\blacksquare$
+\section{Hyperbolic Astroid} \label{app:hyperastroid}
+We define a 'hyperbolic astroid' as the envelope of the line segment connecting points A$(a, 0)$ on the $x$-axis and B$(0, b)$ on the $y$-axis, where these points satisfy the relation:
+$b^2-a^2=c^2$
+The equation of this envelope is given by the following hyperbolic astroid equation:
+$$ \left|\dfrac{x}{c}\right|^{2/3} - \left|\dfrac{y}{c}\right|^{2/3} = -1. $$
+The derivation is similar to that in Appendix \ref{app:astroid} and is omitted here.
+If we draw a tangent line from a point A to the envelope, the coordinates of the tangent point are given by $(-a^3/c^2, b^3/c^2)$. 
+If we draw a tangent line from an arbitrary point $(x_{\mathrm{V}^{}}, y_{\mathrm{V}}^{})$ to the hyperbolic astroid, and let $(a,0)$ be the point where the tangent line intersects the $x$-axis, then $a$ is a real root of the quartic equation
+$$ \left( a^2 + c^2 \right) \left(a - x_{\mathrm{V}}^{} \right)^2 = a^2 y_{\mathrm{V}}^2$$
+lying between $0$ and $x_{\mathrm{V}^{}}$, and $b = \pm \sqrt{a^2 + c^2}$.
+
+\section{Python Code for Finding the Image Location Using the Tangent of the Astroid} \label{app:python}
+\begin{verbatim}
+	import numpy as np
+	import sympy as sym
+	from scipy.optimize import root
+	
+	ksi, eta, alfa = sym.symbols('xi eta alpha')
+	eqn = (alfa - ksi)**2 * (1 - alfa**2)\
+	- alfa**2 * eta**2
+	eqnf = sym.lambdify((ksi, eta, alfa), eqn);
+	
+	def imgloc(pov, obj, nrel):
+	xv, yv = pov
+	xo, yo = obj
+	M = yo / np.sqrt(nrel**2 - 1)
+	N = yo / nrel
+	xi_v = (xv - xo) / M
+	eta_v = yv / N
+	alpha = root(lambda x:\
+	eqnf(xi_v, eta_v, x), xi_v).x[0]
+	beta = np.sqrt(1 - alpha**2)
+	xim = alpha**3 * M + xo
+	yim = beta**3 * N
+	xpoi = (xim*yv - yim*xv)/(yv - yim)
+	
+	img = np.array([xim, yim])
+	poi = np.array([xpoi, 0])
+	
+	return img, poi
+\end{verbatim}
 
 \vfill
-
-\slshape{This document is translated from Korean with the assistance of Google's Gemini language model.}
-%
-%\medskip
-%
-%\noindent
-%I am thankful to my daughter for her thoughtful advice, which was instrumental in completing this work.
-
+\section*{}
+\slshape{This document is translated from original Korean with the assistance of Google's Gemini language model.}
 \end{document}
-
