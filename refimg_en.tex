@@ -59,12 +59,11 @@ The extension of the refracted ray intersects the $y$-axis at point $\mathrm{B}(
 	\label{fig:geometry}
 \end{figure}
 
-According to Snell's law,
-$$ \sin\theta_1 = \frac{n_2}{n_1} \sin\theta_2 = n\sin\theta_2,$$
-and the straight line $\mathrm{AB}$ can be expressed by the following equation, where $a$ is the distance from the $y$-axis to the point of incidence:
+The straight line $\mathrm{AB}$ can be expressed by the following equation, where $a$ is the distance from the $y$-axis to the point of incidence:
 $$y=k(x-a).$$
 
-Considering Snell's law, the slope of the line, $k$, is given by
+Considering Snell's law, $ {n_1} \sin\theta_1 = {n_2} \sin\theta_2$, or $ \sin\theta_1 = n\sin\theta_2,$
+the slope of the line, $k$, is given by
 $$k=\dfrac{1}{\tan\theta_1}=\dfrac{\cos\theta_1}{\sin\theta_1}
 =\dfrac{\sqrt{1-n^2\sin^2\theta_2}}{n\sin\theta_2}.$$
 
@@ -76,7 +75,7 @@ $$\begin{aligned}
 	&= -\frac{D\sqrt{1-n^2\sin^2\theta_2}}{n\cos\theta_2}.
 \end{aligned}$$
 
-Now, introducing dimensionless parameters $\alpha = a/M$ and $\beta = b/N$, we have
+Introducing dimensionless parameters $\alpha = a/M$ and $\beta = b/N$, we have
 
 \begin{equation}
 	\begin{aligned}
@@ -88,18 +87,18 @@ Now, introducing dimensionless parameters $\alpha = a/M$ and $\beta = b/N$, we h
 	\end{aligned}
 \end{equation}
 
-Furthermore, by introducing dimensionless coordinates $\xi = x/M$ and $\eta = y/N$, as the viewpoint moves in the $xy$-plane, points $\mathrm{A}(a, 0)$ and $\mathrm{B}(0, b)$ also move. The corresponding points $\mathrm{A'}(\alpha, 0)$ and $\mathrm{B'}(0, \beta$) in the $\xi\eta$-plane maintain a constant distance of $1$.
+Now, let's introduce dimensionless coordinates $\xi = x/M$ and $\eta = y/N$. As the viewpoint moves in the $xy$-plane, points $\mathrm{A}(a, 0)$ and $\mathrm{B}(0, b)$ also move. The corresponding points $\mathrm{A'}(\alpha, 0)$ and $\mathrm{B'}(0, \beta$) move in the $\xi\eta$-plane maintaining a constant distance of $1$.
 
-The envelope of the family of lines ${\mathrm{A'B'}}$ parameterized by $\alpha$ is a well-known curve called an \emph{astroid}\footnote{Not to be confused with the \emph{asteroid} meaning a small celestial body.}, which can be described by the equation:
-$$ \left| \xi \right|^{2/3} + \left| \eta \right|^{2/3} = 1. $$
-(See Appendix \ref{app:astroid} for details.)
-
-\begin{figure}
+\begin{figure}[!t]
 	\centering
 	\includegraphics[width=2.5in]{figs/g107.eps}	
 	\caption{Projection of the caustic onto the $\xi\eta$ plane, revealing an astroid shape.}
 	\label{fig:astroid}
 \end{figure}
+
+The envelope of the family of lines ${\mathrm{A'B'}}$ parameterized by $\alpha$ is a well-known curve called an \emph{astroid}\footnote{Not to be confused with the \emph{asteroid} meaning a small celestial body.}, which can be described by the equation:
+$$ \left| \xi \right|^{2/3} + \left| \eta \right|^{2/3} = 1. $$
+(See Appendix \ref{app:astroid} for details.)
 
 The point of tangency between the line ${\mathrm{A'B'}}$ and the astroid is $\mathrm{G}(\alpha^3, \beta^3)$, which corresponds to the image point $\mathrm{C}$.
 
@@ -142,7 +141,7 @@ $$ \left\{ 
 When an object is in air at a height $D$ above the boundary, and the viewer is in water, the relative refractive index is $1/n < 1$. By similar reasoning, we obtain the following equation for the caustic (see Appendix \ref{app:hyperastroid}):
 $$ \left| \xi \right|^{2/3} - \left| \eta \right|^{2/3} = -1, $$
 where $\xi = {x}/{W} $ and $\eta = {y}/{Z}$, with $W = {nD}/{\sqrt{n^2-1}}$ and $Z = nD$. 
-Although this curve does not have asymptotes, as $x \to \pm\infty$, the slope converges to $\pm Z/W = \pm \sqrt{n^2-1}$.
+Although this curve does not have asymptotes, its slope converges to $\pm Z/W = \pm \sqrt{n^2-1}$ as $x \to \pm\infty$.
 
 \begin{figure}
 	\centering
@@ -151,18 +150,18 @@ Although this curve does not have asymptotes, as $x \to \pm\infty$, the slope co
 	\label{fig:hyperastroid}
 \end{figure}
 
-Therefore, the sky viewed from underwater appears compressed within a circle (or cone) centered on the vertical axis and bounded by the critical angle for total internal reflection. This phenomenon is well-known as \emph{Snell's window} and is similar to the field of view of a \href{https://en.wikipedia.org/wiki/Fisheye_lens}{fisheye lens} used in ultra wide-angle photography.
+Thus, the skyscape viewed from underwater appears compressed within a circle (or cone) centered on the vertical axis and bounded by the critical angle for total internal reflection. This phenomenon is well-known as \emph{Snell's window} and it gives field of view  similar to that of a \href{https://en.wikipedia.org/wiki/Fisheye_lens}{fisheye lens} used in ultra wide-angle photography.
 
 A more general form of this curve is the family of curves defined by
-$$ \left| \xi \right|^{r} - \left| \eta \right|^{r} = \pm 1. $$
-This family is referred to as \emph{Super Hyperbola} by \href{http://dynamicmathematicslearning.com/super-ellipse.html}{DML}\footnote{\ttfamily{dynamicmathematicslearning.com/super-ellipse.html}} and is included in a broader family of curves called \emph{superconics} along with the astroid, which is defined by
+$$ \left| \xi \right|^{r} - \left| \eta \right|^{r} = \pm 1, $$
+which is referred to as \emph{Super Hyperbola} by \href{http://dynamicmathematicslearning.com/super-ellipse.html}{DML}\footnote{\ttfamily{dynamicmathematicslearning.com/super-ellipse.html}} and is included in a broader family of curves called \emph{superconics} along with the family of curves called \emph{superellipse} which is defined by
 $$ \left| \xi \right|^{r} + \left| \eta \right|^{r} = 1, $$ 
-as defined in the  \href{https://old.nationalcurvebank.org/superconicncb/superconicncb.htm}{`National Curve Bank'}.%
-\footnote{\ttfamily{old.nationalcurvebank.org/superconicncb/\\superconicncb.htm}}
+as defined in the  \href{https://old.nationalcurvebank.org/superconicncb/superconicncb.htm}{`National Curve Bank'}%
+\footnote{\ttfamily{old.nationalcurvebank.org/superconicncb/\\superconicncb.htm}}, to which astroid belongs.
 
-In particular, for the special case where $r = 2/3$,
+In particular, for the special case where $r = 2/3$, the resulting curve
 $$ \left| \xi \right|^{2/3} - \left| \eta \right|^{2/3} = \pm1, $$
-the resulting curve, which is the caustic of light rays emanating from a point source in the air and refracted into the water, has physical significance. Moreover, the relationship between this curve and the astroid is analogous to that between an ellipse and a hyperbola, suggesting the name \emph{hyperastroid}. 
+has physical significance as the caustic of light rays emanating from a point source in the air and refracted into the water. Moreover, the relationship between this curve and the astroid is analogous to that between a hyperbola and an ellipse, suggesting the name \emph{hyperastroid}. 
 
 \section{Finding the Image Position}
 
@@ -175,8 +174,13 @@ Given the position of an object and the viewpoint, the image position can be det
 	\label{fig:image_caustic}
 \end{figure}
 
-As shown in Figure \ref{fig:image_caustic}, a tangent line is drawn from the viewpoint (POV) to the caustic. The point of tangency ($\mathrm{O'}$) on the caustic is the image position, and the intersection point of the tangent line with the water surface is the point where the light ray from the object ($\mathrm{O}$) enters the water.
-Let $(x_{\mathrm{V}}, y_{\mathrm{V}})$ be the coordinates of the viewpoint (POV), $(x_{\mathrm{O}}, y_{\mathrm{O}})$ be the coordinates of the object ($\mathrm{O}$), and $(x_{\mathrm{O'}}, y_{\mathrm{O'}})$ be the coordinates of the image ($\mathrm{O'}$) that we want to find. Let A and B be the points where the refracted ray intersects the water surface and the normal line passing through O (which is the $y$-axis), with coordinates $(a, 0)$ and $(0, b)$, respectively. In the $\xi\eta$ coordinate system, the corresponding points are the viewpoint: $(\xi_{\mathrm{V}}, \eta_{\mathrm{V}})=(x_{\mathrm{V}}/M, y_{\mathrm{V}}/N)$, the object: $(\xi_{\mathrm{O}}, \eta_{\mathrm{O}})=(x_{\mathrm{O}}/M, y_{\mathrm{O}}/N)$, and the image: $(x_{\mathrm{O'}}/M, y_{\mathrm{O'}}/N)=(\alpha^3, \beta^3)$, while the coordinates of $\mathrm{A'}$ and $\mathrm{B'}$ are $(\alpha, 0)$, $(0, \beta)=(a/M, 0)$, $(0, b/N)$, respectively. Here, $M=D/\sqrt{n^2-1}$, $N=D/n$, and $D=y_{\mathrm{O}}$. From the proportional relationship between the tangent, the water surface, and the $\eta$-axis, we obtain the following equation:
+As shown in Figure \ref{fig:image_caustic}, a tangent line is drawn from the viewpoint (POV) to the caustic. The point of tangency ($\mathrm{O'}$) on the caustic is the image position, and the intersection point of the tangent line with the water surface is the point where the light ray from the object ($\mathrm{O}$) enters the interface with air.
+
+Let $(x_{\mathrm{V}}, y_{\mathrm{V}})$ be the coordinates of the viewpoint (POV), $(x_{\mathrm{O}}, y_{\mathrm{O}})$ of the object ($\mathrm{O}$), and $(x_{\mathrm{O'}}, y_{\mathrm{O'}})$ of the image ($\mathrm{O'}$) that we want to find. Let A and B be the points where the extension of the refracted ray intersects the water surface and the normal line passing through O (which is the $y$-axis), with coordinates $(a, 0)$ and $(0, b)$, respectively. 
+
+In the $\xi\eta$ coordinate system, the corresponding points are, the viewpoint: $(\xi_{\mathrm{V}}, \eta_{\mathrm{V}})=(x_{\mathrm{V}}/M, y_{\mathrm{V}}/N)$, the object: $(\xi_{\mathrm{O}}, \eta_{\mathrm{O}})=(x_{\mathrm{O}}/M, y_{\mathrm{O}}/N)$, and the image: $(x_{\mathrm{O'}}/M, y_{\mathrm{O'}}/N)=(\alpha^3, \beta^3)$, while the coordinates of $\mathrm{A'}$ and $\mathrm{B'}$ are $(\alpha, 0)=(a/M, 0)$ and $(0, \beta)=(0, b/N)$, respectively. Here, $M=D/\sqrt{n^2-1}$, $N=D/n$, and $D=y_{\mathrm{O}}$. 
+
+From the proportional relationship between the tangent, the water surface, and the $\eta$-axis, we obtain the following equation:
 $$\dfrac{\eta_{\mathrm{V}}}{\xi_{\mathrm{V}}-\alpha}=-\dfrac{\beta}{\alpha}.$$
 Using $\beta = \pm \sqrt{1-\alpha^2}$ and squaring both sides, we obtain the following quartic equation for $\alpha$:
 \[
@@ -184,7 +188,7 @@ Using $\beta = \pm \sqrt{1-\alpha^2}$ and squaring both sides, we obtain the fol
 \]
 Generally, a quartic equation has four complex roots, and in this case, there are two real roots. The desired value of $\alpha$ is the one between 0 and $\xi_{\mathrm{V}}$. Solving a quartic equation manually is generally difficult. Although an analytical solution can be obtained using a computer algebra system (CAS), it is often more efficient to find an approximate solution using numerical methods. (See Appendix \ref{app:python})
 
-As can be seen from the form of the equation, the coordinates of the image depend on the coordinates of the viewpoint. For example, as shown in Figure \ref{fig:pencil_view}, the tip of a partially submerged pencil appears at different positions, $1'$ and $2'$, when viewed from points $1$ and $2$, respectively.
+As can be seen from the form of the equation, the location of the image depends on that of the viewpoint. For example, as shown in Figure \ref{fig:pencil_view}, the tip of a partially submerged pencil appears at different positions, $1'$ and $2'$, when viewed from points $1$ and $2$, respectively.
 
 \begin{figure}[h]
 	\centering
@@ -193,7 +197,7 @@ As can be seen from the form of the equation, the coordinates of the image depen
 	\label{fig:pencil_view}
 \end{figure}
 
-If there is a continuous object in water, as shown in Figure \ref{fig:extended_image}, we can find the corresponding image points $1', 2', 3', \dots$ for points $1, 2, 3, ...$ on the surface of the object using the same method. The locus of these image points, as the points move continuously, forms the image of the object.
+If there is a continuous object in water, as shown in Figure \ref{fig:extended_image}, we can find the corresponding image points $1', 2', 3', \dots$ for points $1, 2, 3, ...$ on the object using the same method. The locus of these image points, as the points move continuously, forms the image of the object.
 
 \begin{figure}[h]
 	\centering
@@ -210,12 +214,12 @@ If there is a continuous object in water, as shown in Figure \ref{fig:extended_i
 \end{figure}
 
 Another approach is to determine the intersection point of the ray with the water surface by solving the equation
-%\[
-%\dfrac{n_1 \left( x - x_{\mathrm{V}}^{} \right)}{\sqrt{ y_{\mathrm{V}}^2 + \left( x - x_{\mathrm{V}}^{} \right)^2 }}
-%+\dfrac{n_2 \left( x - x_{\mathrm{O}}^{} \right)}{\sqrt{ y_{\mathrm{O}}^2 + \left( x - x_{\mathrm{O}}^{} \right)^2 }}
-%= 0,
-%\]
-%or after rearranging,
+\[
+\dfrac{n_1 \left( x - x_{\mathrm{V}}^{} \right)}{\sqrt{ y_{\mathrm{V}}^2 + \left( x - x_{\mathrm{V}}^{} \right)^2 }}
++\dfrac{n_2 \left( x - x_{\mathrm{O}}^{} \right)}{\sqrt{ y_{\mathrm{O}}^2 + \left( x - x_{\mathrm{O}}^{} \right)^2 }}
+= 0,
+\]
+or after rearranging,
 \[ \begin{aligned}
 	\left( x - x_{\mathrm{V}}^{} \right)^2 &\left\{ y_{\mathrm{V}}^2 + \left(x - x_{\mathrm{V}}^{} \right)^2 \right\} \\
 	&= n^2 \left( x - x_{\mathrm{O}}^{} \right)^2 \left\{ y_{\mathrm{V}}^2 + \left(x - x_{\mathrm{V}}^{} \right)^2 \right\},
@@ -273,7 +277,7 @@ When a grid of equal squares is placed in the air adjacent to the water surface,
 
 
 \appendix
-\section*{Appendix}
+\section*{Appendices}
 \section{The Astroid Defined as an Envelope} \label{app:astroid}
 Consider two points in the Cartesian plane: $(a, 0)$ on the $x$-axis and $(0, b)$ on the $y$-axis. Suppose these points maintain a constant distance $c$ from each other. Then, we have $a^2 + b^2 = c^2$, and the equation of the line connecting these two points at any given moment is given by
 $$y = -\frac{b}{a}(x-a)$$
@@ -312,7 +316,7 @@ If we draw a tangent line from an arbitrary point $(x_{\mathrm{V}^{}}, y_{\mathr
 $$ \left( a^2 + c^2 \right) \left(a - x_{\mathrm{V}}^{} \right)^2 = a^2 y_{\mathrm{V}}^2$$
 lying between $0$ and $x_{\mathrm{V}^{}}$, and $b = \pm \sqrt{a^2 + c^2}$.
 
-\section{Python Code for Finding the Image Location Using the Tangent of the Astroid} \label{app:python}
+\section{Python Code for Finding the Image Location Using the Tangent to the Astroid} \label{app:python}
 \begin{verbatim}
 	import numpy as np
 	import sympy as sym
