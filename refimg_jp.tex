@@ -10,8 +10,9 @@
 \usepackage[font=small,labelfont=bf]{caption}
 \title{水中の鉛筆が描くアストロイド：\\光と幾何学の不思議な出会い}
 \author{M. Ryu \\ {\href{mailto:mingshey@hafs.hs.kr}{mingshey@hafs.hs.kr}}}
-\begin{document}
 \renewcommand{\figurename}{図}
+\begin{document}
+\maketitle
 \section{序論}
 
 水に部分的に浸かった鉛筆が曲がって見える現象は、光の屈折を学ぶ初期段階でよく見かける現象です（図\ref{fig:pencil}）。しかし、鉛筆の先端の見かけの位置が観察角度によって変化する現象は、より深い分析が必要です。
@@ -226,7 +227,7 @@ $$\dfrac{\eta_{\mathrm{V}}^{}}{\xi_{\mathrm{V}}^{}-\alpha}=-\dfrac{\beta}{\alpha
 
 前節で像の位置を定量的に求める方法を学んだので、この方法を用いて、水中空間を空気中から見たときの像がどのように歪んで見えるかを調べてみよう。図\ref{fig:grid_underwater}のように正方形格子で表された水中の長方形領域は、空気中から見下ろすとき、視点の相対的な高さによって図\ref{fig:image_underwater}〜\ref{fig:seashell}のように見える。
 
-\begin{figure}
+\begin{figure}[!h]
 	\centering
 	\includegraphics[width=2.5in]{figs/grid_underwater.eps}
 	\caption{水中の格子状物体}
@@ -240,14 +241,14 @@ $$\dfrac{\eta_{\mathrm{V}}^{}}{\xi_{\mathrm{V}}^{}-\alpha}=-\dfrac{\beta}{\alpha
 	\label{fig:image_underwater}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[!t]
 	\centering
 	\includegraphics[width=3in]{figs/fishjar.eps}
 	\caption{格子の像。視点の高さが水の深さより非常に低いとき、長方形の空間が魚鉢のような形に圧縮されて見える。}
 	\label{fig:fishbowl}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[!t]
 	\centering
 	\includegraphics[width=3in]{figs/seashell_shape.eps}
 	\caption{格子の像。視点が水面に極めて近いとき、長方形の空間が貝殻のような形に圧縮されて見える。}
@@ -311,7 +312,8 @@ $$ \left( a^2 + c^2 \right) \left(a - x_{\mathrm{V}} \right)^2 = a^2 y_{\mathrm{
 	from scipy.optimize import root
 	
 	ksi, eta, alfa = sym.symbols('xi eta alpha')
-	eqn = (alfa - ksi)**2 * (1 - alfa**2) - alfa**2 * eta**2
+	eqn = (alfa - ksi)**2 * (1 - alfa**2)\
+	    - alfa**2 * eta**2
 	eqnf = sym.lambdify((ksi, eta, alfa), eqn);
 	
 	def imgloc(pov, obj, nrel):
@@ -321,7 +323,8 @@ $$ \left( a^2 + c^2 \right) \left(a - x_{\mathrm{V}} \right)^2 = a^2 y_{\mathrm{
 	N = yo / nrel
 	xi_v = (xv - xo) / M
 	eta_v = yv / N
-	alpha = root(lambda x: eqnf(xi_v, eta_v, x), xi_v).x[0]
+	alpha = root(lambda x: eqnf(xi_v, eta_v, x),\
+	    xi_v).x[0]
 	beta = np.sqrt(1 - alpha**2)
 	xim = alpha**3 * M + xo
 	yim = beta**3 * N
