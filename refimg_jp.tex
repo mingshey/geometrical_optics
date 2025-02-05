@@ -34,7 +34,7 @@
 
 興味はあるが、あまり時間をかけたくない読者のために結論から述べると、平らな水面下の点光源を水面上から見ると、像の位置は視点によって変化する。視点が動くにつれて法平面内で観察される像の軌跡は、一種のコースティクス曲線であり、この場合、変形したアストロイドと呼ばれる曲線となる。
 
-図\ref{fig:caustic}のように、物体と視点を含む法平面において、法平面と水面の交線をx軸、物体を通り法線となる直線をy軸とすると、像の軌跡は次の曲線の一部となる。
+図\ref{fig:caustic}のように、物体と視点を含む法平面において、法平面と水面の交線を$x$軸、物体を通り法線となる直線を$y$軸とすると、像の軌跡は次の曲線の一部となる。
 $$ \left| \dfrac{x}{M} \right| ^ {2/3} 
 + \left| \dfrac{y}{N} \right| ^ {2/3} = 1,$$
 ここで、$M = D/\sqrt{n^2 - 1}$は全反射の臨界角($\theta_{\mathrm{c}}$)によって決まる入射距離の最大値であり、
@@ -50,7 +50,7 @@ $D$は物体の実際の深さ、$n$は空気に対する水の屈折率であ�
 	
 \section{式の導出}
 
-空気と水の屈折率をそれぞれ$n_1$および$n_2$とする。空気と水の境界面の下、深さ$D$の位置に点物体$O$があるとする。物体から出た光線が$y$軸から$a$だけ離れた境界面上の点Aに、法線から$\theta_2$の角度で入射し、同じ法線から$\theta_1$の角度で空気中に屈折する。
+空気と水の屈折率をそれぞれ$n_1$および$n_2$とする。空気と水の境界面の下、深さ$D$の位置に点物体$\mathrm{O}$があるとする。物体から出た光線が$y$軸から$a$だけ離れた境界面上の点Aに、法線から$\theta_2$の角度で入射し、同じ法線から$\theta_1$の角度で空気中に屈折する。
 
 屈折光線の延長線は$y$軸と点B$(0, b)$で交わる。入射角$\theta_2$が変化するとき、直線${\mathrm{AB}}$が重なり合い包絡線を形成し、このように光線が集まってできる包絡線をコースティクス曲線(caustic)と呼ぶ。\footnote{この場合、実際の光線ではなく、光線の延長線が作る仮想的なコースティクス、すなわち虚コースティクスである。} 像は線分${\mathrm{AB}}$とコースティクスの接点$\mathrm{C}$に位置する。これは、この点の近傍の光線束が局所的に発散する点だからである。
 
@@ -63,9 +63,9 @@ $D$は物体の実際の深さ、$n$は空気に対する水の屈折率であ�
 	
 スネルの法則より、
 $$ \sin\theta_1 = \frac{n_2}{n_1} \sin\theta_2 = n\sin\theta_2$$
-が成り立ち、直線ABはy軸からの入射点までの距離aを媒介変数とする以下の式で表される。
+が成り立ち、直線ABは$y$軸からの入射点までの距離aを媒介変数とする以下の式で表される。
 $$y=k(x-a).$$
-ここで、直線の傾きkはスネルの法則より、
+ここで、直線の傾き$k$はスネルの法則より、
 $$k=\dfrac{1}{\tan\theta_1}=\dfrac{\cos\theta_1}{\sin\theta_1}
 =\dfrac{\sqrt{1-n^2\sin^2\theta_2}}{n\sin\theta_2}.$$
 幾何学的に以下の関係が成り立つ。
@@ -141,7 +141,7 @@ $$ \left\{ 
 	\label{fig:hyperastroid}
 \end{figure}
 
-物体が境界面から高さDの空気中にあり、観測者が水中にある場合、相対的な屈折率は$1/n < 1$となり、同様の推論により、コースティクスに関する以下の式を得る（付録\ref{app:hyperastroid}参照）。
+物体が境界面から高さ$D$の空気中にあり、観測者が水中にある場合、相対的な屈折率は$1/n < 1$となり、同様の推論により、コースティクスに関する以下の式を得る（付録\ref{app:hyperastroid}参照）。
 $$ \left| \xi \right|^{2/3} - \left| \eta \right|^{2/3} = -1, $$
 ここで、$\xi = \dfrac{x}{W} $、$\eta = \dfrac{y}{Z}$ とおき、$W = \dfrac{nD}{\sqrt{n^2-1}}$、$Z = nD$ とすると、この曲線は漸近線を持たないが、$x \to \pm \infty$ のとき、傾きは $\pm Z/W = \pm \sqrt{n^2-1}$ に収束する。
 
@@ -149,7 +149,7 @@ $$ \left| \xi \right|^{2/3} - \left| \eta \right|^{2/3} = -1, $$
 
 この曲線は、より一般的には
 $$ \left| \xi \right|^{r} - \left| \eta \right|^{r} = \pm1 $$
-で表される曲線族に属し、\href{http://dynamicmathematicslearning.com/super-ellipse.html}{DML}\footnote{\ttfamily{dynamicmathematicslearning.com/super-ellipse.html}}では\emph{Super Hyperbola}と呼ばれ、\href{https://old.nationalcurvebank.org/superconicncb/superconicncb.htm}{National Curve Bank}\footnote{\ttfamily{https://old.nationalcurvebank.org/superconicncb/\\superconicnb.htm}}ではアストロイドが属する
+で表される曲線族に属し、\href{http://dynamicmathematicslearning.com/super-ellipse.html}{DML}\footnote{\ttfamily{dynamicmathematicslearning.com/super-ellipse.html}}ではスーパー双曲線(\emph{Super Hyperbola})と呼ばれ、\href{https://old.nationalcurvebank.org/superconicncb/superconicncb.htm}{National Curve Bank}\footnote{\ttfamily{https://old.nationalcurvebank.org/superconicncb/\\superconicnb.htm}}ではアストロイドが属する
 $$ \left| \xi \right|^{r} + \left| \eta \right|^{r} = 1. $$
 のような曲線族であるスーパー楕円(\emph{superellipse})とまとめてスーパー円錐曲線(\emph{superconics})と呼ばれる、広範な曲線族の一部である。
 
@@ -168,9 +168,9 @@ $$ \left| \xi \right|^{2/3} - \left| \eta \right|^{2/3} = \pm1 $$
 	\label{fig:image_caustic}
 \end{figure}
 
-図\ref{fig:image_caustic}のように、視点(POV)からコースティクスに接線を引く。接線とコースティクスの接点($O'$)が像の位置であり、接線が水面と交わる点が物体($O$)から出た光線が水面に入射する点である。
+図\ref{fig:image_caustic}のように、視点(POV)からコースティクスに接線を引く。接線とコースティクスの接点($\mathrm{O'}$)が像の位置であり、接線が水面と交わる点が物体($\mathrm{O}$)から出た光線が水面に入射する点である。
 
-視点(POV)の座標を$(x_{\mathrm{V}}^{}, y_{\mathrm{V}}^{})$、物体($O$)の座標を$(x_{\mathrm{O}}^{}, y_{\mathrm{O}}^{})$、求める像($O'$)の座標を$(x_{\mathrm{O'}}^{}, y_{\mathrm{O'}}^{})$とする。屈折光線が水面および$O$を通る法線（ここでは$y$軸）と交わる点をA, Bとし、それぞれの座標を$(a, 0)$, $(0, b)$とする。このとき、$\xi\eta$座標系における対応する点は、それぞれ視点: $(\xi_{\mathrm{V}}^{}, \eta_{\mathrm{V}}^{})=(x_{\mathrm{V}}^{}/M, y_{\mathrm{V}}^{}/N)$、物体: $(\xi_{\mathrm{O}}^{}, \eta_{\mathrm{O}}^{})=(x_{\mathrm{O}}^{}/M, y_{\mathrm{O}}^{}/N)$、像: $(x_{\mathrm{O'}}^{}/M, y_{\mathrm{O'}}^{}/N)=(\alpha^3, \beta^3)$であり、$A'$, $B'$の座標はそれぞれ$(\alpha, 0)$, $(0, \beta)=(a/M, 0)$, $(0, b/N)$である。ここで、$M=D/\sqrt{n^2-1}$, $N=D/n$, $D=y_{\mathrm{O}}^{}$である。接線と水面、$\eta$軸が作る比例関係から、以下の式を得る。
+視点(POV)の座標を$(x_{\mathrm{V}}^{}, y_{\mathrm{V}}^{})$、物体($\mathrm{O}$)の座標を$(x_{\mathrm{O}}^{}, y_{\mathrm{O}}^{})$、求める像($\mathrm{O'}$)の座標を$(x_{\mathrm{O'}}^{}, y_{\mathrm{O'}}^{})$とする。屈折光線が水面および$\mathrm{O}$を通る法線（ここでは$y$軸）と交わる点をA, Bとし、それぞれの座標を$(a, 0)$, $(0, b)$とする。このとき、$\xi\eta$座標系における対応する点は、それぞれ視点: $(\xi_{\mathrm{V}}^{}, \eta_{\mathrm{V}}^{})=(x_{\mathrm{V}}^{}/M, y_{\mathrm{V}}^{}/N)$、物体: $(\xi_{\mathrm{O}}^{}, \eta_{\mathrm{O}}^{})=(x_{\mathrm{O}}^{}/M, y_{\mathrm{O}}^{}/N)$、像: $(x_{\mathrm{O'}}^{}/M, y_{\mathrm{O'}}^{}/N)=(\alpha^3, \beta^3)$であり、$\mathrm{A'}$, $\mathrm{B'}$の座標はそれぞれ$(\alpha, 0)$, $(0, \beta)=(a/M, 0)$, $(0, b/N)$である。ここで、$M=D/\sqrt{n^2-1}$, $N=D/n$, $D=y_{\mathrm{O}}^{}$である。接線と水面、$\eta$軸が作る比例関係から、以下の式を得る。
 $$\dfrac{\eta_{\mathrm{V}}^{}}{\xi_{\mathrm{V}}^{}-\alpha}=-\dfrac{\beta}{\alpha}.$$
 
 ここで、$\beta = \pm \sqrt{1-\alpha^2}$ を用い、両辺を二乗して整理すると、$\alpha$ に関する4次方程式
@@ -223,13 +223,13 @@ $$\dfrac{\eta_{\mathrm{V}}^{}}{\xi_{\mathrm{V}}^{}-\alpha}=-\dfrac{\beta}{\alpha
 \href{https://github.com/mingshey/python_projects/blob/main/Refraction_Image.ipynb}%
 {\sffamily{github}}\footnote{\ttfamily{https://github.com/mingshey/python\_projects/blob/main/\\Refraction\_Image\_en.ipynb}} に公開されている。
 
-\section{水中の像}
+\section{水中空間の像}
 
 前節で像の位置を定量的に求める方法を学んだので、この方法を用いて、水中空間を空気中から見たときの像がどのように歪んで見えるかを調べてみよう。図\ref{fig:grid_underwater}のように正方形格子で表された水中の長方形領域は、空気中から見下ろすとき、視点の相対的な高さによって図\ref{fig:image_underwater}〜\ref{fig:seashell}のように見える。
 
 \begin{figure}[!h]
 	\centering
-	\includegraphics[width=2.5in]{figs/grid_underwater.eps}
+	\includegraphics[width=2.7in]{figs/grid_underwater.eps}
 	\caption{水中の格子状物体}
 	\label{fig:grid_underwater}
 \end{figure}
@@ -237,7 +237,7 @@ $$\dfrac{\eta_{\mathrm{V}}^{}}{\xi_{\mathrm{V}}^{}-\alpha}=-\dfrac{\beta}{\alpha
 \begin{figure}[!t]
 	\centering
 	\includegraphics[width=3in]{figs/image_underwater1.eps}
-	\caption{グリッドの画像。観察者の目の高さが水面とほぼ同じかそれよりも高い場合、画像は屈折率にほぼ等しい比率で全体的に平坦に見えます。\ref{fig:image_underwater}$\sim$\ref{fig:snell_window}では比較のためにグリッドの外形を長方形で示しています。}
+	\caption{格子の像。観察者の目の高さが水面とほぼ同じかそれよりも高い場合、像は屈折率にほぼ等しい比率で全体的に平坦に見えます。\ref{fig:image_underwater}$\sim$\ref{fig:snell_window}では比較のためにグリッドの外形を長方形で示しています。}
 	\label{fig:image_underwater}
 \end{figure}
 
