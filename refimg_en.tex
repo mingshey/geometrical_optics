@@ -176,7 +176,7 @@ Given the position of an object and the viewpoint, the image position can be det
 \end{figure}
 
 As shown in Figure \ref{fig:image_caustic}, a tangent line is drawn from the viewpoint (POV) to the caustic. The point of tangency ($\mathrm{O'}$) on the caustic is the image position, and the intersection point of the tangent line with the water surface is the point where the light ray from the object ($\mathrm{O}$) enters the water.
-Let $(x_{\mathrm{V}}, y_{\mathrm{V}})$ be the coordinates of the viewpoint (POV), $(x_{\mathrm{O}}, y_{\mathrm{O}})$ be the coordinates of the object ($\mathrm{O}$), and $(x_{\mathrm{O'}}, y_{\mathrm{O'}})$ be the coordinates of the image ($\mathrm{O'}$) that we want to find. Let A and B be the points where the refracted ray intersects the water surface and the normal line passing through O (which is the y-axis), with coordinates $(a, 0)$ and $(0, b)$, respectively. In the $\xi\eta$ coordinate system, the corresponding points are the viewpoint: $(\xi_{\mathrm{V}}, \eta_{\mathrm{V}})=(x_{\mathrm{V}}/M, y_{\mathrm{V}}/N)$, the object: $(\xi_{\mathrm{O}}, \eta_{\mathrm{O}})=(x_{\mathrm{O}}/M, y_{\mathrm{O}}/N)$, and the image: $(x_{\mathrm{O'}}/M, y_{\mathrm{O'}}/N)=(\alpha^3, \beta^3)$, while the coordinates of $\mathrm{A'}$ and $\mathrm{B'}$ are $(\alpha, 0)$, $(0, \beta)=(a/M, 0)$, $(0, b/N)$, respectively. Here, $M=D/\sqrt{n^2-1}$, $N=D/n$, and $D=y_{\mathrm{O}}$. From the proportional relationship between the tangent, the water surface, and the $\eta$-axis, we obtain the following equation:
+Let $(x_{\mathrm{V}}, y_{\mathrm{V}})$ be the coordinates of the viewpoint (POV), $(x_{\mathrm{O}}, y_{\mathrm{O}})$ be the coordinates of the object ($\mathrm{O}$), and $(x_{\mathrm{O'}}, y_{\mathrm{O'}})$ be the coordinates of the image ($\mathrm{O'}$) that we want to find. Let A and B be the points where the refracted ray intersects the water surface and the normal line passing through O (which is the $y$-axis), with coordinates $(a, 0)$ and $(0, b)$, respectively. In the $\xi\eta$ coordinate system, the corresponding points are the viewpoint: $(\xi_{\mathrm{V}}, \eta_{\mathrm{V}})=(x_{\mathrm{V}}/M, y_{\mathrm{V}}/N)$, the object: $(\xi_{\mathrm{O}}, \eta_{\mathrm{O}})=(x_{\mathrm{O}}/M, y_{\mathrm{O}}/N)$, and the image: $(x_{\mathrm{O'}}/M, y_{\mathrm{O'}}/N)=(\alpha^3, \beta^3)$, while the coordinates of $\mathrm{A'}$ and $\mathrm{B'}$ are $(\alpha, 0)$, $(0, \beta)=(a/M, 0)$, $(0, b/N)$, respectively. Here, $M=D/\sqrt{n^2-1}$, $N=D/n$, and $D=y_{\mathrm{O}}$. From the proportional relationship between the tangent, the water surface, and the $\eta$-axis, we obtain the following equation:
 $$\dfrac{\eta_{\mathrm{V}}}{\xi_{\mathrm{V}}-\alpha}=-\dfrac{\beta}{\alpha}.$$
 Using $\beta = \pm \sqrt{1-\alpha^2}$ and squaring both sides, we obtain the following quartic equation for $\alpha$:
 \[
@@ -202,7 +202,7 @@ If there is a continuous object in water, as shown in Figure \ref{fig:extended_i
 	\label{fig:extended_image}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[!h]
 	\centering
 	\includegraphics[width=3in]{figs/img_1805_2.eps}
 	\caption{Photograph of a chopstick partially submerged in water. Taken from a low angle close to the water surface.}
@@ -210,17 +210,18 @@ If there is a continuous object in water, as shown in Figure \ref{fig:extended_i
 \end{figure}
 
 Another approach is to determine the intersection point of the ray with the water surface by solving the equation
-\[
-\dfrac{n_1 \left( x - x_{\mathrm{V}}^{} \right)}{\sqrt{ y_{\mathrm{V}}^2 + \left( x - x_{\mathrm{V}}^{} \right)^2 }}
-+\dfrac{n_2 \left( x - x_{\mathrm{O}}^{} \right)}{\sqrt{ y_{\mathrm{O}}^2 + \left( x - x_{\mathrm{O}}^{} \right)^2 }}
-= 0,
-\]
-which is obtained by applying Fermat's principle. The abscissa of the intersection point, which is a real root of the quartic equation
+%\[
+%\dfrac{n_1 \left( x - x_{\mathrm{V}}^{} \right)}{\sqrt{ y_{\mathrm{V}}^2 + \left( x - x_{\mathrm{V}}^{} \right)^2 }}
+%+\dfrac{n_2 \left( x - x_{\mathrm{O}}^{} \right)}{\sqrt{ y_{\mathrm{O}}^2 + \left( x - x_{\mathrm{O}}^{} \right)^2 }}
+%= 0,
+%\]
+%or after rearranging,
 \[ \begin{aligned}
 	\left( x - x_{\mathrm{V}}^{} \right)^2 &\left\{ y_{\mathrm{V}}^2 + \left(x - x_{\mathrm{V}}^{} \right)^2 \right\} \\
-	&= n^2 \left( x - x_{\mathrm{O}}^{} \right)^2 \left\{ y_{\mathrm{V}}^2 + \left(x - x_{\mathrm{V}}^{} \right)^2 \right\}
-	\end{aligned}
+	&= n^2 \left( x - x_{\mathrm{O}}^{} \right)^2 \left\{ y_{\mathrm{V}}^2 + \left(x - x_{\mathrm{V}}^{} \right)^2 \right\},
+\end{aligned}
 \]
+which is obtained by applying Fermat's principle. The abscissa of the intersection point, which is a real root of the quartic equation
 lying between $x_{\mathrm{O}}^{}$ and $x_{\mathrm{V}}^{}$, can then be used to determine the image position using the equation of the tangent point of the astroid.
 
 As in the tangent approach, numerical methods can be more efficient than analytical methods for practical purposes. A Python example demonstrating how to find the image position using both analytical and numerical methods can be found at 
@@ -289,7 +290,7 @@ $$
 	&= 0.
 \end{aligned}
 $$
-Therefore, the $x$-coordinate of the stationary point is $x = a^3/c^2$. Substituting this into $y(x, a)$, we obtain the y-coordinate:
+Therefore, the $x$-coordinate of the stationary point is $x = a^3/c^2$. Substituting this into $y(x, a)$, we obtain the $y$-coordinate:
 $$
 \begin{aligned}
 	y(x, a) &= \mp \frac{\sqrt{c^2-a^2}}{a}\left(\frac{a^3}{c^2}-a\right)\\
