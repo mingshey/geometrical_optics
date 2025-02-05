@@ -198,11 +198,11 @@ $$ \left| \xi \right|^{2/3} - \left| \eta \right|^{2/3} = \pm1 $$
 \end{figure}
 
 그림 \ref{fig:image_caustic}\와 같이 시점(POV)에서 코스틱에 접선을 그린다. 접선과 코스틱의 접점($\mathrm{O'}$)이 상의 위치이고, 접선이 수면과 
-교차하는 점은 물체($\mathrm{O}$)에서 나온 광선이 수면에 입사하는 점이다.
+교차하는 점은 물체($\mathrm{O}$)에서 나온 광선이 공기와의  경계면에 입사하는 점이다.
 
 시점(POV)의 좌표를 $(x_{\mathrm{V}}^{}, y_{\mathrm{V}}^{})$, 물체($\mathrm{O}$)의 좌표를 $(x_{\mathrm{O}}^{}, y_{\mathrm{O}}^{})$라 하고, 구하고자 하는 상($\mathrm{O'}$)의 좌표를 $(x_{\mathrm{O'}}^{}, y_{\mathrm{O'}}^{})$\라 하자. 굴절 광선이 수면 및 $\mathrm{O}$를 지나는 법선(여기서는 $y$-축)과 만나는 점 A, B의 좌표를 각각 $(a, 0)$, $(0, b)$라 하자. 
 
-그러면 $\xi\eta$-좌표계에서 대응하는 점들은 각각 시점: $(\xi_{\mathrm{V}}^{}, \eta_{\mathrm{V}}^{})=(x_{\mathrm{V}}^{}/M, y_{\mathrm{V}}^{}/N)$, 물체: $(\xi_{\mathrm{O}}^{}, \eta_{\mathrm{O}}^{})=(x_{\mathrm{O}}^{}/M, y_{\mathrm{O}}^{}/N)$, 상: $(x_{\mathrm{O'}}^{}/M, y_{\mathrm{O'}}^{}/N)=(\alpha^3, \beta^3)$이고, $\mathrm{A'}$, $\mathrm{B'}$의 좌표는 각각 $(\alpha, 0)=(a/M, 0)$, $(0, \beta)=(0, b/N)$ 이다. 여기서 $M=D/\sqrt{n^2-1}$, $N=D/n$, $D=y_{\mathrm{O}}^{}$이다. 
+그러면 $\xi\eta$-좌표계에서 대응하는 점들은 각각, 시점: $(\xi_{\mathrm{V}}^{}, \eta_{\mathrm{V}}^{})=(x_{\mathrm{V}}^{}/M, y_{\mathrm{V}}^{}/N)$, 물체: $(\xi_{\mathrm{O}}^{}, \eta_{\mathrm{O}}^{})=(x_{\mathrm{O}}^{}/M, y_{\mathrm{O}}^{}/N)$, 상: $(x_{\mathrm{O'}}^{}/M, y_{\mathrm{O'}}^{}/N)=(\alpha^3, \beta^3)$이고, $\mathrm{A'}$, $\mathrm{B'}$의 좌표는 각각 $(\alpha, 0)=(a/M, 0)$, $(0, \beta)=(0, b/N)$ 이다. 여기서 $M=D/\sqrt{n^2-1}$, $N=D/n$, $D=y_{\mathrm{O}}^{}$이다. 
 
 접선과 수면, $\eta$ 축이 이루는 비례 관계에 의해 다음 식을 얻는다:
 $$\dfrac{\eta_{\mathrm{V}}^{}}{\xi_{\mathrm{V}}^{}-\alpha}=-\dfrac{\beta}{\alpha}.$$
@@ -276,21 +276,21 @@ $$\dfrac{\eta_{\mathrm{V}}^{}}{\xi_{\mathrm{V}}^{}-\alpha}=-\dfrac{\beta}{\alpha
 \begin{figure}
 	\centering
 	\includegraphics[width=3in]{figs/image_underwater1.eps}
-	\caption{격자의 상. 비교를 위해 격자의 윤곽선을 직사각형으로 나타냄. 시점의 높이가 물의 깊이와 비슷하거나 높을 때 전체적으로 굴절률의 비율에 가깝게 얕아져 보인다.}
+	\caption{격자의 상. 시점의 높이가 물의 깊이와 비슷하거나 높을 때 전체적으로 굴절률의 비율에 가깝게 얕아져 보인다. 그림 \ref{fig:image_underwater}$\sim$\ref{fig:snell_window}에서 비교를 위해 격자의 윤곽선만을 직사각형으로 나타냄. }
 	\label{fig:image_underwater}
 \end{figure}
 
 \begin{figure}
 	\centering
 	\includegraphics[width=3in]{figs/fishjar.eps}
-	\caption{격자의 상. 비교를 위해 격자의 윤곽선을 직사각형으로 나타냄. 시점의 높이가 물의 깊이에 비해 매우 낮을 때 직사각형 공간이 어항 모양으로 압축되어 보인다.}
+	\caption{격자의 상. 시점의 높이가 물의 깊이에 비해 매우 낮을 때 직사각형 공간이 어항 모양으로 압축되어 보인다.}
 	\label{fig:fishbowl}
 \end{figure}
 
 \begin{figure}
 	\centering
 	\includegraphics[width=3in]{figs/seashell_shape.eps}
-	\caption{격자의 상.  비교를 위해 격자의 윤곽선을 직사각형으로 나타냄. 시점이 수면에 극히 가까울 때 직사각형 공간이 조개류와 비슷한 형태로 압축되어 보인다.}
+	\caption{격자의 상.  시점이 수면에 극히 가까울 때 직사각형 공간이 조개류와 비슷한 형태로 압축되어 보인다.}
 	\label{fig:seashell}
 \end{figure}
 
@@ -299,7 +299,7 @@ $$\dfrac{\eta_{\mathrm{V}}^{}}{\xi_{\mathrm{V}}^{}-\alpha}=-\dfrac{\beta}{\alpha
 \begin{figure}
 	\centering
 	\includegraphics[width=3.3in]{figs/snell_window.eps}
-	\caption{스넬의 창. 물 속의 시점에서 물 위의 공간을 바라볼 때 상의 모습. 비교를 위해 격자의 윤곽선을 직사각형으로 나타냄. 스넬의 창을 정의하는 원뿔의 모선을 편의상 Snell's window로 표기함.}
+	\caption{스넬의 창. 물 속의 시점에서 물 위의 공간을 바라볼 때 상의 모습. 스넬의 창을 정의하는 원뿔의 모선을 편의상 Snell's window로 표기함.}
 	\label{fig:snell_window}
 \end{figure}
 
