@@ -56,7 +56,7 @@ $D$는 물체의 실제 깊이이고, $n$은 공기에 대한 물의 굴절률�
 	
 \section{공식의 유도}
 	
-공기와 물의 굴절률을 각각 $n_1$ 및 $n_2$라고 하자. 공기와 물의 경계면 아래 깊이 $D$인 곳에 점 물체 $O$가 있다. 
+공기와 물의 굴절률을 각각 $n_1$ 및 $n_2$라고 하자. 공기와 물의 경계면 아래 깊이 $D$인 곳에 점 물체 $\mathrm{O}$가 있다. 
 물체에서 출발한 광선이 $y$-축으로부터 $a$만큼 떨어진 경계면 위의 점 A에 
 법선으로부터 $\theta_2$의 각도로 입사한 후, 동일한 법선으로부터 $\theta_1$의 각도로 공기 중으로 굴절된다. 
 
@@ -157,7 +157,7 @@ $$ \left\{ 
 	\label{fig:hyperastroid}
 \end{figure}
 
-물체가 경계면 위 높이 D인 공기 중에 있고, 
+물체가 경계면 위 높이 $D$인 공기 중에 있고, 
 시점이 물 속에 있는 경우, 상대적인 굴절률은 $1/n < 1$이고, 
 유사한 추론에 의해 코스틱에 대한 다음 방정식을 얻는다. (부록 \ref{app:hyperastroid})
 $$ \left| \xi \right|^{2/3} - \left| \eta \right|^{2/3} = -1, $$
@@ -198,10 +198,10 @@ $$ \left| \xi \right|^{2/3} - \left| \eta \right|^{2/3} = \pm1 $$
 	\label{fig:image_caustic}
 \end{figure}
 
-그림 \ref{fig:image_caustic}\와 같이 시점(POV)에서 코스틱에 접선을 그린다. 접선과 코스틱의 접점($O'$)이 상의 위치이고, 접선이 수면과 
-교차하는 점은 물체($O$)에서 나온 광선이 수면에 입사하는 점이다.
+그림 \ref{fig:image_caustic}\와 같이 시점(POV)에서 코스틱에 접선을 그린다. 접선과 코스틱의 접점($\mathrm{O'}$)이 상의 위치이고, 접선이 수면과 
+교차하는 점은 물체($\mathrm{O}$)에서 나온 광선이 수면에 입사하는 점이다.
 
-시점(POV)의 좌표를 $(x_{\mathrm{V}}^{}, y_{\mathrm{V}}^{})$, 물체($O$)의 좌표를 $(x_{\mathrm{O}}^{}, y_{\mathrm{O}}^{})$라 하고, 구하고자 하는 상($O'$)의 좌표를 $(x_{\mathrm{O'}}^{}, y_{\mathrm{O'}}^{})$\라 하자. 굴절 광선이 수면 및 $O$를 지나는 법선(여기서는 $y$-축)과 만나는 점 A, B의 좌표를 각각 $(a, 0)$, $(0, b)$라 하자. 그러면 $\xi\eta$-좌표계에서 대응하는 점들은 각각 시점: $(\xi_{\mathrm{V}}^{}, \eta_{\mathrm{V}}^{})=(x_{\mathrm{V}}^{}/M, y_{\mathrm{V}}^{}/N)$, 물체: $(\xi_{\mathrm{O}}^{}, \eta_{\mathrm{O}}^{})=(x_{\mathrm{O}}^{}/M, y_{\mathrm{O}}^{}/N)$, 상: $(x_{\mathrm{O'}}^{}/M, y_{\mathrm{O'}}^{}/N)=(\alpha^3, \beta^3)$이고, $A'$, $B'$의 좌표는 각각 $(\alpha, 0)$, $(0, \beta)=(a/M, 0)$, $(0, b/N)$ 이다. 여기서 $M=D/\sqrt{n^2-1}$, $N=D/n$, $D=y_{\mathrm{O}}^{}$이다. 접선과 수면, $\eta$ 축이 이루는 비례 관계에 의해 다음 식을 얻는다:
+시점(POV)의 좌표를 $(x_{\mathrm{V}}^{}, y_{\mathrm{V}}^{})$, 물체($\mathrm{O}$)의 좌표를 $(x_{\mathrm{O}}^{}, y_{\mathrm{O}}^{})$라 하고, 구하고자 하는 상($\mathrm{O'}$)의 좌표를 $(x_{\mathrm{O'}}^{}, y_{\mathrm{O'}}^{})$\라 하자. 굴절 광선이 수면 및 $\mathrm{O}$를 지나는 법선(여기서는 $y$-축)과 만나는 점 A, B의 좌표를 각각 $(a, 0)$, $(0, b)$라 하자. 그러면 $\xi\eta$-좌표계에서 대응하는 점들은 각각 시점: $(\xi_{\mathrm{V}}^{}, \eta_{\mathrm{V}}^{})=(x_{\mathrm{V}}^{}/M, y_{\mathrm{V}}^{}/N)$, 물체: $(\xi_{\mathrm{O}}^{}, \eta_{\mathrm{O}}^{})=(x_{\mathrm{O}}^{}/M, y_{\mathrm{O}}^{}/N)$, 상: $(x_{\mathrm{O'}}^{}/M, y_{\mathrm{O'}}^{}/N)=(\alpha^3, \beta^3)$이고, $\mathrm{A'}$, $\mathrm{B'}$의 좌표는 각각 $(\alpha, 0)$, $(0, \beta)=(a/M, 0)$, $(0, b/N)$ 이다. 여기서 $M=D/\sqrt{n^2-1}$, $N=D/n$, $D=y_{\mathrm{O}}^{}$이다. 접선과 수면, $\eta$ 축이 이루는 비례 관계에 의해 다음 식을 얻는다:
 $$\dfrac{\eta_{\mathrm{V}}^{}}{\xi_{\mathrm{V}}^{}-\alpha}=-\dfrac{\beta}{\alpha}.$$
 
 여기서 $\beta = \pm \sqrt{1-\alpha^2}$을 이용하고, 양 변을 제곱하여 정리하면 $\alpha$에 대한 4차 방정식
