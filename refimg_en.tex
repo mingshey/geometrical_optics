@@ -77,7 +77,7 @@ $$\begin{aligned}
 
 Introducing dimensionless parameters $\alpha = a/M$ and $\beta = b/N$, we have
 
-\begin{equation}
+$$
 	\begin{aligned}
 		\alpha^2 + \beta^2 &= \frac{a^2}{M^2} + \frac{b^2}{N^2} \\
 		&= \frac{n^2-1}{D^2} \frac{D^2\sin^2\theta_2}{\cos^2\theta_2} + \frac{n^2}{D^2} \frac{D^2(1-n^2\sin^2\theta_2)}{n^2\cos^2\theta_2} \\
@@ -85,7 +85,7 @@ Introducing dimensionless parameters $\alpha = a/M$ and $\beta = b/N$, we have
 		&= \frac{1-\sin^2\theta_2}{\cos^2\theta_2} \\
 		&= 1
 	\end{aligned}
-\end{equation}
+$$
 
 Now, let's introduce dimensionless coordinates $\xi = x/M$ and $\eta = y/N$. As the viewpoint moves in the $xy$-plane, points $\mathrm{A}(a, 0)$ and $\mathrm{B}(0, b)$ also move. The corresponding points $\mathrm{A'}(\alpha, 0)$ and $\mathrm{B'}(0, \beta$) move in the $\xi\eta$-plane maintaining a constant distance of $1$.
 
@@ -183,9 +183,9 @@ In the $\xi\eta$ coordinate system, the corresponding points are, the viewpoint:
 From the proportional relationship between the tangent, the water surface, and the $\eta$-axis, we obtain the following equation:
 $$\dfrac{\eta_{\mathrm{V}}}{\xi_{\mathrm{V}}-\alpha}=-\dfrac{\beta}{\alpha}.$$
 Using $\beta = \pm \sqrt{1-\alpha^2}$ and squaring both sides, we obtain the following quartic equation for $\alpha$:
-\[
+\begin{equation}\label{eqn:tangent}
 \left( 1 - \alpha^2 \right) \left(\alpha-\xi_{\mathrm{V}} \right)^2 = \alpha^2 \eta_{\mathrm{V}}^2
-\]
+\end{equation}
 Generally, a quartic equation has four complex roots, and in this case, there are two real roots. The desired value of $\alpha$ is the one between 0 and $\xi_{\mathrm{V}}$. Solving a quartic equation manually is generally difficult. Although an analytical solution can be obtained using a computer algebra system (CAS), it is often more efficient to find an approximate solution using numerical methods. (See Appendix \ref{app:python})
 
 As can be seen from the form of the equation, the location of the image depends on that of the viewpoint. For example, as shown in Figure \ref{fig:pencil_view}, the tip of a partially submerged pencil appears at different positions, $1'$ and $2'$, when viewed from points $1$ and $2$, respectively.
@@ -220,15 +220,17 @@ Another approach is to determine the intersection point of the ray with the wate
 = 0,
 \]
 or after rearranging,
-\[ \begin{aligned}
-	\left( x - x_{\mathrm{V}}^{} \right)^2 &\left\{ y_{\mathrm{O}}^2 + \left(x - x_{\mathrm{O}}^{} \right)^2 \right\} \\
-	&= n^2 \left( x - x_{\mathrm{O}}^{} \right)^2 \left\{ y_{\mathrm{V}}^2 + \left(x - x_{\mathrm{V}}^{} \right)^2 \right\},
-\end{aligned}
-\]
+\begin{equation} \label{eqn:fermat}
+	\begin{aligned}
+		\left( x - x_{\mathrm{V}}^{} \right)^2 &\left\{ y_{\mathrm{O}}^2 + \left(x - x_{\mathrm{O}}^{} \right)^2 \right\} \\
+		&= n^2 \left( x - x_{\mathrm{O}}^{} \right)^2 \left\{ y_{\mathrm{V}}^2 + \left(x - x_{\mathrm{V}}^{} \right)^2 \right\},
+	\end{aligned}
+\end{equation}
 which is obtained by applying Fermat's principle. The abscissa of the intersection point, which is a real root of the quartic equation
 lying between $x_{\mathrm{O}}^{}$ and $x_{\mathrm{V}}^{}$, can then be used to determine the image position using the equation of the tangent point of the astroid.
+In fact, after rearranging, equation (\ref{eqn:fermat}) is equivalent to equation (\ref{eqn:tangent}).
 
-As in the tangent approach, numerical methods can be more efficient than analytical methods for practical purposes. A Python example demonstrating how to find the image position using both analytical and numerical methods can be found at 
+A Python example demonstrating how to find the image position using both analytical and numerical methods can be found at 
 \href{https://github.com/mingshey/python_projects/blob/main/Refraction_Image.ipynb}%
 {\sffamily{github}}\footnote{\ttfamily{https://github.com/mingshey/python\_projects/blob/main/\\Refraction\_Image\_en.ipynb}}
 

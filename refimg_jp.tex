@@ -178,9 +178,9 @@ $$ \left| \xi \right|^{2/3} - \left| \eta \right|^{2/3} = \pm1 $$
 $$\dfrac{\eta_{\mathrm{V}}^{}}{\xi_{\mathrm{V}}^{}-\alpha}=-\dfrac{\beta}{\alpha}.$$
 
 ここで、$\beta = \pm \sqrt{1-\alpha^2}$ を用い、両辺を二乗して整理すると、$\alpha$ に関する4次方程式
-\[
+\begin{equation} \label{eqn:tangent}
 \left( 1 - \alpha^2 \right) \left(\alpha-\xi_{\mathrm{V}} \right)^2 = \alpha^2 \eta_{\mathrm{V}}^2
-\]
+\end{equation}
 を得る。一般に、4次方程式は4つの複素数解を持つが、この場合、実数解が2つ存在する。求めたい$\alpha$の値は、0と$\xi_{\mathrm{V}}$の間にあるものとなる。4次方程式を手計算で解くことは一般的に困難である。コンピュータ代数システム (CAS) を利用して解析解を求めることも可能であるが、数値解法を用いて近似解を求める方が効率的なことが多い。 (付録 \ref{app:python} 参照)
 
 方程式の形式からわかるように、像の座標は視点の座標に依存する。例えば、水中に半分浸かった鉛筆の先端は、図\ref{fig:pencil_view}のように、視点$1$, $2$によってそれぞれ$1'$, $2'$の位置に異なる。
@@ -216,12 +216,13 @@ $$\dfrac{\eta_{\mathrm{V}}^{}}{\xi_{\mathrm{V}}^{}-\alpha}=-\dfrac{\beta}{\alpha
 = 0,
 \]
 または、これを整理した4次方程式
-\[ \begin{aligned}
+\begin{equation} \label{eqn:fermat}
+\begin{aligned}
 	\left( x - x_{\mathrm{V}}^{} \right)^2 & \left\{ y_{\mathrm{O}}^2 + \left(x - x_{\mathrm{O}}^{} \right)^2 \right\}\\
 	&= n^2 \left( x - x_{\mathrm{O}}^{} \right)^2 \left\{ y_{\mathrm{V}}^2 + \left(x - x_{\mathrm{V}}^{} \right)^2 \right\}
 \end{aligned}
-\]
-の解のうち、$x_{\mathrm{O}}^{}$と$x_{\mathrm{V}}^{}$の間の実数解として与えられる。この場合も、厳密な解析解を求めるよりも、数値解法を用いて近似解を求める方が実用的である。
+\end{equation}
+の解のうち、$x_{\mathrm{O}}^{}$と$x_{\mathrm{V}}^{}$の間の実数解として与えられる。実際、式(\ref{eqn:fermat})を整理すると、式(\ref{eqn:tangent})と同等になる。
 
 像の位置を求めるPythonの例は、
 \href{https://github.com/mingshey/python_projects/blob/main/Refraction_Image_en.ipynb}%
