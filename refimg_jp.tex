@@ -183,7 +183,7 @@ $$\dfrac{\eta_{\mathrm{V}}^{}}{\xi_{\mathrm{V}}^{}-\alpha}=-\dfrac{\beta}{\alpha
 \end{equation}
 を得る。一般に、4次方程式は4つの複素数解を持つが、この場合、実数解が2つ存在する。求めたい$\alpha$の値は、0と$\xi_{\mathrm{V}}$の間にあるものとなる。4次方程式を手計算で解くことは一般的に困難である。コンピュータ代数システム (CAS) を利用して解析解を求めることも可能であるが、数値解法を用いて近似解を求める方が効率的なことが多い。 (付録 \ref{app:python} 参照)
 
-方程式の形式からわかるように、像の座標は視点の座標に依存する。例えば、水中に半分浸かった鉛筆の先端は、図\ref{fig:pencil_view}のように、視点$1$, $2$によってそれぞれ$1'$, $2'$の位置に異なる。
+方程式の形式からわかるように、像の座標は視点の座標に依存する。例えば、水中に半分浸かった鉛筆の先端の像は、図\ref{fig:pencil_view}のように、視点$1$, $2$によってそれぞれ$1'$, $2'$の位置に異なる。
 	
 \begin{figure}[h]
 	\centering
@@ -328,8 +328,8 @@ $$ \left( a^2 + c^2 \right) \left(a - x_{\mathrm{V}} \right)^2 = a^2 y_{\mathrm{
 	    N = yo / nrel
 	    xi_v = (xv - xo) / M
 	    eta_v = yv / N
-	    alpha = root(lambda x: eqnf(xi_v, eta_v, x),\
-	        xi_v).x[0]
+	    alpha = root(lambda x: \
+	        eqnf(xi_v, eta_v, x), xi_v).x[0]
 	    beta = np.sqrt(1 - alpha**2)
 	    xim = alpha**3 * M + xo
 	    yim = beta**3 * N
