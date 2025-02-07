@@ -322,23 +322,23 @@ $$ \left( a^2 + c^2 \right) \left(a - x_{\mathrm{V}} \right)^2 = a^2 y_{\mathrm{
 	eqnf = sym.lambdify((ksi, eta, alfa), eqn);
 	
 	def imgloc(pov, obj, nrel):
-	xv, yv = pov
-	xo, yo = obj
-	M = yo / np.sqrt(nrel**2 - 1)
-	N = yo / nrel
-	xi_v = (xv - xo) / M
-	eta_v = yv / N
-	alpha = root(lambda x: eqnf(xi_v, eta_v, x),\
-	    xi_v).x[0]
-	beta = np.sqrt(1 - alpha**2)
-	xim = alpha**3 * M + xo
-	yim = beta**3 * N
-	xpoi = (xim*yv - yim*xv)/(yv - yim)
+	    xv, yv = pov
+	    xo, yo = obj
+	    M = yo / np.sqrt(nrel**2 - 1)
+	    N = yo / nrel
+	    xi_v = (xv - xo) / M
+	    eta_v = yv / N
+	    alpha = root(lambda x: eqnf(xi_v, eta_v, x),\
+	        xi_v).x[0]
+	    beta = np.sqrt(1 - alpha**2)
+	    xim = alpha**3 * M + xo
+	    yim = beta**3 * N
+	    xpoi = (xim*yv - yim*xv)/(yv - yim)
 	
-	img = np.array([xim, yim])
-	poi = np.array([xpoi, 0])
+	    img = np.array([xim, yim])
+	    poi = np.array([xpoi, 0])
 	
-	return img, poi
+	    return img, poi
 \end{verbatim}
 
 \section*{}
