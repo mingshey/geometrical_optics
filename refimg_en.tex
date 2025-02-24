@@ -41,7 +41,7 @@ For those who are curious but short on time, here's the bottom line: When viewin
 	\label{fig:caustic}
 \end{figure}
 
-In the normal plane containing both the object and the viewer, let the intersection of the normal plane and the water surface be the $x$-axis, and the normal line passing through the object be the $y$-axis, as shown in Figure \ref{fig:caustic}. Then, the locus of the image is part of the following curve:
+In the normal plane containing both the object and the viewer, let the intersection of the normal plane and the water surface be the $x$-axis, and the normal line passing through the object be the $y$-axis, as shown in Figure \ref{fig:caustic}. Then, the locus of the image is part of the following curve: \cite{Glaeser2000}
 
 $$ \left| \dfrac{x}{M} \right| ^ {2/3} + \left| \dfrac{y}{N} \right| ^ {2/3} = 1,$$
 where $M = D/\sqrt{n^2 - 1}$ is the maximum incident distance determined by the critical angle of total internal reflection ($\theta_{\mathrm{c}}$), $N = D/n$ is the apparent depth when viewed directly from above, $D$ is the actual depth of the object, and $n$ is the refractive index of water relative to air.
@@ -322,13 +322,11 @@ lying between $0$ and $x_{\mathrm{V}^{}}$, and $b = \pm \sqrt{a^2 + c^2}$.
 \begin{verbatim}
 	import numpy as np
 	import sympy as sym
-	from scipy.optimize import root
-	
+	from scipy.optimize import root	
 	ksi, eta, alfa = sym.symbols('xi eta alpha')
 	eqn = (alfa - ksi)**2 * (1 - alfa**2)\
 	    - alfa**2 * eta**2
 	eqnf = sym.lambdify((ksi, eta, alfa), eqn);
-	
 	def imgloc(pov, obj, nrel):
 	    xv, yv = pov
 	    xo, yo = obj
@@ -339,17 +337,15 @@ lying between $0$ and $x_{\mathrm{V}^{}}$, and $b = \pm \sqrt{a^2 + c^2}$.
 	    alpha = root(lambda x:\
 	        eqnf(xi_v, eta_v, x), xi_v).x[0]
 	    beta = np.sqrt(1 - alpha**2)
-	    
 	    xim = alpha**3 * M + xo
 	    yim = beta**3 * N
-	    xpoi = (xim*yv - yim*xv)/(yv - yim)
-	
+	    xpoi = (xim*yv - yim*xv)/(yv - yim)	
 	    img = np.array([xim, yim])
-	    poi = np.array([xpoi, 0])
-	
+	    poi = np.array([xpoi, 0])	
 	    return img, poi
 \end{verbatim}
-
+\bibliographystyle{unsrt}
+\bibliography{ref}
 \vfill
 \slshape{This document is translated from original Korean with the assistance of Google's Gemini language model.}
 \end{document}
