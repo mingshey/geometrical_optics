@@ -1,5 +1,5 @@
 \documentclass[twocolumn]{article}
-\usepackage[a4paper, top=1in, bottom=1in, left=2cm, right=2cm]{geometry}
+\usepackage[a4paper, top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
 \usepackage[singlespacing]{setspace}
 \usepackage{amsmath}
 \usepackage{amssymb}
@@ -323,10 +323,12 @@ lying between $0$ and $x_{\mathrm{V}^{}}$, and $b = \pm \sqrt{a^2 + c^2}$.
 	import numpy as np
 	import sympy as sym
 	from scipy.optimize import root	
+	
 	ksi, eta, alfa = sym.symbols('xi eta alpha')
 	eqn = (alfa - ksi)**2 * (1 - alfa**2)\
 	    - alfa**2 * eta**2
 	eqnf = sym.lambdify((ksi, eta, alfa), eqn);
+	
 	def imgloc(pov, obj, nrel):
 	    xv, yv = pov
 	    xo, yo = obj
@@ -340,8 +342,10 @@ lying between $0$ and $x_{\mathrm{V}^{}}$, and $b = \pm \sqrt{a^2 + c^2}$.
 	    xim = alpha**3 * M + xo
 	    yim = beta**3 * N
 	    xpoi = (xim*yv - yim*xv)/(yv - yim)	
+	    
 	    img = np.array([xim, yim])
 	    poi = np.array([xpoi, 0])	
+	    
 	    return img, poi
 \end{verbatim}
 \bibliographystyle{unsrt}
